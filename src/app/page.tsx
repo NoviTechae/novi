@@ -55,7 +55,7 @@ export default function Home() {
         <p className="section-text max-w-3xl">
           نحن في <span className="font-semibold">NoviTech</span> نؤمن أن التقنية هي المفتاح لنمو الأعمال واستدامتها.
           نطوّر مواقع إلكترونية، تطبيقات موبايل، وأنظمة برمجية مخصّصة تُحوّل أفكاركم إلى منتجاتٍ رقمية عملية،
-          مع تركيز على الجودة، السرعة، وتجربة استخدام حديثة.
+          مع التركيز على الجودة، السرعة، وتجربة استخدام حديثة.
         </p>
 
         <div className="mt-8 grid gap-4 md:grid-cols-3">
