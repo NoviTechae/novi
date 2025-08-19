@@ -1,103 +1,218 @@
 import Image from "next/image";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main dir="rtl" className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-900">
+      {/* HERO */}
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section className="container mx-auto px-4 py-12 grid md:grid-cols-2 gap-8 items-center">
+        {/* الصورة يسار */}
+        <div className="flex justify-center order-1 md:order-2">
+          <Image
+            src="/brand/novi1.jpeg"
+            alt="Development"
+            width={450}
+            height={40}
+            //className="max-w-sm md:max-w-md h-auto"
+            priority
+          />
+
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        {/* الكروت يمين */}
+        <div className="order-1 md:order-1">
+          <div className="space-y-4 text-center md:text-right">
+            <p className="text-indigo-700 font-semibold">حلول تقنية متخصصة</p>
+            <h1 className="text-3xl md:text-5xl font-extrabold leading-tight">نبني برمجيات تُطلق نموّ عملك</h1>
+            <p className="text-slate-600">مواقع، تطبيقات، وأنظمة حسب الطلب — تسليم سريع ودقيق، وتجربة حديثة.</p>
+          </div>
+
+          {/* كروت الميزات */}
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="card text-center">
+              <h3 className="font-semibold mb-1">🚀 سرعة ومرونة</h3>
+              <p className="text-sm text-slate-600">تسليم سريع في أي احتياجاتك</p>
+            </div>
+            <div className="card text-center">
+              <h3 className="font-semibold mb-1">🌍 لا حدود للأفكار</h3>
+              <p className="text-sm text-slate-600">تحويل أي فكرة إلى مشروع ناجح</p>
+            </div>
+            <div className="card text-center">
+              <h3 className="font-semibold mb-1">🔒 برمج موثوق</h3>
+              <p className="text-sm text-slate-600">حلول آمنة بجودة عالية</p>
+            </div>
+            <div className="card text-center">
+              <h3 className="font-semibold mb-1">💡 دعم دائم</h3>
+              <p className="text-sm text-slate-600">متابعة وصيانة بعد الإطلاق</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* ABOUT */}
+      <section id="about" dir="rtl" className="container mx-auto px-4 py-16">
+        <h2 className="section-title">من نحن</h2>
+
+        <p className="section-text max-w-3xl">
+          نحن في <span className="font-semibold">NoviTech</span> نؤمن أن التقنية هي المفتاح لنمو الأعمال واستدامتها.
+          نطوّر مواقع إلكترونية، تطبيقات موبايل، وأنظمة برمجية مخصّصة تُحوّل أفكاركم إلى منتجاتٍ رقمية عملية،
+          مع تركيز على الجودة، السرعة، وتجربة استخدام حديثة.
+        </p>
+
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
+          {/* هدفنا */}
+          <div className="rounded-xl border bg-white p-5 shadow-sm hover:shadow-md transition">
+            <div className="mb-2 text-2xl">🚀</div>
+            <h3 className="font-semibold mb-1">هدفنا</h3>
+            <p className="text-sm text-slate-600">
+              تقديم حلول تقنية مبتكرة ومرنة تُسهّل إطلاق المشاريع وتسريع الوصول إلى النتائج.
+            </p>
+          </div>
+
+          {/* رؤيتنا */}
+          <div className="rounded-xl border bg-white p-5 shadow-sm hover:shadow-md transition">
+            <div className="mb-2 text-2xl">👁️</div>
+            <h3 className="font-semibold mb-1">رؤيتنا</h3>
+            <p className="text-sm text-slate-600">
+              أن نكون الشريك التقني الأول في المنطقة لتحويل الأفكار إلى واقع رقمي ناجح قابل للنمو.
+            </p>
+          </div>
+
+          {/* قيمنا */}
+          <div className="rounded-xl border bg-white p-5 shadow-sm hover:shadow-md transition">
+            <div className="mb-2 text-2xl">💎</div>
+            <h3 className="font-semibold mb-2">قيمنا</h3>
+            <ul className="text-sm text-slate-700 space-y-1 list-disc pr-5">
+              <li>الجودة والموثوقية</li>
+              <li>السرعة في التنفيذ</li>
+              <li>الإبداع والابتكار</li>
+              <li>الشفافية والتعاون</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      {/* SERVICES (بدل الأسعار) */}
+      <section id="services" className="container mx-auto px-4 pb-16">
+        <h2 className="section-title">خدماتنا</h2>
+
+        {/* مجموعات الخدمات */}
+        <div className="grid lg:grid-cols-3 gap-6">
+          <ServiceCard
+            title="المواقع الإلكترونية"
+            items={[
+              "موقع بسيط (صفحة تعريفية)",
+              "موقع متعدد الصفحات",
+              "متجر إلكتروني (منتجات/سلة/دفع)",
+            ]}
+            icon={<GlobeIcon />}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <ServiceCard
+            title="تطبيقات الموبايل"
+            items={[
+              "تطبيق أساسي (iOS أو Android)",
+              "تطبيق كامل (iOS + Android + لوحة تحكم)",
+            ]}
+            icon={<AppIcon />}
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          <ServiceCard
+            title="أنظمة مخصصة"
+            items={[
+              "أنظمة حجز وإدارة",
+              "لوحات تحكّم وواجهات APIs",
+            ]}
+            icon={<CogIcon />}
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <ServiceCard
+            title="ذكاء اصطناعي"
+            items={[
+              "شات بوت خدمة عملاء / أدوات بيانات",
+              "توليد محتوى (نصوص/صور)",
+              "حلول RAG وربط قواعد بيانات",
+            ]}
+            icon={<RobotIcon />}
+          />
+          <ServiceCard
+            title="الأداء والأمان"
+            items={[
+              "تحسين السرعة وتجربة المستخدم",
+              "حماية البيانات والخصوصية",
+              "مراقبة وتتبّع الأخطاء",
+            ]}
+            icon={<ShieldIcon />}
+          />
+          <ServiceCard
+            title="الدعم والصيانة"
+            items={[
+              "دعم وإطلاق منظم",
+              "صيانة وتحديثات شهرية",
+              "نسخ احتياطي ومراقبة",
+            ]}
+            icon={<WrenchIcon />}
+          />
+        </div>
+        {/* CTA */}
+        <div className="mt-8 rounded-2xl border bg-white p-6 text-center shadow-sm">
+          <h3 className="text-xl font-bold mb-2">جاهز نبدأ مشروعك؟</h3>
+          <p className="text-slate-600 mb-4">
+            احصل على عرض مخصص حسب احتياجك — نرد عليك خلال أقل من 24 ساعة.
+          </p>
+          <div className="flex justify-center gap-3">
+            <a href="#contact" className="btn-primary">اطلب عرض</a>
+            <a href="https://wa.me/971558198862" target="_blank" className="btn-ghost">تواصل واتساب</a>
+          </div>
+        </div>
+
+      </section>
+
+
+      {/* CONTACT */}
+      <section id="contact" className="container mx-auto px-4 py-12">
+        <h2 className="section-title">تواصل معنا</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* معلومات التواصل يسار/يمين حسب تصميمك */}
+          <ContactForm />
+        </div>
+      </section>
+    </main>
+  );
+}
+
+/* ============ Components ============ */
+
+
+function ServiceCard({
+  title,
+  items,
+  icon,
+}: { title: string; items: string[]; icon: React.ReactNode }) {
+  return (
+    <div className="group rounded-xl border bg-white p-5 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 ring-1 ring-slate-200/70 hover:ring-indigo-200">
+      <div className="h-10 w-10 rounded-lg bg-gradient-to-tr from-indigo-600 to-sky-500 text-white grid place-items-center mb-3 group-hover:scale-105 transition-transform">
+        {icon}
+      </div>
+      <h3 className="font-semibold mb-2">{title}</h3>
+      <ul className="text-sm text-slate-700 space-y-1 list-disc pr-5">
+        {items.map(i => <li key={i}>{i}</li>)}
+      </ul>
     </div>
   );
 }
+
+
+function ShieldIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
+      <path d="M12 2 4 5v6c0 5 3.8 9.4 8 11 4.2-1.6 8-6 8-11V5l-8-3Z" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
+  );
+}
+
+
+/* ====== Simple inline icons (SVG) ====== */
+function GlobeIcon() { return (<svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="12" r="9" /><path d="M3 12h18" /><path d="M12 3c2.5 3 2.5 15 0 18" /><path d="M12 3c-2.5 3-2.5 15 0 18" /></svg>); }
+function AppIcon() { return (<svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="5" y="2" width="14" height="20" rx="3" /><circle cx="12" cy="18" r="1.2" /></svg>); }
+function CogIcon() { return (<svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" /><path d="M19.4 15a1 1 0 0 0 .2 1.1l.1.1a8 8 0 0 1-2.1 3.6l-.1-.1a1 1 0 0 0-1.1-.2l-1.3.5a8 8 0 0 1-3 0l-1.3-.5a1 1 0 0 0-1.1.2l-.1.1a8 8 0 0 1-2.1-3.6l.1-.1a1 1 0 0 0 .2-1.1l-.5-1.3a8 8 0 0 1 0-3l.5-1.3a1 1 0 0 0-.2-1.1l-.1-.1A8 8 0 0 1 8 3.8l.1.1a1 1 0 0 0 1.1.2l1.3-.5a8 8 0 0 1 3 0l1.3.5a1 1 0 0 0 1.1-.2l.1-.1a8 8 0 0 1 2.1 3.6l-.1.1a1 1 0 0 0-.2 1.1l.5 1.3a8 8 0 0 1 0 3l-.5 1.3Z" /></svg>); }
+function RobotIcon() { return (<svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="4" y="7" width="16" height="12" rx="3" /><circle cx="9" cy="13" r="1.5" /><circle cx="15" cy="13" r="1.5" /><path d="M12 7V4" /></svg>); }
+function WrenchIcon() { return (<svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M14 7a4 4 0 1 0-5 5l-6 6 2 2 6-6a4 4 0 0 0 5-5Z" /></svg>); }
