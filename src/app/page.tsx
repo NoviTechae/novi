@@ -38,7 +38,7 @@ export default function Home() {
               <p className="text-sm text-slate-600">تحويل أي فكرة إلى مشروع ناجح</p>
             </div>
             <div className="card text-center">
-              <h3 className="font-semibold mb-1">🔒 برمج موثوق</h3>
+              <h3 className="font-semibold mb-1">🔒 برمجيات موثوقة</h3>
               <p className="text-sm text-slate-600">حلول آمنة بجودة عالية</p>
             </div>
             <div className="card text-center">
