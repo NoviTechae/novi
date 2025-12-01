@@ -13,17 +13,17 @@ export async function POST(req: Request) {
     const message = (fd.get("message") || "").toString();
 
     const { error } = await resend.emails.send({
-      from: "NoviTech <support@novitech.ae>",   // أو بريد دومينك بعد التوثيق
-      to: ["info@novitech.ae"],                   // عدّلي الوجهة
+      from: "NoviTech <noreply@novitech.ae>",  // ← الحل الأساسي
+      to: ["info@novitech.ae"],               // ← الإيميل الرسمي
+      replyTo: email || undefined,           // ← مهم جداً
       subject: "رسالة جديدة من نموذج التواصل",
       html: `
         <h2>رسالة جديدة</h2>
         <p><b>الاسم:</b> ${name}</p>
         <p><b>البريد:</b> ${email}</p>
         <p><b>الهاتف:</b> ${phone}</p>
-        <p><b>الرسالة:</b><br/>${message.replace(/\n/g,"<br/>")}</p>
+        <p><b>الرسالة:</b><br/>${message.replace(/\n/g, "<br/>")}</p>
       `,
-      replyTo: email || undefined,
     });
 
     if (error) {
