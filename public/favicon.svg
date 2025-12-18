@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- glitch left -->
+  <text x="18" y="46"
+        font-size="42"
+        font-family="monospace"
+        fill="#000"
+        opacity="0.25"
+        transform="translate(-2,0)">
+    N
+  </text>
+
+  <!-- glitch right -->
+  <text x="18" y="46"
+        font-size="42"
+        font-family="monospace"
+        fill="#000"
+        opacity="0.25"
+        transform="translate(2,0)">
+    N
+  </text>
+
+  <!-- main -->
+  <text x="18" y="46"
+        font-size="42"
+        font-family="monospace"
+        fill="#000">
+    N
+  </text>
+</svg>

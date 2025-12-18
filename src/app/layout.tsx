@@ -1,17 +1,43 @@
 // src/app/layout.tsx
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import type { ReactNode } from "react";
+import type { Metadata } from "next";
 
-export const viewport = { themeColor: "#ffffff" };
+export const metadata: Metadata = {
+  title: {
+    default: "NoviTech | Custom Software & Web Development",
+    template: "%s | NoviTech",
+  },
+  description:
+    "NoviTech is an Emirati-led tech brand building custom websites, software systems, and AI-powered solutions.",
+  keywords: [
+    "NoviTech",
+    "web development UAE",
+    "software company UAE",
+    "custom software",
+    "AI solutions",
+  ],
+  icons: {
+    icon: "/favicon.svg",
+  },
+  openGraph: {
+    title: "NoviTech",
+    description: "Building precise digital solutions for real-world needs.",
+    url: "https://novitech.ae",
+    siteName: "NoviTech",
+    type: "website",
+  },
+};
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
   return (
-    <html  dir="rtl">
-      <body className="min-h-dvh bg-gradient-to-b from-slate-50 to-white text-slate-900">
-        <Navbar />
-        <main className="container mx-auto px-4">{children}</main>
-        <Footer />
+    <html lang="en">
+      <body className="min-h-dvh bg-beige text-charcoal">
+        {children}
       </body>
     </html>
   );

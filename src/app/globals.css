@@ -2,43 +2,148 @@
 @tailwind components;
 @tailwind utilities;
 
-/* مكوّنات مخصّصة */
-@layer components {
-  .section {
-    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
-  }
-
-   .btn-primary {
-    @apply inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium bg-blue-600 text-white hover:bg-blue-700;
-  }
-
-  .card {
-    @apply rounded-xl border border-slate-200 bg-white shadow;
-  }
-  /* سكرول ناعم للأنكور */
-html { scroll-behavior: smooth; }
-
-/* حاويات */
-.container { max-width: 1200px; }
-
-/* أزرار */
-.btn-primary{
-  @apply inline-flex items-center justify-center rounded-lg bg-gradient-to-tr from-indigo-600 to-sky-500 px-4 py-2 text-white font-semibold shadow hover:opacity-90 transition;
-}
-.btn-ghost{
-  @apply inline-flex items-center justify-center rounded-lg border px-4 py-2 text-slate-800 hover:bg-slate-50 transition;
+html {
+  scroll-behavior: smooth;
 }
 
-/* روابط النافبار */
-.nav-link{ @apply text-slate-700 hover:text-indigo-700 transition; }
-
-/* عناوين وأوصاف الأقسام */
-.section-title{ @apply text-2xl md:text-3xl font-extrabold mb-4; }
-.section-text{ @apply text-slate-600 leading-7; }
-
-/* فورم */
-.input{
-  @apply w-full rounded-lg border px-3 py-2 outline-none focus:ring-2 focus:ring-indigo-300 bg-white;
+.glitch {
+  position: relative;
+  display: inline-block;
 }
 
+.glitch::before,
+.glitch::after {
+  content: "N";
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.6;
+}
+
+.glitch::before {
+  transform: translate(-1px, -1px);
+}
+
+.glitch::after {
+  transform: translate(1px, 1px);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out;
+}
+
+/* ===============================
+   System Visual – micro motion
+   =============================== */
+
+/* ===== AI SYSTEM VISUAL ===== */
+
+.ai-node {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: rgb(156 138 90 / 0.65);
+  animation: nodeFloat 6s ease-in-out infinite;
+}
+
+/* core */
+.ai-core {
+  width: 12px;
+  height: 12px;
+  background: rgb(156 138 90);
+  box-shadow: 0 0 18px rgb(156 138 90 / 0.6);
+  animation: corePulse 3.2s ease-in-out infinite;
+}
+
+/* lines */
+.ai-line {
+  stroke: rgb(156 138 90 / 0.25);
+  stroke-width: 1;
+  stroke-dasharray: 6 10;
+  animation: dataFlow 6s linear infinite;
+}
+
+/* ===== Animations ===== */
+
+@keyframes nodeFloat {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(6px, -6px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.4;
+  }
+}
+
+@keyframes corePulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes dataFlow {
+  0% {
+    stroke-dashoffset: 0;
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    stroke-dashoffset: -40;
+    opacity: 0.2;
+  }
+}
+
+/* System rotation */
+@keyframes system-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-system-rotate {
+  animation: system-rotate 60s linear infinite;
+}
+
+/* Data flow */
+@keyframes data-flow {
+  0% {
+    transform: translate(-50%, 0) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 320px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.animate-data-flow {
+  animation: data-flow 5s ease-in-out infinite;
 }
