@@ -1,3 +1,4 @@
+// src/components/SystemVisualClient.jsx
 "use client";
 
 import dynamic from "next/dynamic";

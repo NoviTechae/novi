@@ -1,3 +1,4 @@
+// src/components/LanguageSwitch.jsx
 "use client";
 import { usePathname, useRouter } from "next/navigation";
 

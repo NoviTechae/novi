@@ -1,3 +1,4 @@
+// src/components/Logo.jsx
 export default function Logo() {
   return (
     <div className="flex items-center font-mono text-lg md:text-xl">
