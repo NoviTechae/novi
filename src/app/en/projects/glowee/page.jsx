@@ -20,7 +20,7 @@ export default function GloweeProjectPage() {
           name="Glowee"
           category="Beauty Technology Platform"
           intro="A UAE beauty platform bringing bookings, gifting, loyalty, and business management into one connected digital experience."
-          image="/projects/glowee.jpeg"
+          image="/projects/glowee-icon.png"
           status="Live on the App Store"
           primaryAction={{
             label: "Download on the App Store",

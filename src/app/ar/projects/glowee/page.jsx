@@ -23,7 +23,7 @@ export default function GloweeProjectPageAR() {
           name="Glowee"
           category="منصة تقنية لقطاع التجميل"
           intro="منصة إماراتية تجمع الحجوزات والهدايا والولاء وإدارة أعمال التجميل ضمن تجربة رقمية مترابطة."
-          image="/projects/glowee.jpeg"
+          image="/projects/glowee-icon.png"
           status="متوفر على App Store"
           primaryAction={{
             label: "تحميل من App Store",
