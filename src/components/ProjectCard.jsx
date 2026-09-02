@@ -3,33 +3,58 @@
 
 import { useState } from "react";
 
-export default function ProjectCard({ name, category, desc, image, placeholder }) {
+export default function ProjectCard({
+  name,
+  category,
+  desc,
+  image,
+  placeholder,
+}) {
   const [imgError, setImgError] = useState(false);
 
   return (
-    <div className="border border-border hover:border-accent hover:-translate-y-1 transition-all duration-200 overflow-hidden">
-      {/* Image area */}
-      <div className="w-full h-48 bg-border/30 flex items-center justify-center overflow-hidden">
+    <article className="group relative h-full overflow-hidden border border-border bg-beige transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-sm">
+      
+      {/* Corner detail */}
+      <span className="absolute right-0 top-0 z-10 h-8 w-8 border-r border-t border-accent" />
+
+      {/* Image */}
+      <div className="relative aspect-[16/10] w-full overflow-hidden bg-border/20">
         {!imgError ? (
           <img
             src={image}
-            alt={name}
-            className="w-full h-full object-cover"
+            alt={`${name} project`}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
             onError={() => setImgError(true)}
           />
         ) : (
-          <span className="text-2xl font-bold text-accent/40 tracking-widest">
-            {placeholder}
-          </span>
+          <div className="flex h-full w-full items-center justify-center">
+            <span className="text-4xl font-semibold tracking-[0.2em] text-accent/30">
+              {placeholder}
+            </span>
+          </div>
         )}
+
+        {/* Subtle image overlay */}
+        <div className="pointer-events-none absolute inset-0 bg-charcoal/[0.02]" />
       </div>
 
       {/* Content */}
-      <div className="p-8">
-        <p className="text-xs uppercase tracking-widest text-accent mb-2">{category}</p>
-        <p className="text-lg font-medium mb-2">{name}</p>
-        <p className="text-sm text-muted">{desc}</p>
+      <div className="flex h-[calc(100%-1px)] flex-col p-7 md:p-9">
+        <p className="mb-4 text-[11px] uppercase tracking-[0.2em] text-accent">
+          {category}
+        </p>
+
+        <h3 className="text-2xl font-medium tracking-tight md:text-3xl">
+          {name}
+        </h3>
+
+        <div className="my-5 h-px w-10 bg-accent/60 transition-all duration-300 group-hover:w-16" />
+
+        <p className="max-w-xl text-sm leading-7 text-muted">
+          {desc}
+        </p>
       </div>
-    </div>
+    </article>
   );
 }
