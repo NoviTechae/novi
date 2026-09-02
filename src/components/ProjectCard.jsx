@@ -27,7 +27,7 @@ export default function ProjectCard({
             src={image}
             alt={`${name} project`}
             className={`h-full w-full transition-transform duration-500 group-hover:scale-[1.02] ${imageFit === "contain"
-                ? "object-contain p-8"
+                ? "object-contain p-3 md:p-4"
                 : "object-cover"
               }`}
             onError={() => setImgError(true)}
