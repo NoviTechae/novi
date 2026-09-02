@@ -2,6 +2,7 @@
 // src/components/ProjectCard.jsx
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function ProjectCard({
   name,
@@ -9,12 +10,12 @@ export default function ProjectCard({
   desc,
   image,
   placeholder,
+  href,
 }) {
   const [imgError, setImgError] = useState(false);
 
-  return (
+  const cardContent = (
     <article className="group relative h-full overflow-hidden border border-border bg-beige transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-sm">
-      
       {/* Corner detail */}
       <span className="absolute right-0 top-0 z-10 h-8 w-8 border-r border-t border-accent" />
 
@@ -35,7 +36,6 @@ export default function ProjectCard({
           </div>
         )}
 
-        {/* Subtle image overlay */}
         <div className="pointer-events-none absolute inset-0 bg-charcoal/[0.02]" />
       </div>
 
@@ -54,7 +54,25 @@ export default function ProjectCard({
         <p className="max-w-xl text-sm leading-7 text-muted">
           {desc}
         </p>
+
+        {href && (
+          <span className="mt-6 text-sm font-medium text-charcoal transition group-hover:text-accent">
+            Explore project →
+          </span>
+        )}
       </div>
     </article>
+  );
+
+  if (!href) return cardContent;
+
+  return (
+    <Link
+      href={href}
+      className="block h-full"
+      aria-label={`Explore ${name}`}
+    >
+      {cardContent}
+    </Link>
   );
 }

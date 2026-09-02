@@ -60,8 +60,9 @@ const projects = [
     name: "Glowee",
     category: "منصة تقنية لقطاع التجميل",
     desc: "منصة إماراتية تربط العملاء بالصالونات وخدمات التجميل المنزلية من خلال الحجوزات والهدايا والمكافآت، مع منصات مخصصة لإدارة الأعمال والإدارة التشغيلية.",
-    image: "/projects/glowee.jpeg",
+    image: "/projects/glowee-icon.png",
     placeholder: "GL",
+    href:"/ar/projects/glowee"
   },
   {
     name: "Samar App",
@@ -69,6 +70,7 @@ const projects = [
     desc: "منصة جوال تفاعلية تم تطويرها لدعم التعلم والتواصل والأنشطة المنظمة لأصحاب الهمم، مع تجارب مخصصة للطلاب والمعلمين والإدارة.",
     image: "/projects/samar.png",
     placeholder: "SA",
+    href:"/ar/projects/samar"
   },
 ];
 

@@ -43,8 +43,9 @@ const projects = [
     name: "Glowee",
     category: "Beauty Technology Platform",
     desc: "A UAE beauty platform connecting customers with salons and home-service businesses through bookings, gifting, and rewards, supported by dedicated business and administration platforms.",
-    image: "/projects/glowee.jpeg",
+    image: "/projects/glowee-icon.png",
     placeholder: "GL",
+    href:"/en/projects/glowee"
   },
   {
     name: "Samar App",
@@ -52,6 +53,7 @@ const projects = [
     desc: "An interactive mobile platform developed to support learning, communication, and structured activities for People of Determination, with dedicated experiences for students, educators, and administrators.",
     image: "/projects/samar.png",
     placeholder: "SA",
+    href:"/en/projects/samar"
   },
 ];
 
