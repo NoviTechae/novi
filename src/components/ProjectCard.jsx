@@ -21,24 +21,20 @@ export default function ProjectCard({
       <span className="absolute right-0 top-0 z-10 h-8 w-8 border-r border-t border-accent" />
 
       {/* Image */}
-      <div className="relative aspect-[16/10] w-full overflow-hidden bg-border/20">
-        {!imgError ? (
-          <img
-            src={image}
-            alt={`${name} project`}
-            className={`h-full w-full transition-transform duration-500 group-hover:scale-[1.02] ${imageFit === "contain"
-                ? "object-contain p-3 md:p-4"
-                : "object-cover"
-              }`}
-            onError={() => setImgError(true)}
-          />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center">
-            <span className="text-4xl font-semibold tracking-[0.2em] text-accent/30">
-              {placeholder}
-            </span>
-          </div>
-        )}
+      <div className="relative aspect-square w-full overflow-hidden bg-border/20">        {!imgError ? (
+        <img
+          src={image}
+          alt={`${name} project`}
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+          onError={() => setImgError(true)}
+        />
+      ) : (
+        <div className="flex h-full w-full items-center justify-center">
+          <span className="text-4xl font-semibold tracking-[0.2em] text-accent/30">
+            {placeholder}
+          </span>
+        </div>
+      )}
 
         <div className="pointer-events-none absolute inset-0 bg-charcoal/[0.02]" />
       </div>
