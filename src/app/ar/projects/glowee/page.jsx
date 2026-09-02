@@ -24,6 +24,7 @@ export default function GloweeProjectPageAR() {
           category="منصة تقنية لقطاع التجميل"
           intro="منصة إماراتية تجمع الحجوزات والهدايا والولاء وإدارة أعمال التجميل ضمن تجربة رقمية مترابطة."
           image="/projects/glowee-icon.png"
+          imageFit="contain"
           status="متوفر على App Store"
           primaryAction={{
             label: "تحميل من App Store",

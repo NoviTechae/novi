@@ -21,6 +21,7 @@ export default function GloweeProjectPage() {
           category="Beauty Technology Platform"
           intro="A UAE beauty platform bringing bookings, gifting, loyalty, and business management into one connected digital experience."
           image="/projects/glowee-icon.png"
+          imageFit="contain"
           status="Live on the App Store"
           primaryAction={{
             label: "Download on the App Store",
