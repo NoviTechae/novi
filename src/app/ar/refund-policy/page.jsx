@@ -1,58 +1,212 @@
-// src/app/ar/refund-policy/page.jsx
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "سياسة الاسترداد | نوفيتك",
-  description: "سياسة الاسترداد والإلغاء لشركة NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C",
+  description:
+    "سياسة الاسترداد والإلغاء لشركة NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C",
 };
 
-const LEGAL_NAME = "NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C";
+const LEGAL_NAME =
+  "NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C";
 
 const summary = [
-  { label: "الإلغاء قبل البدء", value: "استرداد الدفعة الأولى ممكن" },
-  { label: "الإلغاء في منتصف المشروع", value: "الدفع مقابل العمل المنجز فقط" },
-  { label: "العيوب بعد التسليم", value: "إصلاح مجاني خلال فترة الضمان" },
-  { label: "المنتجات الرقمية", value: "غير قابلة للاسترداد بعد الوصول" },
-  { label: "تكاليف الأطراف الثالثة", value: "غير قابلة للاسترداد" },
+  {
+    label: "الإلغاء قبل بدء العمل",
+    value: "قد يكون مؤهلاً لاسترداد الدفعة المقدمة",
+  },
+  {
+    label: "الإلغاء أثناء المشروع",
+    value: "الدفع مقابل العمل المنجز والتكاليف المتكبدة",
+  },
+  {
+    label: "العيوب بعد التسليم",
+    value: "المعالجة ضمن نطاق الضمان المتفق عليه",
+  },
+  {
+    label: "المنتجات الرقمية",
+    value: "غير قابلة للاسترداد غالباً بعد الوصول",
+  },
+  {
+    label: "تكاليف الأطراف الثالثة",
+    value: "غير قابلة للاسترداد بعد تكبدها",
+  },
 ];
 
 const sections = [
-  { id: "overview", title: "١. نظرة عامة", content: `تنطبق هذه السياسة على جميع خدمات ومنتجات ${LEGAL_NAME}. يُعالَج كل طلب استرداد بشكل فردي وفق الإرشادات أدناه.` },
-  { id: "deposits", title: "٢. الدفعات الأولى", content: `الدفعات الأولى غير قابلة للاسترداد بمجرد بدء العمل.\n\nإذا تم الإلغاء قبل بدء أي عمل وقبل اجتماع الانطلاق، قد يُستردّ المبلغ وفق تقدير نوفيتك.` },
-  { id: "milestones", title: "٣. المشاريع القائمة على المراحل", content: `• المدفوعات للمراحل المكتملة غير قابلة للاسترداد.\n• الإلغاء في منتصف مرحلة: تُصدر فاتورة بالعمل المنجز. أي دفع زائد يُستردّ.` },
-  { id: "cancellation", title: "٤. إلغاء المشروع", content: `عند الإلغاء:\n١. ملخص للأعمال المنجزة.\n٢. فاتورة بالعمل المكتمل بالسعر المتفق عليه.\n٣. تسليم المخرجات عند الدفع النهائي.\n٤. استرداد أي دفع زائد خلال ١٤ يوم عمل.` },
-  { id: "defects", title: "٥. العيوب والضمان", content: `فترة ضمان (عادةً ٣٠ يوماً) لإصلاح الأخطاء الناجمة عن عملنا مجاناً.\n\nطلبات الاسترداد تُنظر فقط إذا:\n• تم الإبلاغ خلال فترة الضمان\n• المشكلة قابلة للتكرار وناجمة عن تطبيقنا\n• أُعطيت نوفيتك فرصة معقولة للحل` },
-  { id: "digital-products", title: "٦. المنتجات الرقمية", content: `• تصبح غير قابلة للاسترداد بمجرد الوصول إليها أو تنزيلها.\n• إذا كانت مختلفة جوهرياً عن وصفها، يُستردّ المبلغ خلال ٧ أيام.` }, { id: "mobile-games", title: "٧. التطبيقات والألعاب", content: `للتطبيقات الموزعة عبر App Store أو Google Play:\n• تخضع لسياسة المتجر المعني.\n• • لا تستطيع نوفيتك معالجة طلبات الاسترداد الخاصة بالمشتريات التي تتم عبر متاجر التطبيقات التابعة لجهات خارجية.` },
-  { id: "non-refundable", title: "٨. البنود غير القابلة للاسترداد", content: `• تكاليف الأطراف الثالثة (نطاقات، استضافة، APIs، رسوم المتاجر)\n• رسوم التسليم العاجل\n• المراحل المكتملة والمعتمدة\n• الاستشارات التي أُجريت\n• العمل المتأخر بسبب العميل` },
-  { id: "process", title: "٩. كيفية طلب الاسترداد", content: `تواصل عبر novitech.ae/ar/contact مع:\n• اسمك ومرجع المشروع\n• الدفعة المعنية\n• وصف واضح للسبب\n\nنؤكد استلام الطلب خلال يومي عمل ونسعى إلى معالجته خلال ١٠ أيام عمل.` },
-  { id: "governing-law", title: "١٠. القانون المعمول به", content: `تخضع هذه السياسة لقوانين الإمارات وتختص محاكمها بالنظر في النزاعات.` },
+  {
+    id: "overview",
+    title: "١. نظرة عامة",
+    content: `تنطبق سياسة الاسترداد هذه على الخدمات والمنتجات التي تقدمها ${LEGAL_NAME} تحت الاسم التجاري نوفيتك.
+
+يتم تقييم طلبات الاسترداد والتعديلات المالية والإلغاءات وفقاً لطبيعة الخدمة، ومرحلة المشروع، والأعمال المنجزة، والتكاليف التي تم تكبدها، وأحكام اتفاقية المشروع أو شروط الشراء ذات الصلة.`,
+  },
+  {
+    id: "deposits",
+    title: "٢. الدفعات المقدمة",
+    content: `قد تصبح الدفعات المقدمة أو المبالغ المدفوعة مسبقاً غير قابلة للاسترداد بمجرد بدء العمل أو تكبد تكاليف مرتبطة بالمشروع.
+
+إذا تم إلغاء المشروع قبل بدء العمل، فقد تقوم نوفيتك برد جزء من الدفعة المقدمة أو كاملها، وذلك بحسب اتفاقية المشروع وما إذا تم بالفعل تكبد أي تكاليف إدارية أو تخطيطية أو تكاليف أطراف ثالثة أو تكاليف أخرى مرتبطة بالمشروع.`,
+  },
+  {
+    id: "milestones",
+    title: "٣. المشاريع القائمة على المراحل",
+    content: `بالنسبة للمشاريع المقسمة إلى مراحل:
+
+• المدفوعات المتعلقة بالمراحل المكتملة والمقبولة تكون غير قابلة للاسترداد عادةً.
+• إذا تم إلغاء المشروع أثناء مرحلة جارية، يبقى العميل مسؤولاً عن قيمة الأعمال المنجزة والتكاليف المتكبدة حتى تاريخ الإلغاء الفعلي.
+• أي مبالغ مدفوعة تزيد عن المبلغ المستحق فعلياً قد تكون قابلة للاسترداد.
+• يتم تحديد نطاق المرحلة واكتمالها وفق المخرجات ومعايير القبول المحددة في اتفاقية المشروع ذات الصلة.`,
+  },
+  {
+    id: "cancellation",
+    title: "٤. إلغاء المشروع",
+    content: `في حال إلغاء المشروع:
+
+١. يجوز لنوفيتك إعداد ملخص بالأعمال المنجزة والتكاليف المتكبدة.
+٢. يبقى العميل مسؤولاً عن جميع المبالغ المستحقة مقابل الأعمال المكتملة والمراحل المعتمدة وأي تكاليف غير قابلة للإلغاء أو تكاليف أطراف ثالثة تم تكبدها.
+٣. يجوز تسليم المخرجات المستحقة للعميل بعد سداد جميع المبالغ المتعلقة بالأعمال المنجزة.
+٤. إذا نتج عن التسوية وجود مبلغ زائد مدفوع من العميل، يتم رد الرصيد المستحق خلال فترة معالجة معقولة.`,
+  },
+  {
+    id: "defects",
+    title: "٥. العيوب والضمان",
+    content: `إذا كان المشروع يتضمن فترة ضمان أو فترة تصحيح بعد التسليم، فسيتم تحديد مدتها ونطاقها في اتفاقية المشروع ذات الصلة.
+
+خلال هذه الفترة، قد تقوم نوفيتك بإصلاح العيوب القابلة للتكرار والناجمة مباشرة عن تنفيذ نوفيتك، بشرط أن تكون ضمن نطاق المشروع المتفق عليه.
+
+لا يتم إصدار استرداد عادةً إذا كان بإمكان نوفيتك معالجة العيب بشكل معقول.
+
+ولا يشمل الضمان المشكلات الناتجة عن:
+
+• تعديلات يجريها العميل أو طرف ثالث
+• خدمات أو واجهات برمجية أو مزودي استضافة أو منصات خارجية
+• تحديثات أنظمة التشغيل أو المتصفحات أو المتاجر أو المنصات
+• الاستخدام غير الصحيح أو الاستخدام خارج المواصفات المتفق عليها
+• الميزات أو التغييرات أو المتطلبات الخارجة عن نطاق المشروع الأصلي`,
+  },
+  {
+    id: "digital-products",
+    title: "٦. المنتجات الرقمية",
+    content: `تكون المنتجات الرقمية والمواد القابلة للتنزيل والقوالب والبرمجيات والتراخيص وأي محتوى رقمي متاح فوراً غير قابلة للاسترداد عادةً بعد الوصول إليها أو تنزيلها أو تفعيلها أو تسليمها.
+
+إذا كان منتج رقمي تم شراؤه مباشرة من نوفيتك مختلفاً بشكل جوهري عن الوصف المنشور، أو تعذر الوصول إليه بسبب خلل يرجع إلى نوفيتك، فيجب على العميل التواصل معنا في أقرب وقت حتى تتم مراجعة الحالة، وقد يتم حسب الحالة إصلاح المشكلة أو استبدال المنتج أو إصدار رصيد أو استرداد.
+
+وتطبق كذلك أي شروط استرداد خاصة بالمنتج يتم عرضها وقت الشراء.`,
+  },
+  {
+    id: "mobile-games",
+    title: "٧. التطبيقات والألعاب",
+    content: `بالنسبة للتطبيقات أو الألعاب أو المنتجات الرقمية التي يتم شراؤها من خلال منصات خارجية مثل Apple App Store أو Google Play:
+
+• تخضع طلبات الاسترداد لقواعد وإجراءات المنصة المعنية.
+• لا تستطيع نوفيتك معالجة المبالغ المستردة مباشرة للمشتريات التي تتم فوترتها ومعالجتها من خلال متجر خارجي.
+• تخضع المنتجات أو التراخيص المشتراة مباشرة من نوفيتك لسياسة الاسترداد هذه وأي شروط خاصة بالمنتج يتم توضيحها وقت الشراء.`,
+  },
+  {
+    id: "non-refundable",
+    title: "٨. البنود غير القابلة للاسترداد",
+    content: `تكون المبالغ التالية غير قابلة للاسترداد عادةً بعد تكبدها أو تسليمها أو إتمامها:
+
+• تكاليف الأطراف الثالثة، بما في ذلك النطاقات والاستضافة وواجهات البرمجة والتراخيص والاشتراكات ورسوم متاجر التطبيقات والخدمات الخارجية
+• رسوم التسليم العاجل أو المستعجل
+• المراحل المكتملة والمقبولة
+• الاستشارات أو جلسات التوجيه التي تم تقديمها
+• الأعمال التي تم إنجازها قبل الإلغاء
+• الأعمال المخصصة التي تم تطويرها وفق المواصفات المعتمدة
+• التكاليف أو الأعمال الناتجة عن تأخيرات أو تغييرات أو عدم استجابة من جانب العميل
+
+ولا يحد أي نص في هذا القسم من أي حقوق لا يجوز قانوناً استبعادها وفقاً للقوانين المعمول بها.`,
+  },
+  {
+    id: "process",
+    title: "٩. كيفية طلب الاسترداد",
+    content: `لطلب استرداد أو لمناقشة مشكلة تتعلق بدفعة مالية، تواصل مع نوفيتك من خلال novitech.ae/ar/contact وقدّم:
+
+• اسمك
+• مرجع المشروع أو الفاتورة أو الطلب أو الدفعة
+• الدفعة المعنية
+• وصفاً واضحاً لسبب الطلب
+• أي معلومات أو مستندات داعمة تساعد في مراجعة الحالة
+
+ستقوم نوفيتك بمراجعة الطلب والرد خلال فترة زمنية معقولة، وقد نطلب معلومات إضافية عند الحاجة.`,
+  },
+  {
+    id: "governing-law",
+    title: "١٠. القانون المعمول به",
+    content: `تخضع سياسة الاسترداد هذه لقوانين دولة الإمارات العربية المتحدة.
+
+ويخضع أي نزاع يتعلق بهذه السياسة لاختصاص المحاكم المختصة في دولة الإمارات العربية المتحدة، ما لم يتم الاتفاق كتابياً على خلاف ذلك.`,
+  },
 ];
 
 export default function RefundPolicyPageAR() {
   return (
-    <main className="min-h-screen bg-beige text-charcoal px-6 md:px-10 py-10 md:py-14" dir="rtl">
+    <main
+      className="min-h-screen bg-beige text-charcoal px-6 md:px-10 py-10 md:py-14"
+      dir="rtl"
+    >
       <Navbar />
+
       <div className="max-w-3xl mx-auto py-16">
         <div className="mb-12">
-          <p className="text-xs uppercase tracking-widest text-accent mb-3">قانوني</p>
-          <h1 className="text-4xl font-bold tracking-tight mb-4">سياسة الاسترداد</h1>
-          <p className="text-sm text-muted">آخر تحديث: <span className="text-charcoal">مارس ٢٠٢٦</span></p>
+          <p className="text-xs uppercase tracking-widest text-accent mb-3">
+            قانوني
+          </p>
+
+          <h1 className="text-4xl font-bold tracking-tight mb-4">
+            سياسة الاسترداد
+          </h1>
+
+          <p className="text-sm text-muted">
+            آخر تحديث:{" "}
+            <span className="text-charcoal">
+              سبتمبر ٢٠٢٦
+            </span>
+          </p>
+
           <div className="mt-4 border border-border p-4">
-            <p className="text-xs uppercase tracking-widest text-accent mb-1">الاسم القانوني</p>
-            <p className="text-sm font-medium">{LEGAL_NAME}</p>
+            <p className="text-xs uppercase tracking-widest text-accent mb-1">
+              الاسم القانوني
+            </p>
+
+            <p
+              dir="ltr"
+              className="text-sm font-medium text-right"
+            >
+              {LEGAL_NAME}
+            </p>
+
+            <p className="text-xs text-muted mt-1">
+              مسجلة في دولة الإمارات العربية المتحدة
+            </p>
           </div>
-          <p className="mt-4 text-muted leading-relaxed">نحن واثقون من جودة عملنا. هذه السياسة توضح متى يمكن إصدار المبالغ المستردة.</p>
+
+          <p className="mt-4 text-muted leading-relaxed">
+            نحن نحرص على جودة أعمالنا. توضح هذه السياسة كيفية التعامل مع
+            الإلغاءات والتعديلات المالية وطلبات الاسترداد.
+          </p>
         </div>
 
         {/* Quick Summary */}
         <div className="border border-border p-6 mb-8">
-          <p className="text-xs uppercase tracking-widest text-accent mb-4">ملخص سريع</p>
+          <p className="text-xs uppercase tracking-widest text-accent mb-4">
+            ملخص سريع
+          </p>
+
           <div className="space-y-3">
             {summary.map((item) => (
-              <div key={item.label} className="flex items-center justify-between text-sm border-b border-border pb-2 last:border-0 last:pb-0">
-                <span className="text-muted">{item.label}</span>
-                <span className="text-charcoal">{item.value}</span>
+              <div
+                key={item.label}
+                className="flex flex-col gap-1 border-b border-border pb-3 text-sm last:border-0 last:pb-0 sm:flex-row sm:items-center sm:justify-between"
+              >
+                <span className="text-muted">
+                  {item.label}
+                </span>
+
+                <span className="text-charcoal sm:text-left">
+                  {item.value}
+                </span>
               </div>
             ))}
           </div>
@@ -60,24 +214,42 @@ export default function RefundPolicyPageAR() {
 
         {/* TOC */}
         <div className="border border-border p-6 mb-12">
-          <p className="text-xs uppercase tracking-widest text-accent mb-4">المحتويات</p>
+          <p className="text-xs uppercase tracking-widest text-accent mb-4">
+            المحتويات
+          </p>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
-            {sections.map((s) => (
-              <a key={s.id} href={`#${s.id}`} className="text-sm text-muted hover:text-charcoal transition py-1">{s.title}</a>
+            {sections.map((section) => (
+              <a
+                key={section.id}
+                href={`#${section.id}`}
+                className="text-sm text-muted hover:text-charcoal transition py-1"
+              >
+                {section.title}
+              </a>
             ))}
           </div>
         </div>
 
         <div className="space-y-10">
-          {sections.map((s) => (
-            <section key={s.id} id={s.id} className="scroll-mt-8">
-              <h2 className="text-lg font-semibold mb-3">{s.title}</h2>
-              <p className="text-muted leading-relaxed text-[15px] whitespace-pre-line">{s.content}</p>
+          {sections.map((section) => (
+            <section
+              key={section.id}
+              id={section.id}
+              className="scroll-mt-28"
+            >
+              <h2 className="text-lg font-semibold mb-3">
+                {section.title}
+              </h2>
+
+              <p className="text-muted leading-relaxed text-[15px] whitespace-pre-line">
+                {section.content}
+              </p>
             </section>
           ))}
         </div>
-
       </div>
+
       <Footer />
     </main>
   );

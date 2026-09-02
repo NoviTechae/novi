@@ -1,68 +1,192 @@
-// ═══════════════════════════════════════════════════
-// src/app/ar/terms/page.jsx
-// ═══════════════════════════════════════════════════
-// انسخ كل section لملفه المناسب
-
-// ─── ar/terms/page.jsx ────────────────────────────
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const LEGAL_NAME = "NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C";
+export const metadata = {
+  title: "شروط الخدمة | نوفيتك",
+  description:
+    "شروط وأحكام خدمات NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C.",
+};
 
-/* ══════════════════════════════
-   TERMS
-══════════════════════════════ */
+const LEGAL_NAME =
+  "NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C";
+
 const termsSections = [
-  { id: "parties", title: "١. أطراف الاتفاقية", content: `تُعدّ هذه الشروط اتفاقية ملزمة بينك ("العميل") وبين ${LEGAL_NAME}، شركة مسجلة في الإمارات، تعمل تحت الاسم التجاري نوفيتك على novitech.ae.` },
-  { id: "acceptance", title: "٢. قبول الشروط", content: `بالوصول إلى خدمات نوفيتك أو استخدامها، فإنك توافق على الالتزام بهذه الشروط. وإذا كنت لا توافق عليها، يرجى عدم استخدام خدماتنا.` },
-  { id: "services", title: "٣. الخدمات", content: `تقدم نوفيتك:\n\n• تطوير المواقع والتطبيقات\n• تطوير تطبيقات الجوال (iOS و Android)\n• برمجيات مخصصة\n• أنظمة إدارية\n• حلول الذكاء الاصطناعي\n• الألعاب والتجارب الرقمية\n• استشارات تقنية وحلول برمجية مخصصة\n\nويتم تحديد نطاق العمل والمدة الزمنية والمخرجات في اتفاقية مكتوبة منفصلة.` },
-  { id: "client-responsibilities", title: "٤. مسؤوليات العميل", content: `يتحمل العميل مسؤولية تقديم متطلبات دقيقة وتغذية راجعة في الوقت المناسب. التأخيرات الناجمة عن العميل لا تقع على عاتق نوفيتك.` },
-  { id: "intellectual-property", title: "٥. الملكية الفكرية", content: `عند اكتمال الدفع يحصل العميل على ملكية المنتجات المخصصة المتفق عليها. تحتفظ نوفيتك بملكية الأطر والأدوات المطورة بشكل مستقل.` },
-  { id: "payment", title: "٦. شروط الدفع", content: `تُحدَّد شروط الدفع في اتفاقية المشروع. تحتفظ نوفيتك بحق إيقاف العمل عند عدم استيفاء الالتزامات.` },
-  { id: "confidentiality", title: "٧. السرية", content: `يلتزم الطرفان بسرية المعلومات المشتركة خلال التعامل. يستمر هذا الالتزام بعد إنهاء الاتفاقية.` },
-  { id: "limitation", title: "٨. تحديد المسؤولية", content: `لا تتجاوز مسؤولية نوفيتك المبلغ المدفوع مقابل الخدمة المعنية. لا نتحمل الأضرار غير المباشرة.` },
-  { id: "warranties", title: "٩. الضمانات", content: `يُنجز العمل باحترافية وفق المواصفات المتفق عليها.` },
-  { id: "termination", title: "١٠. الإنهاء", content: `يحق لأي طرف الإنهاء بإشعار كتابي. يدفع العميل مقابل العمل المنجز حتى تاريخ الإنهاء.` },
-  { id: "governing-law", title: "١١. القانون المعمول به", content: `تخضع هذه الشروط لقوانين الإمارات وتختص محاكمها بالنظر في النزاعات.` },
-  { id: "contact", title: "١٢. التواصل", content: `لأي استفسارات متعلقة بهذه الشروط، يرجى التواصل عبر البريد الإلكتروني info@novitech.ae أو زيارة صفحة التواصل على novitech.ae/ar/contact` },
+  {
+    id: "parties",
+    title: "١. أطراف الاتفاقية",
+    content: `تُعد هذه الشروط اتفاقية ملزمة قانوناً بينك ("العميل") وبين ${LEGAL_NAME}، وهي شركة مسجلة في دولة الإمارات العربية المتحدة وتعمل تحت الاسم التجاري نوفيتك من خلال novitech.ae.`,
+  },
+  {
+    id: "acceptance",
+    title: "٢. قبول الشروط",
+    content: `من خلال الوصول إلى موقع نوفيتك أو خدماتها أو منتجاتها الرقمية أو استخدامها، فإنك توافق على الالتزام بهذه الشروط. إذا كنت لا توافق على هذه الشروط، يرجى عدم استخدام خدماتنا.`,
+  },
+  {
+    id: "services",
+    title: "٣. الخدمات",
+    content: `تقدم نوفيتك خدمات تشمل:
+
+• تطوير المواقع ومنصات الويب
+• تطوير تطبيقات الجوال (iOS وAndroid)
+• تطوير البرمجيات المخصصة
+• الأنظمة الإدارية وأنظمة الأعمال
+• الحلول المدعومة بالذكاء الاصطناعي
+• الألعاب والتجارب الرقمية التفاعلية
+• الاستشارات التقنية والحلول البرمجية المخصصة
+
+يتم تحديد نطاق العمل والجدول الزمني والمخرجات ومتطلبات المشروع وأي شروط دعم أو ضمان مطبقة في اتفاقية مكتوبة أو عرض مشروع أو نطاق عمل أو فاتورة منفصلة.`,
+  },
+  {
+    id: "client-responsibilities",
+    title: "٤. مسؤوليات العميل",
+    content: `يتحمل العميل مسؤولية تقديم متطلبات دقيقة، والملاحظات والموافقات في الوقت المناسب، بالإضافة إلى المحتوى والملفات وبيانات الدخول وأي معلومات أخرى مطلوبة بشكل معقول لإتمام المشروع.
+
+قد تؤثر التأخيرات الناتجة عن عدم توفير المعلومات أو الموافقات أو المتطلبات المرتبطة بالعميل على الجدول الزمني للمشروع، ولا تتحمل نوفيتك مسؤولية هذه التأخيرات.`,
+  },
+  {
+    id: "intellectual-property",
+    title: "٥. الملكية الفكرية",
+    content: `عند سداد جميع المبالغ المستحقة بالكامل، يمتلك العميل المخرجات المخصصة التي تم تطويرها خصيصاً له، وفقاً لما هو محدد في اتفاقية المشروع ذات الصلة.
+
+تحتفظ ${LEGAL_NAME} بملكية حقوق الملكية الفكرية السابقة للمشروع، والأطر البرمجية الخاصة بها، والأدوات الداخلية، والمكونات القابلة لإعادة الاستخدام، والمكتبات، والأساليب، وأي مواد أخرى تم تطويرها بشكل مستقل عن مشروع العميل، ما لم يتم الاتفاق كتابياً على خلاف ذلك.`,
+  },
+  {
+    id: "payment",
+    title: "٦. شروط الدفع",
+    content: `تُحدد شروط الدفع، بما في ذلك أي دفعة مقدمة أو دفعات مرحلية أو جدول للدفع أو رصيد نهائي، في اتفاقية المشروع أو عرض المشروع أو الفاتورة ذات الصلة.
+
+يحق لنوفيتك إيقاف أو تعليق العمل في حال عدم الوفاء بالتزامات الدفع في الموعد المتفق عليه، وقد يتم تعديل الجدول الزمني للمشروع وفقاً لذلك.
+
+ما لم يتم الاتفاق كتابياً على خلاف ذلك، يجوز حجب المخرجات إلى حين سداد جميع المبالغ المستحقة المتعلقة بالمشروع.`,
+  },
+  {
+    id: "confidentiality",
+    title: "٧. السرية",
+    content: `يلتزم الطرفان بالحفاظ على سرية أي معلومات غير عامة أو خاصة أو تجارية أو تقنية أو حساسة يتم تبادلها خلال فترة التعامل.
+
+ويستمر هذا الالتزام بعد إتمام المشروع أو إنهائه، باستثناء الحالات التي يتطلب فيها القانون الإفصاح عن المعلومات أو إذا أصبحت المعلومات متاحة للعامة دون أي إخلال بهذه الشروط.`,
+  },
+  {
+    id: "limitation",
+    title: "٨. تحديد المسؤولية",
+    content: `إلى أقصى حد يسمح به القانون المعمول به، لا تتجاوز المسؤولية الإجمالية لـ${LEGAL_NAME} الناشئة عن خدمة أو مشروع محدد إجمالي المبلغ الذي دفعه العميل مقابل تلك الخدمة أو ذلك المشروع.
+
+ولا تتحمل نوفيتك المسؤولية عن الأضرار غير المباشرة أو العرضية أو الخاصة أو التبعية أو خسارة الأرباح الناتجة عن استخدام أي خدمة أو مخرج أو عدم القدرة على استخدامه.`,
+  },
+  {
+    id: "warranties",
+    title: "٩. الضمانات وإخلاء المسؤولية",
+    content: `تنجز نوفيتك أعمالها بمهنية ووفقاً للمواصفات المتفق عليها لكل مشروع.
+
+تقتصر أي فترة ضمان أو دعم أو صيانة أو تصحيح بعد التسليم على المدة والنطاق المحددين في اتفاقية المشروع ذات الصلة.
+
+ولا تضمن نوفيتك التشغيل المستمر أو الخالي من الأخطاء خارج النطاق المتفق عليه، وبالأخص عندما تنتج المشكلات عن خدمات أو منصات خارجية، أو تعديلات يجريها العميل، أو مزودي الاستضافة، أو تحديثات أنظمة التشغيل، أو أي عوامل أخرى خارجة عن سيطرة نوفيتك.`,
+  },
+  {
+    id: "termination",
+    title: "١٠. الإنهاء",
+    content: `يجوز لأي من الطرفين إنهاء المشروع بإشعار كتابي، وذلك وفقاً لشروط اتفاقية المشروع ذات الصلة.
+
+ويظل العميل مسؤولاً عن سداد قيمة الأعمال التي تم إنجازها والتكاليف التي تم تحملها وأي التزامات غير قابلة للإلغاء حتى تاريخ سريان الإنهاء.
+
+ويتم تسليم أي مخرجات مستحقة للعميل بعد سداد جميع المبالغ المستحقة المتعلقة بالأعمال المنجزة.`,
+  },
+  {
+    id: "governing-law",
+    title: "١١. القانون المعمول به",
+    content: `تخضع هذه الشروط لقوانين دولة الإمارات العربية المتحدة.
+
+ويخضع أي نزاع ينشأ عن هذه الشروط أو يتعلق بها أو بخدمات نوفيتك لاختصاص المحاكم المختصة في دولة الإمارات العربية المتحدة، ما لم يتم الاتفاق كتابياً على خلاف ذلك.`,
+  },
+  {
+    id: "contact",
+    title: "١٢. التواصل",
+    content: `لأي استفسارات متعلقة بهذه الشروط، يرجى التواصل مع نوفيتك عبر البريد الإلكتروني info@novitech.ae أو من خلال صفحة التواصل على novitech.ae/ar/contact.`,
+  },
 ];
 
-export function ARTermsPage() {
+export default function ARTermsPage() {
   return (
-    <main className="min-h-screen bg-beige text-charcoal px-6 md:px-10 py-10 md:py-14" dir="rtl">
+    <main
+      className="min-h-screen bg-beige text-charcoal px-6 md:px-10 py-10 md:py-14"
+      dir="rtl"
+    >
       <Navbar />
+
       <div className="max-w-3xl mx-auto py-16">
         <div className="mb-12">
-          <p className="text-xs uppercase tracking-widest text-accent mb-3">قانوني</p>
-          <h1 className="text-4xl font-bold tracking-tight mb-4">شروط الخدمة</h1>
-          <p className="text-sm text-muted">آخر تحديث: <span className="text-charcoal">مارس ٢٠٢٦</span></p>
+          <p className="text-xs uppercase tracking-widest text-accent mb-3">
+            قانوني
+          </p>
+
+          <h1 className="text-4xl font-bold tracking-tight mb-4">
+            شروط الخدمة
+          </h1>
+
+          <p className="text-sm text-muted">
+            آخر تحديث:{" "}
+            <span className="text-charcoal">
+              سبتمبر ٢٠٢٦
+            </span>
+          </p>
+
           <div className="mt-4 border border-border p-4">
-            <p className="text-xs uppercase tracking-widest text-accent mb-1">الاسم القانوني</p>
-            <p className="text-sm font-medium">{LEGAL_NAME}</p>
-            <p className="text-xs text-muted mt-1">مسجلة في الإمارات العربية المتحدة</p>
+            <p className="text-xs uppercase tracking-widest text-accent mb-1">
+              الاسم القانوني
+            </p>
+
+            <p
+              dir="ltr"
+              className="text-sm font-medium text-right"
+            >
+              {LEGAL_NAME}
+            </p>
+
+            <p className="text-xs text-muted mt-1">
+              مسجلة في دولة الإمارات العربية المتحدة
+            </p>
           </div>
         </div>
+
+        {/* Contents */}
         <div className="border border-border p-6 mb-12">
-          <p className="text-xs uppercase tracking-widest text-accent mb-4">المحتويات</p>
+          <p className="text-xs uppercase tracking-widest text-accent mb-4">
+            المحتويات
+          </p>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
-            {termsSections.map((s) => (
-              <a key={s.id} href={`#${s.id}`} className="text-sm text-muted hover:text-charcoal transition py-1">{s.title}</a>
+            {termsSections.map((section) => (
+              <a
+                key={section.id}
+                href={`#${section.id}`}
+                className="text-sm text-muted hover:text-charcoal transition py-1"
+              >
+                {section.title}
+              </a>
             ))}
           </div>
         </div>
+
         <div className="space-y-10">
-          {termsSections.map((s) => (
-            <section key={s.id} id={s.id} className="scroll-mt-8">
-              <h2 className="text-lg font-semibold mb-3">{s.title}</h2>
-              <p className="text-muted leading-relaxed text-[15px] whitespace-pre-line">{s.content}</p>
+          {termsSections.map((section) => (
+            <section
+              key={section.id}
+              id={section.id}
+              className="scroll-mt-28"
+            >
+              <h2 className="text-lg font-semibold mb-3">
+                {section.title}
+              </h2>
+
+              <p className="text-muted leading-relaxed text-[15px] whitespace-pre-line">
+                {section.content}
+              </p>
             </section>
           ))}
         </div>
       </div>
+
       <Footer />
     </main>
   );
 }
-
-export default ARTermsPage;
