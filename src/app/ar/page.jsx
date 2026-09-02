@@ -61,6 +61,7 @@ const projects = [
     category: "منصة تقنية لقطاع التجميل",
     desc: "منصة إماراتية تربط العملاء بالصالونات وخدمات التجميل المنزلية من خلال الحجوزات والهدايا والمكافآت، مع منصات مخصصة لإدارة الأعمال والإدارة التشغيلية.",
     image: "/projects/glowee-icon.png",
+    imageFit:"contain",
     placeholder: "GL",
     href:"/ar/projects/glowee"
   },

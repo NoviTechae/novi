@@ -44,6 +44,7 @@ const projects = [
     category: "Beauty Technology Platform",
     desc: "A UAE beauty platform connecting customers with salons and home-service businesses through bookings, gifting, and rewards, supported by dedicated business and administration platforms.",
     image: "/projects/glowee-icon.png",
+    imageFit:"contain",
     placeholder: "GL",
     href:"/en/projects/glowee"
   },

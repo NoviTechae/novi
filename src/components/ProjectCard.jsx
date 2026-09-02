@@ -11,6 +11,7 @@ export default function ProjectCard({
   image,
   placeholder,
   href,
+  imageFit = "cover",
 }) {
   const [imgError, setImgError] = useState(false);
 
@@ -25,7 +26,10 @@ export default function ProjectCard({
           <img
             src={image}
             alt={`${name} project`}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+            className={`h-full w-full transition-transform duration-500 group-hover:scale-[1.02] ${imageFit === "contain"
+                ? "object-contain p-8"
+                : "object-cover"
+              }`}
             onError={() => setImgError(true)}
           />
         ) : (
