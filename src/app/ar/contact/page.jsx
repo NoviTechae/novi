@@ -79,14 +79,14 @@ export default function ContactPageAR() {
 
         </div>
 
-        <div className="mt-16 pt-8 border-t border-border">
+        {/* <div className="mt-16 pt-8 border-t border-border">
           <p className="text-xs text-muted leading-relaxed">
             NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C شركة مسجلة في الإمارات. جميع الخدمات تخضع لـ{" "}
             <Link href="/ar/terms" className="underline hover:text-accent transition">الشروط</Link>{" "}
             و<Link href="/ar/privacy" className="underline hover:text-accent transition">الخصوصية</Link>{" "}
             و<Link href="/ar/refund-policy" className="underline hover:text-accent transition">سياسة الاسترداد</Link>.
           </p>
-        </div>
+        </div> */}
 
       </div>
       <Footer />

@@ -86,7 +86,7 @@ export default function ContactPage() {
 
         </div>
 
-        {/* Legal note */}
+        {/* Legal note
         <div className="mt-16 pt-8 border-t border-border">
           <p className="text-xs text-muted leading-relaxed">
             NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C is registered in the UAE. All services subject to our{" "}
@@ -94,7 +94,7 @@ export default function ContactPage() {
             <Link href="/en/privacy" className="underline hover:text-accent transition">Privacy Policy</Link>, and{" "}
             <Link href="/en/refund-policy" className="underline hover:text-accent transition">Refund Policy</Link>.
           </p>
-        </div>
+        </div> */}
 
       </div>
       <Footer />
