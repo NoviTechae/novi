@@ -48,6 +48,33 @@ export async function POST(req: Request) {
       );
     }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: "Invalid email address",
+        },
+        { status: 400 }
+      );
+    }
+
+    if (
+      name.length > 100 ||
+      email.length > 254 ||
+      phone.length > 30 ||
+      message.length > 5000
+    ) {
+      return NextResponse.json(
+        {
+          ok: false,
+          error: "Invalid field length",
+        },
+        { status: 400 }
+      );
+    }
+    
     const safeName = escapeHtml(name);
     const safeEmail = escapeHtml(email);
     const safePhone = escapeHtml(phone || "Not provided");

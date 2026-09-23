@@ -1,3 +1,4 @@
+// src/app/ar/projects/glowee/page.jsx
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductCaseStudy from "@/components/ProductCaseStudy";
@@ -6,6 +7,13 @@ export const metadata = {
   title: "قلوي | منصة تقنية لقطاع التجميل من نوفيتك",
   description:
     "تعرّف على قلوي، منصة إماراتية طورتها نوفيتك لحجوزات الصالونات والخدمات المنزلية والهدايا والمكافآت وإدارة الأعمال.",
+alternates: {
+  canonical: "https://novitech.ae/ar/projects/glowee",
+  languages: {
+    "en-AE": "https://novitech.ae/en/projects/glowee",
+    "ar-AE": "https://novitech.ae/ar/projects/glowee",
+  },
+},
 };
 
 export default function GloweeProjectPageAR() {
@@ -71,7 +79,7 @@ export default function GloweeProjectPageAR() {
             "تطبيق iOS",
             "لوحة إدارة الأعمال",
             "منصة الإدارة",
-            "Backend & APIs",
+            "البنية الخلفية وواجهات API",
             "نظام الحجوزات",
             "نظام الهدايا",
             "المحفظة والمكافآت",
@@ -79,8 +87,7 @@ export default function GloweeProjectPageAR() {
             "الإشعارات الفورية",
           ]}
           availabilityTitle="التوفر"
-          availabilityText="يتوفر Glowee حالياً على Apple App Store، ويتم إطلاقه تدريجياً في سوق التجميل داخل دولة الإمارات."
-          footerTitle="هل تبني منصة تضم مستخدمين متعددين وعمليات وتجارب مترابطة؟"
+          availabilityText="يتوفر Glowee حالياً على Apple App Store، ويجري العمل على ضم أعمال التجميل والتوسع في السوق الإماراتي." footerTitle="هل تبني منصة تضم مستخدمين متعددين وعمليات وتجارب مترابطة؟"
           footerText="تقوم نوفيتك بتصميم وتطوير منتجات رقمية تجمع تجربة العميل وأدوات الأعمال وأنظمة الإدارة والبنية التقنية الخلفية ضمن حل متكامل."
         />
       </div>

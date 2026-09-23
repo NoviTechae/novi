@@ -1,3 +1,4 @@
+// src/app/en/projects/glowee/page.jsx
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductCaseStudy from "@/components/ProductCaseStudy";
@@ -6,6 +7,13 @@ export const metadata = {
   title: "Glowee | Beauty Technology Platform by NoviTech",
   description:
     "Explore Glowee, a UAE beauty platform developed by NoviTech for salon and home-service bookings, gifting, rewards, and business management.",
+    alternates: {
+  canonical: "https://novitech.ae/en/projects/glowee",
+  languages: {
+    "en-AE": "https://novitech.ae/en/projects/glowee",
+    "ar-AE": "https://novitech.ae/ar/projects/glowee",
+  },
+},
 };
 
 export default function GloweeProjectPage() {
@@ -76,8 +84,7 @@ export default function GloweeProjectPage() {
             "Push Notifications",
           ]}
           availabilityTitle="Availability"
-          availabilityText="Glowee is currently available on the Apple App Store and is launching across the UAE beauty market."
-          footerTitle="Building a platform with multiple users, workflows, and business operations?"
+          availabilityText="Glowee is currently available on the Apple App Store, with business onboarding and market expansion underway in the UAE." footerTitle="Building a platform with multiple users, workflows, and business operations?"
           footerText="NoviTech designs and develops connected digital products that combine customer experiences, business tools, administration systems, and backend infrastructure."
         />
       </div>

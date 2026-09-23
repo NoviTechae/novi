@@ -1,3 +1,4 @@
+// src/app/ar/projects/samar/page.jsx
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductCaseStudy from "@/components/ProductCaseStudy";
@@ -6,6 +7,13 @@ export const metadata = {
   title: "سمر | منصة تعليمية مساندة من نوفيتك",
   description:
     "تعرّف على سمر، منصة تفاعلية طورتها نوفيتك لدعم التعلم والتواصل والأنشطة المنظمة ومتابعة التقدم لأصحاب الهمم.",
+  alternates: {
+    canonical: "https://novitech.ae/ar/projects/samar",
+    languages: {
+      "en-AE": "https://novitech.ae/en/projects/samar",
+      "ar-AE": "https://novitech.ae/ar/projects/samar",
+    },
+  },
 };
 
 export default function SamarProjectPageAR() {
@@ -22,9 +30,8 @@ export default function SamarProjectPageAR() {
           eyebrow="منتج مختار"
           name="سمر"
           category="منصة تعليمية مساندة"
-          intro="منصة رقمية تفاعلية صُممت لدعم التعلم والتواصل والأنشطة المنظمة ومتابعة التقدم لأصحاب الهمم."
-          image="/projects/samar.png"
-          status="حالياً في مرحلة التطوير والتحقق"
+          intro="بدأ سمر كمشروع تخرج جامعي، وهو منصة رقمية تفاعلية صُممت لدعم التعلم والتواصل والأنشطة المنظمة ومتابعة التقدم لأصحاب الهمم." image="/projects/samar.png"
+          status="نموذج وظيفي مكتمل"
           problemTitle="المشكلة"
           problem="تختلف احتياجات التعلم والتواصل بين الطلاب، بينما يحتاج المعلمون والمختصون إلى وسائل منظمة لتقديم الأنشطة ومتابعة التقدم وفهم الاستجابات اليومية وإدارة المحتوى التعليمي. وقد تصبح هذه التجربة متفرقة عندما تكون الأنشطة والتقييمات والتواصل ومعلومات التقدم موزعة بين أدوات مختلفة."
           solutionTitle="الحل"
@@ -66,7 +73,7 @@ export default function SamarProjectPageAR() {
             "تجربة الطالب",
             "تجربة المعلم",
             "نظام الإدارة",
-            "Backend & APIs",
+            "البنية الخلفية وواجهات API",
             "نظام التقييمات",
             "متابعة التقدم",
             "أدوات AAC",
@@ -74,8 +81,7 @@ export default function SamarProjectPageAR() {
             "تجربة ثنائية اللغة",
           ]}
           availabilityTitle="المرحلة الحالية"
-          availabilityText="سمر حالياً في مرحلة التطوير والتحقق، ويتم تجهيز المنصة للمراجعة من قبل المختصين والاختبار ضمن نطاق محدود قبل أي إطلاق أوسع للجمهور."
-          footerTitle="هل لديك احتياج حقيقي يمكن للتقنية أن تقدم له حلاً أفضل؟"
+          availabilityText="تم تطوير سمر كنموذج وظيفي متكامل، وعُرضت المنصة ضمن سياقات أكاديمية وعلى جهات ومختصين في المجال للحصول على الملاحظات والتحقق من التجربة، مع إمكانية مواصلة تطويرها واختبارها على نطاق أوسع." footerTitle="هل لديك احتياج حقيقي يمكن للتقنية أن تقدم له حلاً أفضل؟"
           footerText="تطور نوفيتك منصات رقمية مخصصة تجمع المستخدمين والعمليات والبيانات وأدوات الإدارة ضمن منتج عملي وقابل للتوسع."
         />
       </div>

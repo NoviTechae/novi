@@ -4,25 +4,29 @@ import type { ReactNode } from "react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://novitech.ae"),
   title: {
     default: "NoviTech | Custom Software & Web Development",
     template: "%s | NoviTech",
   },
   description:
-    "NoviTech is an Emirati-led tech brand building custom websites, software systems, and AI-powered solutions.",
+    "NoviTech is a UAE-based, Emirati-led technology company building websites, mobile applications, custom software, management systems, and AI-powered solutions.",
   keywords: [
     "NoviTech",
-    "web development UAE",
+    "technology company UAE",
     "software company UAE",
-    "custom software",
-    "AI solutions",
+    "web development UAE",
+    "mobile app development UAE",
+    "custom software UAE",
+    "management systems UAE",
+    "AI solutions UAE",
   ],
   icons: {
     icon: "/favicon.svg",
   },
   openGraph: {
     title: "NoviTech",
-    description: "Building precise digital solutions for real-world needs.",
+    description: "A UAE-based, Emirati-led technology company building digital products and custom technology solutions.",
     url: "https://novitech.ae",
     siteName: "NoviTech",
     type: "website",

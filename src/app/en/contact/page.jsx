@@ -6,17 +6,27 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Contact Us | NoviTech",
-  description: "Get in touch with NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C for custom software, web, mobile, and AI solutions in the UAE.",
+  description:
+    "Get in touch with NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C for custom software, web, mobile, and AI solutions in the UAE.",
+  alternates: {
+    canonical: "https://novitech.ae/en/contact",
+    languages: {
+      "en-AE": "https://novitech.ae/en/contact",
+      "ar-AE": "https://novitech.ae/ar/contact",
+    },
+  },
 };
 
 const contactInfo = [
   { label: "Legal Name", value: "NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C", sub: "As per UAE Trade License" },
   { label: "Email", value: "info@novitech.ae", href: "mailto:info@novitech.ae" },
-  { label: "WhatsApp", value: "+971558198862", href: "https://wa.me/971558198862" },
-  { label: "Phone", value: "+971558198862", href: "tel:+971558198862" },
+  { label: "WhatsApp", value: "971555195426", href: "https://wa.me/971555195426" },
+  { label: "Phone", value: "971555195426", href: "tel:+971555195426" },
   { label: "Address", value: "Al Ain, Abu Dhabi, United Arab Emirates" },
-  { label: "Working Hours", value: "Mon – Fri: 9:00 AM – 6:00 PM (UAE Time)" },
-];
+  {
+    label: "Working Hours",
+    value: "Mon – Thu: 9:00 AM – 6:00 PM | Fri: 8:00 AM – 12:00 PM (UAE Time)",
+  },];
 
 export default function ContactPage() {
   return (
@@ -61,7 +71,7 @@ export default function ContactPage() {
             <div className="pt-2">
               <p className="text-xs uppercase tracking-widest text-accent mb-3">Social</p>
               <div className="flex gap-6 text-sm text-muted">
-                <a href="https://wa.me/971558198862" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">WhatsApp</a>
+                <a href="https://wa.me/971555195426" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">WhatsApp</a>
                 <a href="https://www.instagram.com/novitech.ae" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">Instagram</a>
                 <a href="https://www.tiktok.com/@novitech.ae" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">TikTok</a>
               </div>

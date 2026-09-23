@@ -5,6 +5,13 @@ export const metadata = {
   title: "Privacy Policy | NoviTech",
   description:
     "How NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C collects, uses, and protects your information.",
+  alternates: {
+    canonical: "https://novitech.ae/en/privacy",
+    languages: {
+      "en-AE": "https://novitech.ae/en/privacy",
+      "ar-AE": "https://novitech.ae/ar/privacy",
+    },
+  },
 };
 
 const LEGAL_NAME =

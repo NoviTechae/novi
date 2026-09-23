@@ -23,33 +23,33 @@ export default function Navbar() {
 
   const links = isAr
     ? [
-        {
-          label: "عن نوفيتك",
-          href: isHomePage ? "#about" : `${prefix}#about`,
-        },
-        {
-          label: "الخدمات",
-          href: isHomePage ? "#services" : `${prefix}#services`,
-        },
-        {
-          label: "المشاريع",
-          href: isHomePage ? "#projects" : `${prefix}#projects`,
-        },
-      ]
+      {
+        label: "عن نوفيتك",
+        href: isHomePage ? "#about" : `${prefix}#about`,
+      },
+      {
+        label: "الخدمات",
+        href: isHomePage ? "#services" : `${prefix}#services`,
+      },
+      {
+        label: "المشاريع",
+        href: isHomePage ? "#projects" : `${prefix}#projects`,
+      },
+    ]
     : [
-        {
-          label: "About",
-          href: isHomePage ? "#about" : `${prefix}#about`,
-        },
-        {
-          label: "Services",
-          href: isHomePage ? "#services" : `${prefix}#services`,
-        },
-        {
-          label: "Projects",
-          href: isHomePage ? "#projects" : `${prefix}#projects`,
-        },
-      ];
+      {
+        label: "About",
+        href: isHomePage ? "#about" : `${prefix}#about`,
+      },
+      {
+        label: "Services",
+        href: isHomePage ? "#services" : `${prefix}#services`,
+      },
+      {
+        label: "Projects",
+        href: isHomePage ? "#projects" : `${prefix}#projects`,
+      },
+    ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,10 +75,9 @@ export default function Navbar() {
     <nav
       className={`
         sticky top-0 z-50 transition-all duration-300
-        ${
-          scrolled
-            ? "border-b border-border bg-beige/95 shadow-sm backdrop-blur"
-            : "border-b border-transparent bg-beige/80 backdrop-blur-sm"
+        ${scrolled
+          ? "border-b border-border bg-beige/95 shadow-sm backdrop-blur"
+          : "border-b border-transparent bg-beige/80 backdrop-blur-sm"
         }
       `}
     >
@@ -89,8 +88,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href={prefix}
-          aria-label="NoviTech home"
-          className="flex items-center text-lg font-medium tracking-tight text-charcoal"
+          aria-label={isAr ? "الصفحة الرئيسية لنوفيتك" : "NoviTech home"} className="flex items-center text-lg font-medium tracking-tight text-charcoal"
         >
           <span className="glitch font-semibold">
             N
@@ -153,8 +151,8 @@ export default function Navbar() {
                 ? "إغلاق القائمة"
                 : "Close menu"
               : isAr
-              ? "فتح القائمة"
-              : "Open menu"
+                ? "فتح القائمة"
+                : "Open menu"
           }
           aria-expanded={open}
           className="

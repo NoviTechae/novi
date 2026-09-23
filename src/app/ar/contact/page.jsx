@@ -6,17 +6,27 @@ import Link from "next/link";
 
 export const metadata = {
   title: "تواصل معنا | نوفيتك",
-  description: "تواصل مع نوفيتك لحلول البرمجيات والمواقع والتطبيقات والذكاء الاصطناعي في الإمارات.",
+  description:
+    "تواصل مع نوفيتك لحلول البرمجيات والمواقع والتطبيقات والذكاء الاصطناعي في الإمارات.",
+  alternates: {
+    canonical: "https://novitech.ae/ar/contact",
+    languages: {
+      "en-AE": "https://novitech.ae/en/contact",
+      "ar-AE": "https://novitech.ae/ar/contact",
+    },
+  },
 };
 
 const contactInfo = [
   { label: "الاسم القانوني", value: "NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C", sub: "كما في الرخصة التجارية الإماراتية" },
   { label: "البريد الإلكتروني", value: "info@novitech.ae", href: "mailto:info@novitech.ae" },
-  { label: "واتساب", value: "+971 55 819 8862", href: "https://wa.me/971558198862" },
-  { label: "هاتف", value: "+971 55 819 8862", href: "tel:+971558198862" },
+  { label: "واتساب", value: "+971 55 519 5426", href: "https://wa.me/971555195426" },
+  { label: "هاتف", value: "971 55 519 5426", href: "tel:+971555195426" },
   { label: "العنوان", value: "العين، أبوظبي، الإمارات العربية المتحدة" },
-  { label: "ساعات العمل", value: "الاثنين – الجمعة: 9:00 ص – 6:00 م (توقيت الإمارات)" },
-];
+  {
+    label: "ساعات العمل",
+    value: "الاثنين – الخميس: 9:00 ص – 6:00 م | الجمعة: 8:00 ص – 12:00 م (توقيت الإمارات)"
+  },];
 
 export default function ContactPageAR() {
   return (
@@ -27,7 +37,9 @@ export default function ContactPageAR() {
         <div className="mb-14">
           <p className="text-xs uppercase tracking-widest text-accent mb-3">تواصل معنا</p>
           <h1 className="text-4xl font-bold tracking-tight mb-4">تواصل معنا</h1>
-          <p className="text-muted leading-relaxed max-w-xl">عندك مشروع؟ نرد عادةً خلال 24 ساعة.</p>
+          <p className="text-muted leading-relaxed max-w-xl">
+            لديك مشروع أو استفسار؟ تواصل معنا، وسنرد عليك عادةً خلال 24 ساعة.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -52,7 +64,7 @@ export default function ContactPageAR() {
             <div className="pt-2">
               <p className="text-xs uppercase tracking-widest text-accent mb-3">التواصل الاجتماعي</p>
               <div className="flex gap-6 text-sm text-muted">
-                <a href="https://wa.me/971558198862" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">واتساب</a>
+                <a href="https://wa.me/971555195426" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">واتساب</a>
                 <a href="https://www.instagram.com/novitech.ae" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">إنستغرام</a>
                 <a href="https://www.tiktok.com/@novitech.ae" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">تيك توك</a>
               </div>

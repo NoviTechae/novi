@@ -26,6 +26,13 @@ export const metadata = {
     siteName: "NoviTech",
     type: "website",
   },
+  alternates: {
+  canonical: "https://novitech.ae/ar",
+  languages: {
+    "en-AE": "https://novitech.ae/en",
+    "ar-AE": "https://novitech.ae/ar",
+  },
+},
 };
 
 const services = [
@@ -61,9 +68,9 @@ const projects = [
     category: "منصة تقنية لقطاع التجميل",
     desc: "منصة إماراتية تربط العملاء بالصالونات وخدمات التجميل المنزلية من خلال الحجوزات والهدايا والمكافآت، مع منصات مخصصة لإدارة الأعمال والإدارة التشغيلية.",
     image: "/projects/glowee-icon.png",
-    imageFit:"contain",
+    imageFit: "contain",
     placeholder: "GL",
-    href:"/ar/projects/glowee"
+    href: "/ar/projects/glowee"
   },
   {
     name: "Samar App",
@@ -71,7 +78,7 @@ const projects = [
     desc: "منصة جوال تفاعلية تم تطويرها لدعم التعلم والتواصل والأنشطة المنظمة لأصحاب الهمم، مع تجارب مخصصة للطلاب والمعلمين والإدارة.",
     image: "/projects/samar.png",
     placeholder: "SA",
-    href:"/ar/projects/samar"
+    href: "/ar/projects/samar"
   },
 ];
 
@@ -90,7 +97,7 @@ export default function AR() {
         <section className="mt-32 grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>
             <p className="text-xs tracking-[0.18em] text-accent mb-5">
-              مقرها الإمارات • بقيادة إماراتية
+              شركة إماراتية • بقيادة إماراتية
             </p>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
@@ -244,8 +251,7 @@ export default function AR() {
             </h2>
 
             <p className="mt-4 text-sm text-muted max-w-2xl leading-relaxed">
-              مجموعة مختارة من المنتجات والأنظمة الرقمية التي تم تصميمها
-              وتطويرها بواسطة NoviTech.
+              مجموعة مختارة من المنتجات والأنظمة الرقمية التي صممتها وطوّرتها NoviTech.
             </p>
           </div>
 

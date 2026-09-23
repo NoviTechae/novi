@@ -5,6 +5,13 @@ export const metadata = {
   title: "سياسة الخصوصية | نوفيتك",
   description:
     "كيف تجمع NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C بياناتك وتستخدمها وتحميها.",
+  alternates: {
+    canonical: "https://novitech.ae/ar/privacy",
+    languages: {
+      "en-AE": "https://novitech.ae/en/privacy",
+      "ar-AE": "https://novitech.ae/ar/privacy",
+    },
+  },
 };
 
 const LEGAL_NAME =

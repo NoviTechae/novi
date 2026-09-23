@@ -37,7 +37,7 @@
     "src/app/en/page.jsx",
     "src/app/page.jsx",
     ".next/dev/types/**/*.ts"
-, "src/app/en/terms/page.jsx", "src/app/en/privacy/page.jsx"  ],
+, "src/app/en/terms/page.jsx", "src/app/en/privacy/page.jsx", "src/app/ar/projects/glowee/page.jsx", "src/app/en/projects/glowee/page.jsx", "src/app/en/projects/samar/page.jsx", "src/app/ar/projects/samar/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]

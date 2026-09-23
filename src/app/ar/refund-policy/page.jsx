@@ -5,6 +5,13 @@ export const metadata = {
   title: "سياسة الاسترداد | نوفيتك",
   description:
     "سياسة الاسترداد والإلغاء لشركة NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C",
+  alternates: {
+    canonical: "https://novitech.ae/ar/refund-policy",
+    languages: {
+      "en-AE": "https://novitech.ae/en/refund-policy",
+      "ar-AE": "https://novitech.ae/ar/refund-policy",
+    },
+  },
 };
 
 const LEGAL_NAME =
