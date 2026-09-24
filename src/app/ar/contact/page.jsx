@@ -20,8 +20,8 @@ export const metadata = {
 const contactInfo = [
   { label: "الاسم القانوني", value: "NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C", sub: "كما في الرخصة التجارية الإماراتية" },
   { label: "البريد الإلكتروني", value: "info@novitech.ae", href: "mailto:info@novitech.ae" },
-  { label: "واتساب", value: "+971 55 519 5426", href: "https://wa.me/971555195426" },
-  { label: "هاتف", value: "971 55 519 5426", href: "tel:+971555195426" },
+  { label: "واتساب", value: "+971 55 519 5426", href: "https://wa.me/971505195426" },
+  { label: "هاتف", value: "971 55 519 5426", href: "tel:+971505195426" },
   { label: "العنوان", value: "العين، أبوظبي، الإمارات العربية المتحدة" },
   {
     label: "ساعات العمل",
@@ -64,7 +64,7 @@ export default function ContactPageAR() {
             <div className="pt-2">
               <p className="text-xs uppercase tracking-widest text-accent mb-3">التواصل الاجتماعي</p>
               <div className="flex gap-6 text-sm text-muted">
-                <a href="https://wa.me/971555195426" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">واتساب</a>
+                <a href="https://wa.me/971505195426" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">واتساب</a>
                 <a href="https://www.instagram.com/novitech.ae" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">إنستغرام</a>
                 <a href="https://www.tiktok.com/@novitech.ae" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">تيك توك</a>
               </div>

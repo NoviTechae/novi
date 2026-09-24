@@ -29,7 +29,7 @@ export default function Footer() {
 
   const socialLinks = [
     {
-      href: "https://wa.me/971555195426",
+      href: "https://wa.me/971505195426",
       label: "WhatsApp",
       icon: MessageCircle,
     },

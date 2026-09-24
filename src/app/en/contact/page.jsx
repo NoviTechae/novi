@@ -20,8 +20,8 @@ export const metadata = {
 const contactInfo = [
   { label: "Legal Name", value: "NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C", sub: "As per UAE Trade License" },
   { label: "Email", value: "info@novitech.ae", href: "mailto:info@novitech.ae" },
-  { label: "WhatsApp", value: "971555195426", href: "https://wa.me/971555195426" },
-  { label: "Phone", value: "971555195426", href: "tel:+971555195426" },
+  { label: "WhatsApp", value: "971505195426", href: "https://wa.me/971505195426" },
+  { label: "Phone", value: "971505195426", href: "tel:+971505195426" },
   { label: "Address", value: "Al Ain, Abu Dhabi, United Arab Emirates" },
   {
     label: "Working Hours",
@@ -71,7 +71,7 @@ export default function ContactPage() {
             <div className="pt-2">
               <p className="text-xs uppercase tracking-widest text-accent mb-3">Social</p>
               <div className="flex gap-6 text-sm text-muted">
-                <a href="https://wa.me/971555195426" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">WhatsApp</a>
+                <a href="https://wa.me/971505195426" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">WhatsApp</a>
                 <a href="https://www.instagram.com/novitech.ae" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">Instagram</a>
                 <a href="https://www.tiktok.com/@novitech.ae" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">TikTok</a>
               </div>
