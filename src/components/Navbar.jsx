@@ -88,19 +88,14 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href={prefix}
-          aria-label={isAr ? "الصفحة الرئيسية لنوفيتك" : "NoviTech home"} className="flex items-center text-lg font-medium tracking-tight text-charcoal"
+          aria-label={isAr ? "الصفحة الرئيسية لنوفيتك" : "NoviTech home"}
+          className="flex items-center"
         >
-          <span className="glitch font-semibold">
-            N
-          </span>
-
-          <span className="ms-[1px]">
-            oviTech
-          </span>
-
-          <span className="ms-[1px] text-accent">
-            .
-          </span>
+          <img
+            src="/header1.png"
+            alt="NoviTech Technology Systems"
+            className="h-14 w-auto object-contain md:h-24"
+          />
         </Link>
 
         {/* Desktop */}
