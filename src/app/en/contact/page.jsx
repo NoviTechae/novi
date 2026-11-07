@@ -12,7 +12,7 @@ export const metadata = {
     title: "Contact Us | NoviTech",
     description:
       "Get in touch with NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C for custom software, web, mobile, and AI solutions in the UAE.",
-    url: "https://novitech.ae/en/contact",
+    url: "https://www.novitech.ae/en/contact",
     locale: "en_AE",
     siteName: "NoviTech",
     type: "website",
@@ -26,10 +26,10 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: "https://novitech.ae/en/contact",
+    canonical: "https://www.novitech.ae/en/contact",
     languages: {
-      "en-AE": "https://novitech.ae/en/contact",
-      "ar-AE": "https://novitech.ae/ar/contact",
+      "en-AE": "https://www.novitech.ae/en/contact",
+      "ar-AE": "https://www.novitech.ae/ar/contact",
     },
   },
 };

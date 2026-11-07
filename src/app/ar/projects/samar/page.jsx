@@ -11,7 +11,7 @@ export const metadata = {
     title: "سمر | منصة تعليمية مساندة من نوفيتك",
     description:
       "تعرّف على سمر، منصة تفاعلية طورتها نوفيتك لدعم التعلم والتواصل والأنشطة المنظمة ومتابعة التقدم لأصحاب الهمم.",
-    url: "https://novitech.ae/ar/projects/samar",
+    url: "https://www.novitech.ae/ar/projects/samar",
     locale: "ar_AE",
     siteName: "NoviTech",
     type: "website",
@@ -25,10 +25,10 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: "https://novitech.ae/ar/projects/samar",
+    canonical: "https://www.novitech.ae/ar/projects/samar",
     languages: {
-      "en-AE": "https://novitech.ae/en/projects/samar",
-      "ar-AE": "https://novitech.ae/ar/projects/samar",
+      "en-AE": "https://www.novitech.ae/en/projects/samar",
+      "ar-AE": "https://www.novitech.ae/ar/projects/samar",
     },
   },
 };
@@ -48,7 +48,7 @@ export default function SamarProjectPageAR() {
           name="سمر"
           category="منصة تعليمية مساندة"
           intro="بدأ سمر كمشروع تخرج جامعي، وهو منصة رقمية تفاعلية صُممت لدعم التعلم والتواصل والأنشطة المنظمة ومتابعة التقدم لأصحاب الهمم." image="/projects/samar.png"
-          status="نموذج وظيفي مكتمل"
+          status="قيد التطوير"
           problemTitle="المشكلة"
           problem="تختلف احتياجات التعلم والتواصل بين الطلاب، بينما يحتاج المعلمون والمختصون إلى وسائل منظمة لتقديم الأنشطة ومتابعة التقدم وفهم الاستجابات اليومية وإدارة المحتوى التعليمي. وقد تصبح هذه التجربة متفرقة عندما تكون الأنشطة والتقييمات والتواصل ومعلومات التقدم موزعة بين أدوات مختلفة."
           solutionTitle="الحل"
@@ -98,7 +98,7 @@ export default function SamarProjectPageAR() {
             "تجربة ثنائية اللغة",
           ]}
           availabilityTitle="المرحلة الحالية"
-          availabilityText="تم تطوير سمر كنموذج وظيفي متكامل، وعُرضت المنصة ضمن سياقات أكاديمية وعلى جهات ومختصين في المجال للحصول على الملاحظات والتحقق من التجربة، مع إمكانية مواصلة تطويرها واختبارها على نطاق أوسع." footerTitle="هل لديك احتياج حقيقي يمكن للتقنية أن تقدم له حلاً أفضل؟"
+          availabilityText="حصل سمر على المركز الثاني في مسابقة مشاريع التخرج من صندوق خليفة ومزن هب، وعُرض في مؤتمر ITT 2025 الدولي. كما عُرضت المنصة في سياقات أكاديمية وعلى مختصين في المجال للحصول على ملاحظاتهم، وتواصل نوفيتك تطويرها." footerTitle="هل لديك احتياج حقيقي يمكن للتقنية أن تقدم له حلاً أفضل؟"
           footerText="تطور نوفيتك منصات رقمية مخصصة تجمع المستخدمين والعمليات والبيانات وأدوات الإدارة ضمن منتج عملي وقابل للتوسع."
         />
       </div>

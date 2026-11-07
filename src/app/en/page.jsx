@@ -13,7 +13,7 @@ export const metadata = {
     title: "NoviTech | Web, Mobile & AI Solutions in the UAE",
     description:
       "NoviTech is a UAE-based, Emirati-led technology company building mobile apps, web platforms, custom software, management systems, and AI-powered solutions.",
-    url: "https://novitech.ae/en",
+    url: "https://www.novitech.ae/en",
     locale: "en_AE",
     siteName: "NoviTech",
     type: "website",
@@ -27,10 +27,10 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: "https://novitech.ae/en",
+    canonical: "https://www.novitech.ae/en",
     languages: {
-      "en-AE": "https://novitech.ae/en",
-      "ar-AE": "https://novitech.ae/ar",
+      "en-AE": "https://www.novitech.ae/en",
+      "ar-AE": "https://www.novitech.ae/ar",
     },
   },
 };
@@ -95,15 +95,15 @@ export default function EN() {
               UAE-based • Emirati-led
             </p>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+            <p className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
               NoviTech
-            </h1>
+            </p>
 
             <div className="w-20 h-[2px] bg-accent my-7" />
 
-            <h2 className="text-xl md:text-2xl leading-relaxed max-w-xl">
+            <h1 className="text-xl md:text-2xl leading-relaxed max-w-xl">
               Building digital products and custom technology solutions.
-            </h2>
+            </h1>
 
             <p className="mt-5 text-sm md:text-base text-muted leading-relaxed max-w-xl">
               We create mobile applications, web platforms, custom software,
@@ -182,6 +182,41 @@ export default function EN() {
                 for building high-quality digital products and scalable
                 technology solutions.
               </p>
+            </div>
+          </div>
+
+          {/* FOUNDER */}
+          <div className="mt-12 border border-border p-8 md:p-10 grid md:grid-cols-[0.8fr_1.2fr] gap-6 md:gap-12">
+            <div>
+              <h3 className="text-sm uppercase tracking-widest text-accent mb-3">
+                Founder
+              </h3>
+
+              <p className="text-2xl font-semibold">Shouq Alameri</p>
+
+              <p className="mt-1 text-sm text-muted">
+                Founder &amp; CEO, Software Developer
+              </p>
+            </div>
+
+            <div>
+              <p className="text-muted leading-relaxed">
+                NoviTech was founded by Shouq Alameri, an Emirati software
+                developer. Her first product, Samar, an assistive education
+                app for People of Determination, won 2nd place in the Khalifa
+                Fund &amp; MZN Hub graduation project competition and inspired
+                the founding of NoviTech.
+              </p>
+
+              <a
+                href="https://www.linkedin.com/in/shouqalameri"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex items-center text-sm text-charcoal transition hover:text-accent"
+              >
+                Connect on LinkedIn
+                <span className="ml-2" aria-hidden="true">→</span>
+              </a>
             </div>
           </div>
         </section>

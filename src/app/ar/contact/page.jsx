@@ -12,7 +12,7 @@ export const metadata = {
     title: "تواصل معنا | نوفيتك",
     description:
       "تواصل مع نوفيتك لتطوير المواقع وتطبيقات الجوال والبرمجيات المخصصة والأنظمة الإدارية وحلول الذكاء الاصطناعي في الإمارات.",
-    url: "https://novitech.ae/ar/contact",
+    url: "https://www.novitech.ae/ar/contact",
     locale: "ar_AE",
     siteName: "NoviTech",
     type: "website",
@@ -26,10 +26,10 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: "https://novitech.ae/ar/contact",
+    canonical: "https://www.novitech.ae/ar/contact",
     languages: {
-      "en-AE": "https://novitech.ae/en/contact",
-      "ar-AE": "https://novitech.ae/ar/contact",
+      "en-AE": "https://www.novitech.ae/en/contact",
+      "ar-AE": "https://www.novitech.ae/ar/contact",
     },
   },
 };

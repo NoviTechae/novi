@@ -9,7 +9,7 @@ export const metadata = {
     title: "شروط الخدمة | نوفيتك",
     description:
       "شروط وأحكام خدمات NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C.",
-    url: "https://novitech.ae/ar/terms",
+    url: "https://www.novitech.ae/ar/terms",
     locale: "ar_AE",
     siteName: "NoviTech",
     type: "website",
@@ -23,10 +23,10 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: "https://novitech.ae/ar/terms",
+    canonical: "https://www.novitech.ae/ar/terms",
     languages: {
-      "en-AE": "https://novitech.ae/en/terms",
-      "ar-AE": "https://novitech.ae/ar/terms",
+      "en-AE": "https://www.novitech.ae/en/terms",
+      "ar-AE": "https://www.novitech.ae/ar/terms",
     },
   },
 };

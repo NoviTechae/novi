@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://novitech.ae/sitemap.xml",
+    sitemap: "https://www.novitech.ae/sitemap.xml",
   };
 }

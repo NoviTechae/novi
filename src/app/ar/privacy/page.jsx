@@ -9,7 +9,7 @@ export const metadata = {
     title: "سياسة الخصوصية | نوفيتك",
     description:
       "كيف تجمع NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C بياناتك وتستخدمها وتحميها.",
-    url: "https://novitech.ae/ar/privacy",
+    url: "https://www.novitech.ae/ar/privacy",
     locale: "ar_AE",
     siteName: "NoviTech",
     type: "website",
@@ -23,10 +23,10 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: "https://novitech.ae/ar/privacy",
+    canonical: "https://www.novitech.ae/ar/privacy",
     languages: {
-      "en-AE": "https://novitech.ae/en/privacy",
-      "ar-AE": "https://novitech.ae/ar/privacy",
+      "en-AE": "https://www.novitech.ae/en/privacy",
+      "ar-AE": "https://www.novitech.ae/ar/privacy",
     },
   },
 };

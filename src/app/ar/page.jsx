@@ -22,7 +22,7 @@ export const metadata = {
     title: "نوفيتك | حلول تقنية ومنتجات رقمية",
     description:
       "نطوّر في نوفيتك تطبيقات الجوال ومنصات الويب والبرمجيات المخصصة والأنظمة الإدارية والحلول المدعومة بالذكاء الاصطناعي للأعمال في الإمارات.",
-    url: "https://novitech.ae/ar",
+    url: "https://www.novitech.ae/ar",
     locale: "ar_AE",
     siteName: "NoviTech",
     type: "website",
@@ -36,10 +36,10 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: "https://novitech.ae/ar",
+    canonical: "https://www.novitech.ae/ar",
     languages: {
-      "en-AE": "https://novitech.ae/en",
-      "ar-AE": "https://novitech.ae/ar",
+      "en-AE": "https://www.novitech.ae/en",
+      "ar-AE": "https://www.novitech.ae/ar",
     },
   },
 };
@@ -105,15 +105,15 @@ export default function AR() {
               شركة إماراتية • بقيادة إماراتية
             </p>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+            <p className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
               NoviTech
-            </h1>
+            </p>
 
             <div className="w-20 h-[2px] bg-accent my-7" />
 
-            <h2 className="text-xl md:text-2xl leading-relaxed max-w-xl">
+            <h1 className="text-xl md:text-2xl leading-relaxed max-w-xl">
               نطوّر منتجات رقمية وحلولاً تقنية مخصصة.
-            </h2>
+            </h1>
 
             <p className="mt-5 text-sm md:text-base text-muted leading-relaxed max-w-xl">
               نطوّر تطبيقات الجوال، ومنصات الويب، والبرمجيات المخصصة،
@@ -192,6 +192,39 @@ export default function AR() {
                 تطوير NoviTech لتصبح شركة تقنية إماراتية موثوقة ومعروفة
                 ببناء منتجات رقمية عالية الجودة وحلول تقنية قابلة للتوسع.
               </p>
+            </div>
+          </div>
+
+          {/* FOUNDER */}
+          <div className="mt-12 border border-border p-8 md:p-10 grid md:grid-cols-[0.8fr_1.2fr] gap-6 md:gap-12">
+            <div>
+              <h3 className="text-sm tracking-widest text-accent mb-3">
+                المؤسسة
+              </h3>
+
+              <p className="text-2xl font-semibold">شوق العامري</p>
+
+              <p className="mt-1 text-sm text-muted">
+                المؤسسة والرئيسة التنفيذية، مطوّرة برمجيات
+              </p>
+            </div>
+
+            <div>
+              <p className="text-muted leading-relaxed">
+                أسست نوفيتك شوق العامري، مطوّرة برمجيات إماراتية. حصل أول منتج
+                لها، تطبيق سمر لدعم تعلم أصحاب الهمم، على المركز الثاني في مسابقة
+                مشاريع التخرج من صندوق خليفة ومزن هب، وكان الدافع لتأسيس نوفيتك.
+              </p>
+
+              <a
+                href="https://www.linkedin.com/in/shouqalameri"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex items-center text-sm text-charcoal transition hover:text-accent"
+              >
+                تواصل عبر لينكدإن
+                <span className="mr-2" aria-hidden="true">←</span>
+              </a>
             </div>
           </div>
         </section>

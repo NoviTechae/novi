@@ -14,7 +14,7 @@ const links = [
     {
         label: "Website",
         sublabel: "Explore NoviTech",
-        href: "https://novitech.ae",
+        href: "https://www.novitech.ae",
         external: true,
     },
     {

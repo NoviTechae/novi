@@ -11,7 +11,7 @@ export const metadata = {
     title: "قلوي | منصة تقنية لقطاع التجميل من نوفيتك",
     description:
       "تعرّف على قلوي، منصة إماراتية طورتها نوفيتك لحجوزات الصالونات والخدمات المنزلية والهدايا والمكافآت وإدارة الأعمال.",
-    url: "https://novitech.ae/ar/projects/glowee",
+    url: "https://www.novitech.ae/ar/projects/glowee",
     locale: "ar_AE",
     siteName: "NoviTech",
     type: "website",
@@ -25,10 +25,10 @@ export const metadata = {
     ],
   },
 alternates: {
-  canonical: "https://novitech.ae/ar/projects/glowee",
+  canonical: "https://www.novitech.ae/ar/projects/glowee",
   languages: {
-    "en-AE": "https://novitech.ae/en/projects/glowee",
-    "ar-AE": "https://novitech.ae/ar/projects/glowee",
+    "en-AE": "https://www.novitech.ae/en/projects/glowee",
+    "ar-AE": "https://www.novitech.ae/ar/projects/glowee",
   },
 },
 };

@@ -11,7 +11,7 @@ export const metadata = {
     title: "Samar | Assistive Education Platform by NoviTech",
     description:
       "Explore Samar, an interactive platform developed by NoviTech to support learning, communication, structured activities, and progress tracking for People of Determination.",
-    url: "https://novitech.ae/en/projects/samar",
+    url: "https://www.novitech.ae/en/projects/samar",
     locale: "en_AE",
     siteName: "NoviTech",
     type: "website",
@@ -25,10 +25,10 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: "https://novitech.ae/en/projects/samar",
+    canonical: "https://www.novitech.ae/en/projects/samar",
     languages: {
-      "en-AE": "https://novitech.ae/en/projects/samar",
-      "ar-AE": "https://novitech.ae/ar/projects/samar",
+      "en-AE": "https://www.novitech.ae/en/projects/samar",
+      "ar-AE": "https://www.novitech.ae/ar/projects/samar",
     },
   },
 };
@@ -45,7 +45,7 @@ export default function SamarProjectPage() {
           name="Samar"
           category="Assistive Education Platform"
           intro="Originally developed as a university capstone project, Samar is an interactive digital platform designed to support learning, communication, structured activities, and progress tracking for People of Determination."
-          status="Completed Functional Prototype"
+          status="In Development"
           problemTitle="The Problem"
           problem="Learning and communication needs can vary significantly between students, while educators and specialists need structured ways to deliver activities, follow progress, understand daily responses, and manage learning content. These experiences can become fragmented when tools, assessments, communication, and progress information are separated."
           solutionTitle="The Solution"
@@ -95,7 +95,7 @@ export default function SamarProjectPage() {
             "Bilingual Experience",
           ]}
           availabilityTitle="Current Stage"
-          availabilityText="Samar was developed as a completed functional prototype and presented in academic and specialist settings for demonstration and feedback, with potential for further development and broader testing." footerTitle="Building technology around a meaningful real-world need?"
+          availabilityText="Samar won 2nd place in the Khalifa Fund & MZN Hub graduation project competition and was presented at the ITT 2025 international conference. It has been demonstrated in academic and specialist settings for feedback, and NoviTech is continuing its development." footerTitle="Building technology around a meaningful real-world need?"
           footerText="NoviTech develops custom digital platforms that bring users, workflows, data, and management tools together within a practical and scalable product."
         />
       </div>

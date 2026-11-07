@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://novitech.ae"),
+  metadataBase: new URL("https://www.novitech.ae"),
   title: {
     default: "NoviTech | Custom Software & Web Development",
     // Page titles already include "NoviTech", so the template no longer adds it again.
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "NoviTech | Web, Mobile & AI Solutions in the UAE",
     description: "A UAE-based, Emirati-led technology company building digital products and custom technology solutions.",
-    url: "https://novitech.ae",
+    url: "https://www.novitech.ae",
     siteName: "NoviTech",
     type: "website",
   },

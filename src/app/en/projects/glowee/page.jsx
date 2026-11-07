@@ -11,7 +11,7 @@ export const metadata = {
     title: "Glowee | Beauty Technology Platform by NoviTech",
     description:
       "Explore Glowee, a UAE beauty platform developed by NoviTech for salon and home-service bookings, gifting, rewards, and business management.",
-    url: "https://novitech.ae/en/projects/glowee",
+    url: "https://www.novitech.ae/en/projects/glowee",
     locale: "en_AE",
     siteName: "NoviTech",
     type: "website",
@@ -25,10 +25,10 @@ export const metadata = {
     ],
   },
     alternates: {
-  canonical: "https://novitech.ae/en/projects/glowee",
+  canonical: "https://www.novitech.ae/en/projects/glowee",
   languages: {
-    "en-AE": "https://novitech.ae/en/projects/glowee",
-    "ar-AE": "https://novitech.ae/ar/projects/glowee",
+    "en-AE": "https://www.novitech.ae/en/projects/glowee",
+    "ar-AE": "https://www.novitech.ae/ar/projects/glowee",
   },
 },
 };
