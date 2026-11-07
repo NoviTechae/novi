@@ -9,13 +9,30 @@ export const metadata = {
   title: "NoviTech | Software, Mobile Apps & Digital Solutions UAE",
   description:
     "NoviTech is a UAE-based technology company building mobile apps, web platforms, custom software, management systems, and AI-powered digital solutions.",
-  alternates: {
-  canonical: "https://novitech.ae/en",
-  languages: {
-    "en-AE": "https://novitech.ae/en",
-    "ar-AE": "https://novitech.ae/ar",
+  openGraph: {
+    title: "NoviTech | Web, Mobile & AI Solutions in the UAE",
+    description:
+      "NoviTech is a UAE-based, Emirati-led technology company building mobile apps, web platforms, custom software, management systems, and AI-powered solutions.",
+    url: "https://novitech.ae/en",
+    locale: "en_AE",
+    siteName: "NoviTech",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 627,
+        alt: "NoviTech",
+      },
+    ],
   },
-},
+  alternates: {
+    canonical: "https://novitech.ae/en",
+    languages: {
+      "en-AE": "https://novitech.ae/en",
+      "ar-AE": "https://novitech.ae/ar",
+    },
+  },
 };
 
 const services = [
