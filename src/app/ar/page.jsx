@@ -21,18 +21,27 @@ export const metadata = {
   openGraph: {
     title: "نوفيتك | حلول تقنية ومنتجات رقمية",
     description:
-      "نطوّر منتجات رقمية وحلولاً تقنية مخصصة تلبي احتياجات حقيقية.",
+      "نطوّر في نوفيتك تطبيقات الجوال ومنصات الويب والبرمجيات المخصصة والأنظمة الإدارية والحلول المدعومة بالذكاء الاصطناعي للأعمال في الإمارات.",
+    url: "https://novitech.ae/ar",
     locale: "ar_AE",
     siteName: "NoviTech",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 627,
+        alt: "NoviTech",
+      },
+    ],
   },
   alternates: {
-  canonical: "https://novitech.ae/ar",
-  languages: {
-    "en-AE": "https://novitech.ae/en",
-    "ar-AE": "https://novitech.ae/ar",
+    canonical: "https://novitech.ae/ar",
+    languages: {
+      "en-AE": "https://novitech.ae/en",
+      "ar-AE": "https://novitech.ae/ar",
+    },
   },
-},
 };
 
 const services = [
