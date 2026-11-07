@@ -8,6 +8,23 @@ export const metadata = {
   title: "Contact Us | NoviTech",
   description:
     "Get in touch with NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C for custom software, web, mobile, and AI solutions in the UAE.",
+  openGraph: {
+    title: "Contact Us | NoviTech",
+    description:
+      "Get in touch with NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C for custom software, web, mobile, and AI solutions in the UAE.",
+    url: "https://novitech.ae/en/contact",
+    locale: "en_AE",
+    siteName: "NoviTech",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 627,
+        alt: "NoviTech",
+      },
+    ],
+  },
   alternates: {
     canonical: "https://novitech.ae/en/contact",
     languages: {

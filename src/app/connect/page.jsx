@@ -3,7 +3,7 @@
 export const metadata = {
     title: "Connect with NoviTech",
     description:
-        "Connect with NoviTech through our website, WhatsApp, Instagram, LinkedIn, or email.",
+        "Connect with NoviTech through our website, WhatsApp, Instagram, TikTok, LinkedIn, or email.",
     robots: {
         index: false,
         follow: true,
@@ -27,6 +27,12 @@ const links = [
         label: "Instagram",
         sublabel: "Follow NoviTech",
         href: "https://www.instagram.com/novitech.ae/",
+        external: true,
+    },
+    {
+        label: "TikTok",
+        sublabel: "Watch NoviTech",
+        href: "https://www.tiktok.com/@novitech.ae",
         external: true,
     },
     {

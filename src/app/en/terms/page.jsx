@@ -5,6 +5,23 @@ export const metadata = {
   title: "Terms of Service | NoviTech",
   description:
     "Terms and conditions for NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C services.",
+  openGraph: {
+    title: "Terms of Service | NoviTech",
+    description:
+      "Terms and conditions for NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C services.",
+    url: "https://novitech.ae/en/terms",
+    locale: "en_AE",
+    siteName: "NoviTech",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 627,
+        alt: "NoviTech",
+      },
+    ],
+  },
   alternates: {
     canonical: "https://novitech.ae/en/terms",
     languages: {
@@ -38,7 +55,6 @@ const sections = [
 • Custom Software Development
 • Management & Business Systems
 • AI-powered Solutions
-• Games & Interactive Digital Experiences
 • Technical Consulting & Custom Coding Solutions
 
 The scope, timeline, deliverables, project requirements, and any applicable support or warranty terms are defined in a separate written agreement, proposal, statement of work, or invoice.`,
@@ -128,7 +144,7 @@ export default function TermsPage() {
           <p className="text-sm text-muted">
             Last updated:{" "}
             <span className="text-charcoal">
-              September 2026
+              November 2026
             </span>
           </p>
 

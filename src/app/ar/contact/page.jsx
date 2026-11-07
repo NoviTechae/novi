@@ -7,7 +7,24 @@ import Link from "next/link";
 export const metadata = {
   title: "تواصل معنا | نوفيتك",
   description:
-    "تواصل مع نوفيتك لحلول البرمجيات والمواقع والتطبيقات والذكاء الاصطناعي في الإمارات.",
+    "تواصل مع نوفيتك لتطوير المواقع وتطبيقات الجوال والبرمجيات المخصصة والأنظمة الإدارية وحلول الذكاء الاصطناعي في الإمارات.",
+  openGraph: {
+    title: "تواصل معنا | نوفيتك",
+    description:
+      "تواصل مع نوفيتك لتطوير المواقع وتطبيقات الجوال والبرمجيات المخصصة والأنظمة الإدارية وحلول الذكاء الاصطناعي في الإمارات.",
+    url: "https://novitech.ae/ar/contact",
+    locale: "ar_AE",
+    siteName: "NoviTech",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 627,
+        alt: "NoviTech",
+      },
+    ],
+  },
   alternates: {
     canonical: "https://novitech.ae/ar/contact",
     languages: {

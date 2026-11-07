@@ -7,6 +7,23 @@ export const metadata = {
   title: "قلوي | منصة تقنية لقطاع التجميل من نوفيتك",
   description:
     "تعرّف على قلوي، منصة إماراتية طورتها نوفيتك لحجوزات الصالونات والخدمات المنزلية والهدايا والمكافآت وإدارة الأعمال.",
+  openGraph: {
+    title: "قلوي | منصة تقنية لقطاع التجميل من نوفيتك",
+    description:
+      "تعرّف على قلوي، منصة إماراتية طورتها نوفيتك لحجوزات الصالونات والخدمات المنزلية والهدايا والمكافآت وإدارة الأعمال.",
+    url: "https://novitech.ae/ar/projects/glowee",
+    locale: "ar_AE",
+    siteName: "NoviTech",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 627,
+        alt: "NoviTech",
+      },
+    ],
+  },
 alternates: {
   canonical: "https://novitech.ae/ar/projects/glowee",
   languages: {

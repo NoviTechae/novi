@@ -5,6 +5,23 @@ export const metadata = {
   title: "Refund Policy | NoviTech",
   description:
     "Refund and cancellation policy for NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C.",
+  openGraph: {
+    title: "Refund Policy | NoviTech",
+    description:
+      "Refund and cancellation policy for NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C.",
+    url: "https://novitech.ae/en/refund-policy",
+    locale: "en_AE",
+    siteName: "NoviTech",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 627,
+        alt: "NoviTech",
+      },
+    ],
+  },
   alternates: {
     canonical: "https://novitech.ae/en/refund-policy",
     languages: {

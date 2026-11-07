@@ -7,6 +7,23 @@ export const metadata = {
   title: "سمر | منصة تعليمية مساندة من نوفيتك",
   description:
     "تعرّف على سمر، منصة تفاعلية طورتها نوفيتك لدعم التعلم والتواصل والأنشطة المنظمة ومتابعة التقدم لأصحاب الهمم.",
+  openGraph: {
+    title: "سمر | منصة تعليمية مساندة من نوفيتك",
+    description:
+      "تعرّف على سمر، منصة تفاعلية طورتها نوفيتك لدعم التعلم والتواصل والأنشطة المنظمة ومتابعة التقدم لأصحاب الهمم.",
+    url: "https://novitech.ae/ar/projects/samar",
+    locale: "ar_AE",
+    siteName: "NoviTech",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 627,
+        alt: "NoviTech",
+      },
+    ],
+  },
   alternates: {
     canonical: "https://novitech.ae/ar/projects/samar",
     languages: {

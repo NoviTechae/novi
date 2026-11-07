@@ -5,6 +5,23 @@ export const metadata = {
   title: "Privacy Policy | NoviTech",
   description:
     "How NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C collects, uses, and protects your information.",
+  openGraph: {
+    title: "Privacy Policy | NoviTech",
+    description:
+      "How NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C collects, uses, and protects your information.",
+    url: "https://novitech.ae/en/privacy",
+    locale: "en_AE",
+    siteName: "NoviTech",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 627,
+        alt: "NoviTech",
+      },
+    ],
+  },
   alternates: {
     canonical: "https://novitech.ae/en/privacy",
     languages: {

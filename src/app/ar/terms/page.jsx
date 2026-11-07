@@ -5,6 +5,23 @@ export const metadata = {
   title: "شروط الخدمة | نوفيتك",
   description:
     "شروط وأحكام خدمات NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C.",
+  openGraph: {
+    title: "شروط الخدمة | نوفيتك",
+    description:
+      "شروط وأحكام خدمات NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C.",
+    url: "https://novitech.ae/ar/terms",
+    locale: "ar_AE",
+    siteName: "NoviTech",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 627,
+        alt: "NoviTech",
+      },
+    ],
+  },
   alternates: {
     canonical: "https://novitech.ae/ar/terms",
     languages: {
@@ -38,7 +55,6 @@ const termsSections = [
 • تطوير البرمجيات المخصصة
 • الأنظمة الإدارية وأنظمة الأعمال
 • الحلول المدعومة بالذكاء الاصطناعي
-• الألعاب والتجارب الرقمية التفاعلية
 • الاستشارات التقنية والحلول البرمجية المخصصة
 
 يتم تحديد نطاق العمل والجدول الزمني والمخرجات ومتطلبات المشروع وأي شروط دعم أو ضمان مطبقة في اتفاقية مكتوبة أو عرض مشروع أو نطاق عمل أو فاتورة منفصلة.`,
@@ -133,7 +149,7 @@ export default function ARTermsPage() {
           <p className="text-sm text-muted">
             آخر تحديث:{" "}
             <span className="text-charcoal">
-              سبتمبر ٢٠٢٦
+              نوفمبر ٢٠٢٦
             </span>
           </p>
 

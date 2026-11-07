@@ -7,6 +7,23 @@ export const metadata = {
   title: "Glowee | Beauty Technology Platform by NoviTech",
   description:
     "Explore Glowee, a UAE beauty platform developed by NoviTech for salon and home-service bookings, gifting, rewards, and business management.",
+  openGraph: {
+    title: "Glowee | Beauty Technology Platform by NoviTech",
+    description:
+      "Explore Glowee, a UAE beauty platform developed by NoviTech for salon and home-service bookings, gifting, rewards, and business management.",
+    url: "https://novitech.ae/en/projects/glowee",
+    locale: "en_AE",
+    siteName: "NoviTech",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 627,
+        alt: "NoviTech",
+      },
+    ],
+  },
     alternates: {
   canonical: "https://novitech.ae/en/projects/glowee",
   languages: {

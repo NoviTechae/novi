@@ -7,6 +7,23 @@ export const metadata = {
   title: "Samar | Assistive Education Platform by NoviTech",
   description:
     "Explore Samar, an interactive platform developed by NoviTech to support learning, communication, structured activities, and progress tracking for People of Determination.",
+  openGraph: {
+    title: "Samar | Assistive Education Platform by NoviTech",
+    description:
+      "Explore Samar, an interactive platform developed by NoviTech to support learning, communication, structured activities, and progress tracking for People of Determination.",
+    url: "https://novitech.ae/en/projects/samar",
+    locale: "en_AE",
+    siteName: "NoviTech",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 627,
+        alt: "NoviTech",
+      },
+    ],
+  },
   alternates: {
     canonical: "https://novitech.ae/en/projects/samar",
     languages: {

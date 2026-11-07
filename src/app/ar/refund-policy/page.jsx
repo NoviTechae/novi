@@ -5,6 +5,23 @@ export const metadata = {
   title: "سياسة الاسترداد | نوفيتك",
   description:
     "سياسة الاسترداد والإلغاء لشركة NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C",
+  openGraph: {
+    title: "سياسة الاسترداد | نوفيتك",
+    description:
+      "سياسة الاسترداد والإلغاء لشركة NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C",
+    url: "https://novitech.ae/ar/refund-policy",
+    locale: "ar_AE",
+    siteName: "NoviTech",
+    type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 627,
+        alt: "NoviTech",
+      },
+    ],
+  },
   alternates: {
     canonical: "https://novitech.ae/ar/refund-policy",
     languages: {
