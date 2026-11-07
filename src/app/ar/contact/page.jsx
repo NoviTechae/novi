@@ -20,8 +20,8 @@ export const metadata = {
 const contactInfo = [
   { label: "الاسم القانوني", value: "NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C", sub: "كما في الرخصة التجارية الإماراتية" },
   { label: "البريد الإلكتروني", value: "info@novitech.ae", href: "mailto:info@novitech.ae" },
-  { label: "واتساب", value: "+971 55 519 5426", href: "https://wa.me/971505195426" },
-  { label: "هاتف", value: "971 55 519 5426", href: "tel:+971505195426" },
+  { label: "واتساب", value: "+971 50 519 5426", href: "https://wa.me/971505195426", ltr: true },
+  { label: "هاتف", value: "+971 50 519 5426", href: "tel:+971505195426", ltr: true },
   { label: "العنوان", value: "العين، أبوظبي، الإمارات العربية المتحدة" },
   {
     label: "ساعات العمل",
@@ -52,7 +52,8 @@ export default function ContactPageAR() {
                 <p className="text-xs uppercase tracking-widest text-accent mb-1">{item.label}</p>
                 {item.href ? (
                   <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined}
-                    rel="noopener noreferrer" className="font-medium hover:text-accent transition">
+                    rel="noopener noreferrer" dir={item.ltr ? "ltr" : undefined}
+                    className="font-medium hover:text-accent transition">
                     {item.value}
                   </a>
                 ) : (
@@ -64,6 +65,7 @@ export default function ContactPageAR() {
             <div className="pt-2">
               <p className="text-xs uppercase tracking-widest text-accent mb-3">التواصل الاجتماعي</p>
               <div className="flex gap-6 text-sm text-muted">
+                <a href="https://www.linkedin.com/company/novitech-ae/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">لينكدإن</a>
                 <a href="https://wa.me/971505195426" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">واتساب</a>
                 <a href="https://www.instagram.com/novitech.ae" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">إنستغرام</a>
                 <a href="https://www.tiktok.com/@novitech.ae" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">تيك توك</a>

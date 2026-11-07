@@ -65,10 +65,6 @@ const services = [
     title: "حلول مدعومة بالذكاء الاصطناعي",
     desc: "ميزات ذكية وأتمتة وأنظمة مدعومة بالذكاء الاصطناعي لتحسين سير العمل وتجربة المستخدم.",
   },
-  {
-    title: "ألعاب وتجارب تفاعلية",
-    desc: "منتجات وتجارب رقمية تفاعلية تجمع بين التقنية والتصميم والتجربة الممتعة والهادفة.",
-  },
 ];
 
 const projects = [
@@ -224,7 +220,11 @@ export default function AR() {
             {services.map((item, index) => (
               <div
                 key={item.title}
-                className="group relative border border-border p-8 md:p-10 h-full transition-all duration-200 hover:-translate-y-1 hover:shadow-sm hover:border-accent"
+                className={`group relative border border-border p-8 md:p-10 h-full transition-all duration-200 hover:-translate-y-1 hover:shadow-sm hover:border-accent ${
+                  services.length % 2 === 1 && index === services.length - 1
+                    ? "md:col-span-2"
+                    : ""
+                }`}
               >
                 <span className="absolute top-0 left-0 w-6 h-6 border-t border-l border-accent" />
 

@@ -149,10 +149,6 @@ export default function ContactForm() {
             {isAr ? "حل مدعوم بالذكاء الاصطناعي" : "AI-powered Solution"}
           </option>
 
-          <option value="game">
-            {isAr ? "لعبة أو تجربة تفاعلية" : "Game or Interactive Experience"}
-          </option>
-
           <option value="other">
             {isAr ? "أخرى" : "Other"}
           </option>

@@ -7,7 +7,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://novitech.ae"),
   title: {
     default: "NoviTech | Custom Software & Web Development",
-    template: "%s | NoviTech",
+    // Page titles already include "NoviTech", so the template no longer adds it again.
+    template: "%s",
   },
   description:
     "NoviTech is a UAE-based, Emirati-led technology company building websites, mobile applications, custom software, management systems, and AI-powered solutions.",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     icon: "/favicon.svg",
   },
   openGraph: {
-    title: "NoviTech",
+    title: "NoviTech | Web, Mobile & AI Solutions in the UAE",
     description: "A UAE-based, Emirati-led technology company building digital products and custom technology solutions.",
     url: "https://novitech.ae",
     siteName: "NoviTech",

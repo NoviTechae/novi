@@ -56,10 +56,6 @@ const services = [
     title: "AI-powered Solutions",
     desc: "AI-powered features, automation, and intelligent systems designed to improve digital workflows and user experiences.",
   },
-  {
-    title: "Games & Interactive Experiences",
-    desc: "Interactive digital products and experiences built with engaging mechanics, thoughtful design, and purposeful technology.",
-  },
 ];
 
 const projects = [
@@ -214,7 +210,11 @@ export default function EN() {
             {services.map((item, index) => (
               <div
                 key={item.title}
-                className="group relative border border-border p-8 md:p-10 h-full transition-all duration-200 hover:-translate-y-1 hover:shadow-sm hover:border-accent"
+                className={`group relative border border-border p-8 md:p-10 h-full transition-all duration-200 hover:-translate-y-1 hover:shadow-sm hover:border-accent ${
+                  services.length % 2 === 1 && index === services.length - 1
+                    ? "md:col-span-2"
+                    : ""
+                }`}
               >
                 <span className="absolute top-0 right-0 w-6 h-6 border-t border-r border-accent" />
 
