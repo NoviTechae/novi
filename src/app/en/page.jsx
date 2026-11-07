@@ -1,14 +1,23 @@
 // src/app/en/page.jsx
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import SystemVisual from "@/components/SystemVisual";
-import ProjectCard from "@/components/ProjectCard";
+import {
+  SiteShell,
+  Container,
+  Eyebrow,
+  PrimaryButton,
+  SecondaryButton,
+  WorkCard,
+  CTASection,
+} from "@/components/site/ui";
+import { services, projects } from "@/data/en/content";
 
 export const metadata = {
   title: "NoviTech | Software, Mobile Apps & Digital Solutions UAE",
   description:
-    "NoviTech is a UAE-based technology company building mobile apps, web platforms, custom software, management systems, and AI-powered digital solutions.",
+    "NoviTech is a UAE-based, Emirati-led technology company building websites, mobile apps, custom software, management systems, and AI-powered solutions.",
   openGraph: {
     title: "NoviTech | Web, Mobile & AI Solutions in the UAE",
     description:
@@ -35,367 +44,190 @@ export const metadata = {
   },
 };
 
-const services = [
+const facts = [
+  { value: "5", label: "Core services" },
+  { value: "2", label: "In-house products" },
+  { value: "Live", label: "Glowee on the App Store" },
+  { value: "2nd", label: "Place, Khalifa Fund & MZN Hub competition" },
+];
+
+const reasons = [
   {
-    title: "Websites & Web Apps",
-    desc: "Modern, responsive web experiences and platforms built for performance, usability, and real business needs.",
+    title: "Emirati-led, UAE-based",
+    text: "We understand the local market, culture, and language, and we build products for the way people here work and live.",
   },
   {
-    title: "Mobile Applications",
-    desc: "iOS and Android applications designed around real users, practical workflows, and reliable experiences.",
+    title: "We build our own products",
+    text: "Glowee and Samar are ours. We know what it takes to design, launch, and run a real product, not just hand over code.",
   },
   {
-    title: "Custom Software",
-    desc: "Custom-built software designed around specific business workflows, requirements, and operational needs.",
+    title: "End to end in one place",
+    text: "Planning, design, development, backend, and launch are handled together, so nothing gets lost between handoffs.",
   },
   {
-    title: "Management Systems",
-    desc: "Digital systems and internal platforms designed to organize workflows, data, and day-to-day operations.",
-  },
-  {
-    title: "AI-powered Solutions",
-    desc: "AI-powered features, automation, and intelligent systems designed to improve digital workflows and user experiences.",
+    title: "Arabic and English by default",
+    text: "Right-to-left Arabic and English are built in from the start, not added as an afterthought.",
   },
 ];
 
-const projects = [
-  {
-    name: "Glowee",
-    category: "Beauty Technology Platform",
-    desc: "A UAE beauty platform connecting customers with salons and home-service businesses through bookings, gifting, and rewards, supported by dedicated business and administration platforms.",
-    image: "/projects/glowee-icon.png",
-    imageFit:"contain",
-    placeholder: "GL",
-    href:"/en/projects/glowee"
-  },
-  {
-    name: "Samar App",
-    category: "Assistive Education Platform",
-    desc: "An interactive mobile platform developed to support learning, communication, and structured activities for People of Determination, with dedicated experiences for students, educators, and administrators.",
-    image: "/projects/samar.png",
-    placeholder: "SA",
-    href:"/en/projects/samar"
-  },
-];
-
-export default function EN() {
+export default function HomeEN() {
   return (
-    <main
-      id="top"
-      className="min-h-screen bg-beige text-charcoal px-6 md:px-10 py-10 md:py-14"
-    >
-      <Navbar />
-
-      <div className="max-w-7xl mx-auto">
-
-        {/* HERO */}
-        <section className="mt-32 grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <SiteShell>
+      {/* HERO */}
+      <section className="border-b border-border">
+        <Container className="grid items-center gap-12 pb-16 pt-12 md:pb-24 md:pt-20 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
-            <p className="text-xs uppercase tracking-[0.24em] text-accent mb-5">
-              UAE-based • Emirati-led
-            </p>
+            <Eyebrow className="mb-6">
+              UAE-based • Emirati-led technology company
+            </Eyebrow>
 
-            <p className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-              NoviTech
-            </p>
-
-            <div className="w-20 h-[2px] bg-accent my-7" />
-
-            <h1 className="text-xl md:text-2xl leading-relaxed max-w-xl">
+            <h1 className="text-5xl font-semibold leading-[1.04] tracking-tight md:text-6xl lg:text-7xl">
               Building digital products and custom technology solutions.
             </h1>
 
-            <p className="mt-5 text-sm md:text-base text-muted leading-relaxed max-w-xl">
-              We create mobile applications, web platforms, custom software,
-              management systems, and AI-powered solutions for real-world
-              business needs.
+            <div className="my-8 h-[2px] w-20 bg-accent" />
+
+            <p className="max-w-2xl text-lg leading-8 text-muted md:text-xl md:leading-9">
+              NoviTech designs and develops websites, mobile apps, custom
+              software, management systems, and AI-powered solutions for
+              businesses in the UAE, and builds products of its own.
             </p>
 
-            <p className="mt-6 text-xs uppercase tracking-[0.18em] text-muted">
-              Web • Mobile • Software • Systems • AI
-            </p>
-
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="/en/contact"
-                className="inline-flex items-center justify-center border border-charcoal bg-charcoal text-beige px-8 py-3 transition hover:bg-transparent hover:text-charcoal"
-              >
+            <div className="mt-10 flex flex-wrap gap-3">
+              <PrimaryButton href="/en/contact">
                 Start a project
-              </a>
-
-              <a
-                href="#projects"
-                className="inline-flex items-center justify-center border border-border px-8 py-3 transition hover:border-charcoal"
-              >
-                Explore our work
-              </a>
+                <ArrowRight size={15} aria-hidden="true" />
+              </PrimaryButton>
+              <SecondaryButton href="/en/services">
+                Explore our services
+              </SecondaryButton>
             </div>
           </div>
 
-          <div className="hidden md:flex justify-end text-charcoal">
+          <div className="hidden justify-end text-charcoal lg:flex">
             <SystemVisual />
           </div>
-        </section>
+        </Container>
 
-        {/* ABOUT */}
-        <section id="about" className="mt-44">
-          <div className="mb-12">
-            <p className="text-xs uppercase tracking-[0.22em] text-accent mb-3">
-              About NoviTech
-            </p>
-            <h2 className="text-3xl md:text-4xl font-semibold">
+        <Container>
+          <dl className="grid grid-cols-2 gap-px border-t border-border bg-border md:grid-cols-4">
+            {facts.map((fact, index) => (
+              <div
+                key={fact.label}
+                className={`bg-beige py-8 pr-4 md:py-10 ${
+                  index === 0 ? "" : index === 2 ? "md:pl-8" : "pl-6 md:pl-8"
+                }`}
+              >
+                <dt className="sr-only">{fact.label}</dt>
+                <dd>
+                  <span className="block text-3xl font-semibold tracking-tight md:text-4xl">
+                    {fact.value}
+                  </span>
+                  <span className="mt-2 block text-sm leading-6 text-muted">
+                    {fact.label}
+                  </span>
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </Container>
+      </section>
+
+      {/* SERVICES */}
+      <section id="services" className="py-20 md:py-28">
+        <Container className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <div>
+            <Eyebrow className="mb-4">What we do</Eyebrow>
+            <h2 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
+              Services built around real business needs
+            </h2>
+            <div className="mt-8">
+              <SecondaryButton href="/en/services">
+                All services
+                <ArrowRight size={15} aria-hidden="true" />
+              </SecondaryButton>
+            </div>
+          </div>
+
+          <ul className="border-t border-border">
+            {services.map((service, index) => (
+              <li key={service.slug}>
+                <Link
+                  href={`/en/services/${service.slug}`}
+                  className="group flex items-center gap-6 border-b border-border py-6 transition hover:text-accent md:py-7"
+                >
+                  <span className="w-8 shrink-0 text-xs tracking-widest text-accent">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="flex-1 text-xl font-medium tracking-tight md:text-2xl">
+                    {service.title}
+                  </span>
+                  <ArrowRight
+                    size={18}
+                    aria-hidden="true"
+                    className="shrink-0 transition-transform group-hover:translate-x-1"
+                  />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
+      {/* FEATURED WORK */}
+      <section id="projects" className="border-t border-border py-20 md:py-28">
+        <Container>
+          <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
+            <div className="max-w-2xl">
+              <Eyebrow className="mb-4">Featured work</Eyebrow>
+              <h2 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
+                Designed, built, and live on the App Store
+              </h2>
+            </div>
+            <SecondaryButton href="/en/work">
+              View all work
+              <ArrowRight size={15} aria-hidden="true" />
+            </SecondaryButton>
+          </div>
+
+          <WorkCard project={projects.glowee} />
+        </Container>
+      </section>
+
+      {/* WHY NOVITECH */}
+      <section id="about" className="bg-charcoal text-beige">
+        <Container className="grid gap-12 py-20 md:py-28 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <div>
+            <Eyebrow className="mb-4">Why NoviTech</Eyebrow>
+            <h2 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
               Technology built with purpose.
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="border-t border-border pt-6">
-              <h3 className="text-sm uppercase tracking-widest text-accent mb-4">
-                Who we are
-              </h3>
+          <div>
+            <ul className="grid gap-x-10 gap-y-6 sm:grid-cols-2">
+              {reasons.map((reason) => (
+                <li key={reason.title} className="border-t border-beige/15 pt-5">
+                  <p className="font-medium">{reason.title}</p>
+                </li>
+              ))}
+            </ul>
 
-              <p className="text-muted leading-relaxed">
-                NoviTech is a UAE-based technology company focused on building
-                practical, reliable, and scalable digital solutions for
-                businesses and real-world needs.
-              </p>
-            </div>
-
-            <div className="border-t border-border pt-6">
-              <h3 className="text-sm uppercase tracking-widest text-accent mb-4">
-                Mission
-              </h3>
-
-              <p className="text-muted leading-relaxed">
-                To design and build reliable digital products and technology
-                solutions that solve real problems efficiently and precisely.
-              </p>
-            </div>
-
-            <div className="border-t border-border pt-6">
-              <h3 className="text-sm uppercase tracking-widest text-accent mb-4">
-                Vision
-              </h3>
-
-              <p className="text-muted leading-relaxed">
-                To grow NoviTech into a trusted UAE technology company known
-                for building high-quality digital products and scalable
-                technology solutions.
-              </p>
+            <div className="mt-10 flex flex-wrap gap-3">
+              <SecondaryButton href="/en/about" dark>
+                About NoviTech
+                <ArrowRight size={15} aria-hidden="true" />
+              </SecondaryButton>
+              <SecondaryButton href="/en/approach" dark>
+                How we work
+                <ArrowRight size={15} aria-hidden="true" />
+              </SecondaryButton>
             </div>
           </div>
+        </Container>
+      </section>
 
-          {/* FOUNDER */}
-          <div className="mt-12 border border-border p-8 md:p-10 grid md:grid-cols-[0.8fr_1.2fr] gap-6 md:gap-12">
-            <div>
-              <h3 className="text-sm uppercase tracking-widest text-accent mb-3">
-                Founder
-              </h3>
-
-              <p className="text-2xl font-semibold">Shouq Alameri</p>
-
-              <p className="mt-1 text-sm text-muted">
-                Founder &amp; CEO, Software Developer
-              </p>
-            </div>
-
-            <div>
-              <p className="text-muted leading-relaxed">
-                NoviTech was founded by Shouq Alameri, an Emirati software
-                developer. Her first product, Samar, an assistive education
-                app for People of Determination, won 2nd place in the Khalifa
-                Fund &amp; MZN Hub graduation project competition and inspired
-                the founding of NoviTech.
-              </p>
-
-              <a
-                href="https://www.linkedin.com/in/shouqalameri"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center text-sm text-charcoal transition hover:text-accent"
-              >
-                Connect on LinkedIn
-                <span className="ml-2" aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* DIVIDER */}
-        <div className="my-24 h-px bg-gradient-to-r from-transparent via-accent to-transparent" />
-
-        {/* SERVICES */}
-        <section id="services" className="mt-44">
-          <div className="mb-12">
-            <p className="text-xs uppercase tracking-[0.22em] text-accent mb-3">
-              Capabilities
-            </p>
-
-            <h2 className="text-3xl md:text-4xl font-semibold">
-              What we build
-            </h2>
-
-            <p className="mt-4 text-sm text-muted max-w-2xl leading-relaxed">
-              From customer-facing products to internal business systems,
-              NoviTech develops technology around the needs of each project.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {services.map((item, index) => (
-              <div
-                key={item.title}
-                className={`group relative border border-border p-8 md:p-10 h-full transition-all duration-200 hover:-translate-y-1 hover:shadow-sm hover:border-accent ${
-                  services.length % 2 === 1 && index === services.length - 1
-                    ? "md:col-span-2"
-                    : ""
-                }`}
-              >
-                <span className="absolute top-0 right-0 w-6 h-6 border-t border-r border-accent" />
-
-                <div className="flex items-start gap-5">
-                  <span className="text-xs text-accent tracking-widest pt-1">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-
-                  <div>
-                    <h3 className="text-lg md:text-xl mb-3">
-                      {item.title}
-                    </h3>
-
-                    <p className="text-sm text-muted leading-relaxed max-w-lg">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* PROJECTS */}
-        <section id="projects" className="mt-44">
-          <div className="mb-12">
-            <p className="text-xs uppercase tracking-[0.22em] text-accent mb-3">
-              Selected Work
-            </p>
-
-            <h2 className="text-3xl md:text-4xl font-semibold">
-              Products & systems
-            </h2>
-
-            <p className="mt-4 text-sm text-muted max-w-2xl leading-relaxed">
-              Selected digital products and systems designed and developed by
-              NoviTech.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project) => (
-              <ProjectCard
-                key={project.name}
-                {...project}
-              />
-            ))}
-          </div>
-        </section>
-
-        {/* COMPANY APPROACH */}
-        <section className="mt-44">
-          <div className="border-y border-border py-14 md:py-16">
-            <div className="grid md:grid-cols-[0.8fr_1.2fr] gap-10 md:gap-20">
-              <div>
-                <p className="text-xs uppercase tracking-[0.22em] text-accent mb-3">
-                  Our approach
-                </p>
-
-                <h2 className="text-3xl md:text-4xl font-semibold leading-tight">
-                  Built around the problem,
-                  <br className="hidden md:block" /> not the template.
-                </h2>
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-x-10 gap-y-8">
-                <div>
-                  <p className="text-sm font-medium mb-2">
-                    Understand
-                  </p>
-                  <p className="text-sm text-muted leading-relaxed">
-                    We start with the problem, users, workflows, and actual
-                    requirements behind the project.
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-sm font-medium mb-2">
-                    Design
-                  </p>
-                  <p className="text-sm text-muted leading-relaxed">
-                    We structure the experience and system around clarity,
-                    usability, and practical operation.
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-sm font-medium mb-2">
-                    Build
-                  </p>
-                  <p className="text-sm text-muted leading-relaxed">
-                    We develop reliable digital solutions using technology
-                    suited to the requirements of the product.
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-sm font-medium mb-2">
-                    Improve
-                  </p>
-                  <p className="text-sm text-muted leading-relaxed">
-                    We refine products through testing, real use, feedback,
-                    and continuous development.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* FINAL CTA */}
-        <section className="mt-36 mb-28">
-          <div className="border border-border p-10 md:p-14 lg:p-16 relative overflow-hidden">
-            <span className="absolute top-0 right-0 w-12 h-12 border-t border-r border-accent" />
-            <span className="absolute bottom-0 left-0 w-12 h-12 border-b border-l border-accent" />
-
-            <div className="max-w-3xl">
-              <p className="text-xs uppercase tracking-[0.22em] text-accent mb-4">
-                Start a project
-              </p>
-
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
-                Have a project in mind?
-              </h2>
-
-              <p className="mt-5 text-muted leading-relaxed max-w-2xl">
-                Tell us what you need, and let&apos;s explore how NoviTech can
-                turn it into a reliable digital solution.
-              </p>
-
-              <a
-                href="/en/contact"
-                className="inline-flex items-center justify-center mt-8 bg-charcoal text-beige border border-charcoal px-8 py-3 transition hover:bg-transparent hover:text-charcoal"
-              >
-                Start a project
-                <span className="ml-3" aria-hidden="true">
-                  →
-                </span>
-              </a>
-            </div>
-          </div>
-        </section>
-
-      </div>
-
-      <Footer />
-    </main>
+      <CTASection />
+    </SiteShell>
   );
 }

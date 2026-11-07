@@ -1,6 +1,5 @@
 // src/app/en/projects/samar/page.jsx
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { SiteShell, Container } from "@/components/site/ui";
 import ProductCaseStudy from "@/components/ProductCaseStudy";
 
 export const metadata = {
@@ -35,10 +34,8 @@ export const metadata = {
 
 export default function SamarProjectPage() {
   return (
-    <main className="min-h-screen bg-beige px-6 py-10 text-charcoal md:px-10 md:py-14">
-      <Navbar />
-
-      <div className="mx-auto max-w-6xl">
+    <SiteShell>
+      <Container className="pb-8">
         <ProductCaseStudy
           locale="en"
           eyebrow="Selected Product"
@@ -98,9 +95,7 @@ export default function SamarProjectPage() {
           availabilityText="Samar won 2nd place in the Khalifa Fund & MZN Hub graduation project competition and was presented at the ITT 2025 international conference. It has been demonstrated in academic and specialist settings for feedback, and NoviTech is continuing its development." footerTitle="Building technology around a meaningful real-world need?"
           footerText="NoviTech develops custom digital platforms that bring users, workflows, data, and management tools together within a practical and scalable product."
         />
-      </div>
-
-      <Footer />
-    </main>
+      </Container>
+    </SiteShell>
   );
 }

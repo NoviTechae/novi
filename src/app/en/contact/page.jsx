@@ -1,32 +1,25 @@
 // src/app/en/contact/page.jsx
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ContactForm from "@/components/ContactForm";
-import Link from "next/link";
 
-export const metadata = {
+import ContactForm from "@/components/ContactForm";
+import {
+  SiteShell,
+  Container,
+  Eyebrow,
+  PageHero,
+  buildMetadata,
+} from "@/components/site/ui";
+
+const base = buildMetadata({
   title: "Contact Us | NoviTech",
   description:
-    "Get in touch with NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C for custom software, web, mobile, and AI solutions in the UAE.",
-  openGraph: {
-    title: "Contact Us | NoviTech",
-    description:
-      "Get in touch with NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C for custom software, web, mobile, and AI solutions in the UAE.",
-    url: "https://www.novitech.ae/en/contact",
-    locale: "en_AE",
-    siteName: "NoviTech",
-    type: "website",
-    images: [
-      {
-        url: "/opengraph-image.png",
-        width: 1200,
-        height: 627,
-        alt: "NoviTech",
-      },
-    ],
-  },
+    "Get in touch with NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C for websites, mobile apps, custom software, management systems, and AI solutions in the UAE.",
+  path: "/en/contact",
+});
+
+export const metadata = {
+  ...base,
   alternates: {
-    canonical: "https://www.novitech.ae/en/contact",
+    ...base.alternates,
     languages: {
       "en-AE": "https://www.novitech.ae/en/contact",
       "ar-AE": "https://www.novitech.ae/ar/contact",
@@ -35,88 +28,120 @@ export const metadata = {
 };
 
 const contactInfo = [
-  { label: "Legal Name", value: "NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C", sub: "As per UAE Trade License" },
-  { label: "Email", value: "info@novitech.ae", href: "mailto:info@novitech.ae" },
-  { label: "WhatsApp", value: "+971 50 519 5426", href: "https://wa.me/971505195426", ltr: true },
-  { label: "Phone", value: "+971 50 519 5426", href: "tel:+971505195426", ltr: true },
+  {
+    label: "Email",
+    value: "info@novitech.ae",
+    href: "mailto:info@novitech.ae",
+  },
+  {
+    label: "WhatsApp",
+    value: "+971 50 519 5426",
+    href: "https://wa.me/971505195426",
+  },
+  {
+    label: "Phone",
+    value: "+971 50 519 5426",
+    href: "tel:+971505195426",
+  },
   { label: "Address", value: "Al Ain, Abu Dhabi, United Arab Emirates" },
   {
-    label: "Working Hours",
-    value: "Mon – Thu: 9:00 AM – 6:00 PM | Fri: 8:00 AM – 12:00 PM (UAE Time)",
-  },];
+    label: "Working hours",
+    value: "Mon – Thu: 9:00 AM – 6:00 PM\nFri: 8:00 AM – 12:00 PM (UAE time)",
+  },
+];
+
+const social = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/novitech-ae/" },
+  { label: "Instagram", href: "https://www.instagram.com/novitech.ae" },
+  { label: "TikTok", href: "https://www.tiktok.com/@novitech.ae" },
+];
+
+const nextSteps = [
+  "We review your message and reply, usually within 24 hours.",
+  "We arrange a short call to understand your needs.",
+  "We send a clear proposal with scope, timeline, and cost.",
+];
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-beige text-charcoal px-6 md:px-10 py-10 md:py-14">
-      <Navbar />
-      <div className="max-w-5xl mx-auto py-16">
+    <SiteShell>
+      <PageHero
+        eyebrow="Contact"
+        title="Let's talk about your project."
+        intro="Tell us what you need, whether it's a website, an app, a system for your team, or just an idea you want to explore. We typically reply within 24 hours."
+      />
 
-        {/* Header */}
-        <div className="mb-14">
-          <p className="text-xs uppercase tracking-widest text-accent mb-3">Get in touch</p>
-          <h1 className="text-4xl font-bold tracking-tight mb-4">Contact Us</h1>
-          <p className="text-muted leading-relaxed max-w-xl">
-            Have a project in mind? We typically reply within 24 hours.
-          </p>
-        </div>
+      <section className="py-16 md:py-24">
+        <Container className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr]">
+          {/* Details */}
+          <div>
+            <Eyebrow className="mb-6">Our details</Eyebrow>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <dl className="border-t border-border">
+              {contactInfo.map((item) => (
+                <div key={item.label} className="border-b border-border py-5">
+                  <dt className="mb-1 text-xs uppercase tracking-widest text-accent">
+                    {item.label}
+                  </dt>
+                  <dd className="whitespace-pre-line font-medium">
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        target={item.href.startsWith("http") ? "_blank" : undefined}
+                        rel="noopener noreferrer"
+                        className="transition hover:text-accent"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      item.value
+                    )}
+                  </dd>
+                </div>
+              ))}
+            </dl>
 
-          {/* Left — Contact Info */}
-          <div className="space-y-6">
-            <p className="text-xs uppercase tracking-widest text-accent">Our details</p>
-            {contactInfo.map((item) => (
-              <div key={item.label} className="border-b border-border pb-5">
-                <p className="text-xs uppercase tracking-widest text-accent mb-1">{item.label}</p>
-                {item.href ? (
+            <div className="mt-8">
+              <p className="mb-3 text-xs uppercase tracking-widest text-accent">
+                Follow us
+              </p>
+              <div className="flex flex-wrap gap-6 text-sm">
+                {social.map((s) => (
                   <a
-                    href={item.href}
-                    target={item.href.startsWith("http") ? "_blank" : undefined}
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
                     rel="noopener noreferrer"
-                    dir={item.ltr ? "ltr" : undefined}
-                    className="font-medium hover:text-accent transition"
+                    className="text-muted transition hover:text-accent"
                   >
-                    {item.value}
+                    {s.label}
                   </a>
-                ) : (
-                  <p className="font-medium">{item.value}</p>
-                )}
-                {item.sub && <p className="text-xs text-muted mt-1">{item.sub}</p>}
+                ))}
               </div>
-            ))}
+            </div>
 
-            {/* Social */}
-            <div className="pt-2">
-              <p className="text-xs uppercase tracking-widest text-accent mb-3">Social</p>
-              <div className="flex gap-6 text-sm text-muted">
-                <a href="https://www.linkedin.com/company/novitech-ae/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">LinkedIn</a>
-                <a href="https://wa.me/971505195426" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">WhatsApp</a>
-                <a href="https://www.instagram.com/novitech.ae" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">Instagram</a>
-                <a href="https://www.tiktok.com/@novitech.ae" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">TikTok</a>
-              </div>
+            <div className="mt-12 bg-charcoal p-8 text-beige">
+              <Eyebrow className="mb-5">What happens next</Eyebrow>
+              <ol className="space-y-4">
+                {nextSteps.map((step, index) => (
+                  <li key={step} className="flex gap-4 text-sm leading-6">
+                    <span className="text-accent">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="text-beige/80">{step}</span>
+                  </li>
+                ))}
+              </ol>
             </div>
           </div>
 
-          {/* Right — Form (الأصلي بدون تعديل) */}
-          <div>
-            <p className="text-xs uppercase tracking-widest text-accent mb-6">Send a message</p>
+          {/* Form */}
+          <div className="border border-border p-6 md:p-10">
+            <Eyebrow>Send a message</Eyebrow>
             <ContactForm />
           </div>
-
-        </div>
-
-        {/* Legal note
-        <div className="mt-16 pt-8 border-t border-border">
-          <p className="text-xs text-muted leading-relaxed">
-            NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C is registered in the UAE. All services subject to our{" "}
-            <Link href="/en/terms" className="underline hover:text-accent transition">Terms</Link>,{" "}
-            <Link href="/en/privacy" className="underline hover:text-accent transition">Privacy Policy</Link>, and{" "}
-            <Link href="/en/refund-policy" className="underline hover:text-accent transition">Refund Policy</Link>.
-          </p>
-        </div> */}
-
-      </div>
-      <Footer />
-    </main>
+        </Container>
+      </section>
+    </SiteShell>
   );
 }

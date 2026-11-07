@@ -1,29 +1,19 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+// src/app/en/privacy/page.jsx
 
-export const metadata = {
+import LegalPage, { LEGAL_NAME } from "@/components/site/LegalPage";
+import { buildMetadata } from "@/components/site/ui";
+
+const base = buildMetadata({
   title: "Privacy Policy | NoviTech",
   description:
-    "How NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C collects, uses, and protects your information.",
-  openGraph: {
-    title: "Privacy Policy | NoviTech",
-    description:
-      "How NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C collects, uses, and protects your information.",
-    url: "https://www.novitech.ae/en/privacy",
-    locale: "en_AE",
-    siteName: "NoviTech",
-    type: "website",
-    images: [
-      {
-        url: "/opengraph-image.png",
-        width: 1200,
-        height: 627,
-        alt: "NoviTech",
-      },
-    ],
-  },
+    "How NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C collects, uses, shares, and protects personal data, in line with UAE Federal Decree-Law No. 45 of 2021.",
+  path: "/en/privacy",
+});
+
+export const metadata = {
+  ...base,
   alternates: {
-    canonical: "https://www.novitech.ae/en/privacy",
+    ...base.alternates,
     languages: {
       "en-AE": "https://www.novitech.ae/en/privacy",
       "ar-AE": "https://www.novitech.ae/ar/privacy",
@@ -31,204 +21,143 @@ export const metadata = {
   },
 };
 
-const LEGAL_NAME =
-  "NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C";
-
 const sections = [
   {
     id: "overview",
-    title: "1. Overview",
-    content: `${LEGAL_NAME}, trading as NoviTech, is committed to respecting your privacy and protecting your personal information.
+    title: "Who we are",
+    content: `${LEGAL_NAME}, trading as NoviTech ("NoviTech", "we", "us"), is a technology company licensed in the Emirate of Abu Dhabi, United Arab Emirates.
 
-This policy explains how we collect, use, retain, and share information when you visit novitech.ae, contact us, or use our services.`,
+This Privacy Policy explains how we collect, use, share, and protect personal data when you visit novitech.ae, contact us, or use our services. We are the controller of the personal data described in this policy.
+
+We process personal data in line with Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data and other applicable UAE laws.
+
+This policy covers our company website and services. Our own products, such as the Glowee app, have their own privacy policies.`,
   },
   {
     id: "information-collected",
-    title: "2. Information We Collect",
-    content: `We may collect the following types of information:
+    title: "Information we collect",
+    content: `We collect only the information we need:
 
-• Contact Information: Such as your name, email address, and phone number when you contact us or submit a form through the website.
-• Project Information: Such as project type, requirements, specifications, content, and other information you choose to share regarding your inquiry or project.
-• Business and Transaction Information: Such as proposal, invoice, payment, and communication records when you begin a business relationship with us.
-• Technical Data: Such as server logs, device or browser information, and IP address where available, for security, operational, and performance purposes.
+• Contact details: your name, email address, and phone number when you contact us or submit our contact form.
+• Project information: project type, requirements, files, and other details you choose to share about your enquiry or project.
+• Business records: proposals, agreements, invoices, payment references, and correspondence when you work with us.
+• Technical data: basic server logs, such as IP address, browser type, and pages requested, used for security and to keep the website running.
 
-We do not intentionally request unnecessary sensitive information through our general contact form, such as full payment card details, passwords, or government identification numbers, unless there is a legitimate and appropriate need within a specific service and suitable handling procedures are in place.`,
+Please do not send sensitive personal data, such as health information, payment card numbers, passwords, or government ID numbers, through our contact form. If a project requires this kind of data, we will agree on a suitable and secure way to handle it.`,
   },
   {
     id: "how-we-use",
-    title: "3. How We Use Your Information",
-    content: `We may use the information we collect to:
+    title: "How and why we use it",
+    content: `We use personal data to:
 
-• Respond to inquiries and project requests
-• Evaluate project needs and prepare proposals or scopes of work
-• Deliver, manage, and improve our services
-• Communicate regarding projects, updates, invoices, and payments
-• Operate, secure, and improve the website
-• Prevent misuse, fraud, or security issues
-• Comply with applicable legal and regulatory obligations in the United Arab Emirates
+• Respond to your enquiries and prepare proposals
+• Deliver, manage, and support the services you request
+• Send project communications, invoices, and payment reminders
+• Keep our website and systems secure and working properly
+• Meet our legal, accounting, and regulatory obligations
 
-We do not sell or trade your personal information.`,
+We process your data with your consent (for example, when you submit our contact form), where it is necessary to enter into or perform a contract with you, or where processing is needed to comply with UAE law, as permitted under Federal Decree-Law No. 45 of 2021.
+
+You can withdraw your consent at any time. This does not affect processing already carried out.
+
+We do not sell your personal data, and we do not use it for automated decisions that have legal or similarly significant effects on you.`,
   },
   {
     id: "data-sharing",
-    title: "4. Data Sharing",
-    content: `We only share personal information where necessary and appropriate, which may include:
+    title: "Who we share it with",
+    content: `We share personal data only where necessary:
 
-• Technology, hosting, email, or infrastructure service providers that help us operate our website and services
-• Professional advisers or service providers where required
-• Government, regulatory, or legal authorities where disclosure is required by law
-• Relevant parties in connection with a business restructuring, merger, or transfer, subject to appropriate legal requirements
+• Service providers that help us run our website and business, including website hosting (Vercel), email delivery for our contact form (Resend), and email and document tools (Google Workspace)
+• Professional advisers, such as accountants or lawyers, where needed
+• Government, regulatory, or judicial authorities where disclosure is required by UAE law
 
-We do not permit service providers to use your information for their own independent marketing purposes merely because they provide services to us.`,
+Our service providers may only use your data to provide services to us, and not for their own marketing.`,
+  },
+  {
+    id: "transfers",
+    title: "Transfers outside the UAE",
+    content: `Some of our service providers store or process data on servers outside the United Arab Emirates.
+
+Where personal data is transferred outside the UAE, we do so in line with the cross-border transfer requirements of Federal Decree-Law No. 45 of 2021, and we use providers that apply appropriate security and contractual safeguards.`,
   },
   {
     id: "data-retention",
-    title: "5. Data Retention",
-    content: `We retain personal information only for as long as reasonably necessary for the purposes for which it was collected, to provide services, manage our business relationship, or meet legal, accounting, and regulatory requirements.
+    title: "How long we keep it",
+    content: `We keep personal data only for as long as needed for the purpose it was collected:
 
-Some information may be retained for longer where required by law or where necessary to protect legal rights, resolve disputes, or maintain business records.
+• Enquiries that do not lead to a project are kept for up to 12 months, then deleted.
+• Project and client records are kept for the duration of the business relationship and afterwards for as long as required for legal, tax, and accounting purposes under UAE law.
 
-You may contact us to request deletion of your information, and we will assess the request in accordance with applicable legal and operational obligations.`,
+We may keep certain information longer where needed to resolve disputes or protect our legal rights.`,
   },
   {
     id: "security",
-    title: "6. Data Security",
-    content: `We apply appropriate technical, organizational, and administrative measures designed to protect information against unauthorized access, loss, misuse, alteration, or disclosure.
+    title: "How we protect it",
+    content: `We use appropriate technical and organisational measures to protect personal data against unauthorised access, loss, misuse, alteration, or disclosure. These include encrypted connections (HTTPS), access controls, and limiting access to people who need it.
 
-However, no method of electronic transmission or storage can be guaranteed to be completely secure.`,
+No method of electronic transmission or storage is completely secure. If a personal data breach occurs that is likely to affect your privacy, we will take the steps required by UAE law, including notifying the competent authority and affected individuals where required.`,
   },
   {
     id: "cookies",
-    title: "7. Cookies & Similar Technologies",
-    content: `Our website may use cookies or similar technologies that are necessary to operate the website and its functionality.
+    title: "Cookies",
+    content: `Our website does not currently use advertising, tracking, or analytics cookies.
 
-At present, we do not use cookies for targeted advertising or cross-site marketing tracking.
+Our hosting provider may use strictly necessary technical cookies or similar technologies to deliver the website securely. These do not identify you personally.
 
-If additional analytics or tracking technologies are introduced in the future, this policy may be updated accordingly.`,
+If we introduce analytics or other non-essential cookies in the future, we will update this policy and ask for your consent where required.`,
   },
   {
     id: "your-rights",
-    title: "8. Your Rights",
-    content: `Subject to applicable law, you may have the right to request:
+    title: "Your rights",
+    content: `Under Federal Decree-Law No. 45 of 2021, you have the right to:
 
-• Access to certain personal information we hold about you
-• Correction of inaccurate or incomplete information
-• Deletion of information where legally permitted
-• Restriction of, or objection to, certain processing where applicable
-• Information about how your personal data is used
+• Request information about, and a copy of, the personal data we hold about you
+• Ask us to correct inaccurate or incomplete data
+• Ask us to delete your data, where we are not required to keep it by law
+• Ask us to restrict or stop processing your data in certain cases
+• Receive your data in a structured, machine-readable format, where applicable
+• Withdraw your consent at any time
 
-To exercise any applicable rights, contact us at info@novitech.ae.
+To make a request, email info@novitech.ae. We may need to verify your identity first, and we will respond within the timeframe required by law.
 
-We may need to verify your identity before processing certain requests.`,
+If you are not satisfied with our response, you may submit a complaint to the UAE Data Office.`,
   },
   {
     id: "third-party",
-    title: "9. Third-Party Websites & Services",
-    content: `Our website or services may contain links to, or integrations with, third-party websites or services.
-
-NoviTech does not control the privacy practices of those third parties. We recommend reviewing their privacy policies before providing personal information to them.`,
+    title: "Links to other websites",
+    content: `Our website links to third-party websites and services, such as the Apple App Store, LinkedIn, Instagram, TikTok, and WhatsApp. We are not responsible for their privacy practices, and we recommend reading their privacy policies.`,
   },
   {
     id: "children",
-    title: "10. Children's Privacy",
-    content: `NoviTech's corporate website and general business services are not directed at individuals under the age of 18.
+    title: "Children",
+    content: `Our website and services are intended for businesses and adults, and are not directed at children under 18.
 
-We do not knowingly collect children's personal information through this website. If we become aware that a child's information has been submitted without an appropriate basis, we will take reasonable steps to address it.`,
+We do not knowingly collect personal data from children through this website. If you believe a child has sent us personal data, please contact us and we will delete it.`,
   },
   {
     id: "changes",
-    title: "11. Changes to This Policy",
-    content: `We may update this Privacy Policy from time to time to reflect changes in our services, systems, or legal requirements.
+    title: "Changes to this policy",
+    content: `We may update this Privacy Policy to reflect changes in our services, the tools we use, or the law. The latest version will always be published on this page with a revised "Last updated" date.
 
-The updated version will be published on this page and the "Last updated" date will be revised accordingly.`,
+This policy is published in Arabic and English. If there is any inconsistency, the Arabic version prevails to the extent required by UAE law.`,
   },
   {
     id: "contact",
-    title: "12. Contact Us",
-    content: `For questions or requests relating to privacy or your personal information, please contact NoviTech at info@novitech.ae or through novitech.ae/en/contact.`,
+    title: "Contact us",
+    content: `For any privacy question or request, contact NoviTech:
+
+Email: info@novitech.ae
+Phone: +971 50 519 5426
+Address: Al Ain, Abu Dhabi, United Arab Emirates`,
   },
 ];
 
 export default function PrivacyPage() {
   return (
-    <main className="min-h-screen bg-beige text-charcoal px-6 md:px-10 py-10 md:py-14">
-      <Navbar />
-
-      <div className="max-w-3xl mx-auto py-16">
-        <div className="mb-12">
-          <p className="text-xs uppercase tracking-widest text-accent mb-3">
-            Legal
-          </p>
-
-          <h1 className="text-4xl font-bold tracking-tight mb-4">
-            Privacy Policy
-          </h1>
-
-          <p className="text-sm text-muted">
-            Last updated:{" "}
-            <span className="text-charcoal">
-              September 2026
-            </span>
-          </p>
-
-          <div className="mt-4 border border-border p-4">
-            <p className="text-xs uppercase tracking-widest text-accent mb-1">
-              Legal Entity
-            </p>
-
-            <p className="text-sm font-medium">
-              {LEGAL_NAME}
-            </p>
-
-            <p className="text-xs text-muted mt-1">
-              Registered in the United Arab Emirates
-            </p>
-          </div>
-
-          <p className="mt-4 text-muted leading-relaxed">
-            Your privacy matters. This policy explains what we collect, why we collect it, and how we use and protect it.
-          </p>
-        </div>
-
-        {/* TOC */}
-        <div className="border border-border p-6 mb-12">
-          <p className="text-xs uppercase tracking-widest text-accent mb-4">
-            Contents
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
-            {sections.map((section) => (
-              <a
-                key={section.id}
-                href={`#${section.id}`}
-                className="text-sm text-muted hover:text-charcoal transition py-1"
-              >
-                {section.title}
-              </a>
-            ))}
-          </div>
-        </div>
-
-        <div className="space-y-10">
-          {sections.map((section) => (
-            <section
-              key={section.id}
-              id={section.id}
-              className="scroll-mt-28"
-            >
-              <h2 className="text-lg font-semibold mb-3">
-                {section.title}
-              </h2>
-
-              <p className="text-muted leading-relaxed text-[15px] whitespace-pre-line">
-                {section.content}
-              </p>
-            </section>
-          ))}
-        </div>
-      </div>
-
-      <Footer />
-    </main>
+    <LegalPage
+      title="Privacy Policy"
+      intro="How NoviTech collects, uses, and protects your personal data, and the rights you have under UAE law."
+      sections={sections}
+    />
   );
 }

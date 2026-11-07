@@ -1,6 +1,5 @@
 // src/app/en/projects/glowee/page.jsx
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { SiteShell, Container } from "@/components/site/ui";
 import ProductCaseStudy from "@/components/ProductCaseStudy";
 
 export const metadata = {
@@ -35,10 +34,8 @@ export const metadata = {
 
 export default function GloweeProjectPage() {
   return (
-    <main className="min-h-screen bg-beige px-6 py-10 text-charcoal md:px-10 md:py-14">
-      <Navbar />
-
-      <div className="mx-auto max-w-6xl">
+    <SiteShell>
+      <Container className="pb-8">
         <ProductCaseStudy
           locale="en"
           eyebrow="Selected Product"
@@ -104,9 +101,7 @@ export default function GloweeProjectPage() {
           availabilityText="Glowee is currently available on the Apple App Store, with business onboarding and market expansion underway in the UAE." footerTitle="Building a platform with multiple users, workflows, and business operations?"
           footerText="NoviTech designs and develops connected digital products that combine customer experiences, business tools, administration systems, and backend infrastructure."
         />
-      </div>
-
-      <Footer />
-    </main>
+      </Container>
+    </SiteShell>
   );
 }

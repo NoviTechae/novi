@@ -1,6 +1,5 @@
 // src/app/ar/projects/samar/page.jsx
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { SiteShell, Container } from "@/components/site/ui";
 import ProductCaseStudy from "@/components/ProductCaseStudy";
 
 export const metadata = {
@@ -35,13 +34,8 @@ export const metadata = {
 
 export default function SamarProjectPageAR() {
   return (
-    <main
-      className="min-h-screen bg-beige px-6 py-10 text-charcoal md:px-10 md:py-14"
-      dir="rtl"
-    >
-      <Navbar />
-
-      <div className="mx-auto max-w-6xl">
+    <SiteShell locale="ar">
+      <Container className="pb-8">
         <ProductCaseStudy
           locale="ar"
           eyebrow="منتج مختار"
@@ -101,9 +95,7 @@ export default function SamarProjectPageAR() {
           availabilityText="حصل سمر على المركز الثاني في مسابقة مشاريع التخرج من صندوق خليفة ومزن هب، وعُرض في مؤتمر ITT 2025 الدولي. كما عُرضت المنصة في سياقات أكاديمية وعلى مختصين في المجال للحصول على ملاحظاتهم، وتواصل نوفيتك تطويرها." footerTitle="هل لديك احتياج حقيقي يمكن للتقنية أن تقدم له حلاً أفضل؟"
           footerText="تطور نوفيتك منصات رقمية مخصصة تجمع المستخدمين والعمليات والبيانات وأدوات الإدارة ضمن منتج عملي وقابل للتوسع."
         />
-      </div>
-
-      <Footer />
-    </main>
+      </Container>
+    </SiteShell>
   );
 }

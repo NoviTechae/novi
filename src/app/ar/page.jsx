@@ -1,412 +1,195 @@
 // src/app/ar/page.jsx
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Link from "next/link";
 import SystemVisual from "@/components/SystemVisual";
-import ProjectCard from "@/components/ProjectCard";
+import {
+  SiteShell,
+  Container,
+  Eyebrow,
+  PrimaryButton,
+  SecondaryButton,
+  WorkCard,
+  CTASection,
+  Arrow,
+  buildMetadata,
+} from "@/components/site/ui";
+import { services, projects } from "@/data/ar/content";
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: "نوفيتك | برمجيات وتطبيقات وحلول رقمية في الإمارات",
   description:
-    "نوفيتك شركة تقنية مقرها الإمارات، تطور تطبيقات الجوال ومنصات الويب والبرمجيات المخصصة والأنظمة الإدارية والحلول المدعومة بالذكاء الاصطناعي.",
-  keywords: [
-    "نوفيتك",
-    "شركة تقنية إماراتية",
-    "تطوير تطبيقات الإمارات",
-    "تطوير مواقع الإمارات",
-    "برمجيات مخصصة",
-    "أنظمة إدارية",
-    "حلول ذكاء اصطناعي",
-  ],
-  openGraph: {
-    title: "نوفيتك | حلول تقنية ومنتجات رقمية",
-    description:
-      "نطوّر في نوفيتك تطبيقات الجوال ومنصات الويب والبرمجيات المخصصة والأنظمة الإدارية والحلول المدعومة بالذكاء الاصطناعي للأعمال في الإمارات.",
-    url: "https://www.novitech.ae/ar",
-    locale: "ar_AE",
-    siteName: "NoviTech",
-    type: "website",
-    images: [
-      {
-        url: "/opengraph-image.png",
-        width: 1200,
-        height: 627,
-        alt: "NoviTech",
-      },
-    ],
-  },
-  alternates: {
-    canonical: "https://www.novitech.ae/ar",
-    languages: {
-      "en-AE": "https://www.novitech.ae/en",
-      "ar-AE": "https://www.novitech.ae/ar",
-    },
-  },
-};
+    "نوفيتك شركة تقنية إماراتية مقرها الإمارات، تطوّر المواقع وتطبيقات الجوال والبرمجيات المخصصة والأنظمة الإدارية والحلول المدعومة بالذكاء الاصطناعي.",
+  path: "/ar",
+});
 
-const services = [
-  {
-    title: "مواقع وتطبيقات ويب",
-    desc: "منصات وتجارب ويب حديثة ومتجاوبة، مصممة للأداء وسهولة الاستخدام واحتياجات الأعمال الفعلية.",
-  },
-  {
-    title: "تطبيقات الجوال",
-    desc: "تطبيقات iOS وAndroid مصممة حول احتياجات المستخدمين وتجارب الاستخدام العملية والموثوقة.",
-  },
-  {
-    title: "برمجيات مخصصة",
-    desc: "حلول برمجية يتم تطويرها وفق متطلبات العمل ومسارات التشغيل والاحتياجات الخاصة بكل مشروع.",
-  },
-  {
-    title: "أنظمة إدارية",
-    desc: "أنظمة ومنصات داخلية تساعد على تنظيم العمليات والبيانات وتبسيط إدارة الأعمال اليومية.",
-  },
-  {
-    title: "حلول مدعومة بالذكاء الاصطناعي",
-    desc: "ميزات ذكية وأتمتة وأنظمة مدعومة بالذكاء الاصطناعي لتحسين سير العمل وتجربة المستخدم.",
-  },
+const facts = [
+  { value: "5", label: "خدمات رئيسية" },
+  { value: "2", label: "منتجات خاصة بنا" },
+  { value: "متوفر", label: "Glowee على App Store" },
+  { value: "الثاني", label: "مركز في مسابقة صندوق خليفة ومزن هب" },
 ];
 
-const projects = [
-  {
-    name: "Glowee",
-    category: "منصة تقنية لقطاع التجميل",
-    desc: "منصة إماراتية تربط العملاء بالصالونات وخدمات التجميل المنزلية من خلال الحجوزات والهدايا والمكافآت، مع منصات مخصصة لإدارة الأعمال والإدارة التشغيلية.",
-    image: "/projects/glowee-icon.png",
-    imageFit: "contain",
-    placeholder: "GL",
-    href: "/ar/projects/glowee"
-  },
-  {
-    name: "Samar App",
-    category: "منصة تعليمية مساندة",
-    desc: "منصة جوال تفاعلية تم تطويرها لدعم التعلم والتواصل والأنشطة المنظمة لأصحاب الهمم، مع تجارب مخصصة للطلاب والمعلمين والإدارة.",
-    image: "/projects/samar.png",
-    placeholder: "SA",
-    href: "/ar/projects/samar"
-  },
+const reasons = [
+  "شركة إماراتية مقرها الإمارات",
+  "نبني منتجاتنا الخاصة",
+  "كل مراحل المشروع في مكان واحد",
+  "العربية والإنجليزية من البداية",
 ];
 
-export default function AR() {
+export default function HomeAR() {
   return (
-    <main
-      id="top"
-      dir="rtl"
-      className="min-h-screen bg-beige text-charcoal px-6 md:px-10 py-10 md:py-14 font-arabic"
-    >
-      <Navbar />
-
-      <div className="max-w-7xl mx-auto">
-
-        {/* HERO */}
-        <section className="mt-32 grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <SiteShell locale="ar">
+      {/* HERO */}
+      <section className="border-b border-border">
+        <Container className="grid items-center gap-12 pb-16 pt-12 md:pb-24 md:pt-20 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
-            <p className="text-xs tracking-[0.18em] text-accent mb-5">
-              شركة إماراتية • بقيادة إماراتية
-            </p>
+            <Eyebrow className="mb-6">شركة تقنية إماراتية • بقيادة إماراتية</Eyebrow>
 
-            <p className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-              NoviTech
-            </p>
-
-            <div className="w-20 h-[2px] bg-accent my-7" />
-
-            <h1 className="text-xl md:text-2xl leading-relaxed max-w-xl">
+            <h1 className="text-5xl font-semibold leading-[1.2] tracking-tight md:text-6xl lg:text-7xl">
               نطوّر منتجات رقمية وحلولاً تقنية مخصصة.
             </h1>
 
-            <p className="mt-5 text-sm md:text-base text-muted leading-relaxed max-w-xl">
-              نطوّر تطبيقات الجوال، ومنصات الويب، والبرمجيات المخصصة،
-              والأنظمة الإدارية، والحلول المدعومة بالذكاء الاصطناعي
-              لتلبية احتياجات أعمال حقيقية.
+            <div className="my-8 h-[2px] w-20 bg-accent" />
+
+            <p className="max-w-2xl text-lg leading-8 text-muted md:text-xl md:leading-9">
+              تصمم نوفيتك وتطوّر المواقع وتطبيقات الجوال والبرمجيات المخصصة
+              والأنظمة الإدارية والحلول المدعومة بالذكاء الاصطناعي للأعمال في
+              الإمارات، وتبني منتجاتها الخاصة.
             </p>
 
-            <p className="mt-6 text-xs tracking-[0.14em] text-muted">
-              ويب • جوال • برمجيات • أنظمة • ذكاء اصطناعي
-            </p>
-
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="/ar/contact"
-                className="inline-flex items-center justify-center border border-charcoal bg-charcoal text-beige px-8 py-3 transition hover:bg-transparent hover:text-charcoal"
-              >
+            <div className="mt-10 flex flex-wrap gap-3">
+              <PrimaryButton href="/ar/contact">
                 ابدأ مشروعك
-              </a>
-
-              <a
-                href="#projects"
-                className="inline-flex items-center justify-center border border-border px-8 py-3 transition hover:border-charcoal"
-              >
-                استكشف أعمالنا
-              </a>
+                <Arrow locale="ar" />
+              </PrimaryButton>
+              <SecondaryButton href="/ar/services">تعرّف على خدماتنا</SecondaryButton>
             </div>
           </div>
 
-          <div className="hidden md:flex justify-start text-charcoal">
+          <div className="hidden justify-end text-charcoal lg:flex">
             <SystemVisual />
           </div>
-        </section>
+        </Container>
 
-        {/* ABOUT */}
-        <section id="about" className="mt-44">
-          <div className="mb-12">
-            <p className="text-xs tracking-[0.18em] text-accent mb-3">
-              عن NoviTech
-            </p>
+        <Container>
+          <dl className="grid grid-cols-2 gap-px border-t border-border bg-border md:grid-cols-4">
+            {facts.map((fact, index) => (
+              <div
+                key={fact.label}
+                className={`bg-beige py-8 pe-4 md:py-10 ${
+                  index === 0 ? "" : index === 2 ? "md:ps-8" : "ps-6 md:ps-8"
+                }`}
+              >
+                <dt className="sr-only">{fact.label}</dt>
+                <dd>
+                  <span className="block text-3xl font-semibold tracking-tight md:text-4xl">
+                    {fact.value}
+                  </span>
+                  <span className="mt-2 block text-sm leading-6 text-muted">
+                    {fact.label}
+                  </span>
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </Container>
+      </section>
 
-            <h2 className="text-3xl md:text-4xl font-semibold">
+      {/* SERVICES */}
+      <section id="services" className="py-20 md:py-28">
+        <Container className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <div>
+            <Eyebrow className="mb-4">ماذا نقدّم</Eyebrow>
+            <h2 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
+              خدمات مبنية حول احتياجات الأعمال الحقيقية
+            </h2>
+            <div className="mt-8">
+              <SecondaryButton href="/ar/services">
+                جميع الخدمات
+                <Arrow locale="ar" />
+              </SecondaryButton>
+            </div>
+          </div>
+
+          <ul className="border-t border-border">
+            {services.map((service, index) => (
+              <li key={service.slug}>
+                <Link
+                  href={`/ar/services/${service.slug}`}
+                  className="group flex items-center gap-6 border-b border-border py-6 transition hover:text-accent md:py-7"
+                >
+                  <span className="w-8 shrink-0 text-xs text-accent">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="flex-1 text-xl font-medium md:text-2xl">
+                    {service.title}
+                  </span>
+                  <Arrow
+                    locale="ar"
+                    size={18}
+                    className="shrink-0 transition-transform group-hover:-translate-x-1"
+                  />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
+      {/* FEATURED WORK */}
+      <section id="projects" className="border-t border-border py-20 md:py-28">
+        <Container>
+          <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
+            <div className="max-w-2xl">
+              <Eyebrow className="mb-4">من أعمالنا</Eyebrow>
+              <h2 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
+                صممناه وطوّرناه، ومتوفر الآن على App Store
+              </h2>
+            </div>
+            <SecondaryButton href="/ar/work">
+              جميع الأعمال
+              <Arrow locale="ar" />
+            </SecondaryButton>
+          </div>
+
+          <WorkCard project={projects.glowee} locale="ar" />
+        </Container>
+      </section>
+
+      {/* WHY NOVITECH */}
+      <section id="about" className="bg-charcoal text-beige">
+        <Container className="grid gap-12 py-20 md:py-28 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <div>
+            <Eyebrow className="mb-4">لماذا نوفيتك</Eyebrow>
+            <h2 className="text-3xl font-semibold leading-tight tracking-tight md:text-5xl">
               تقنية تُبنى لهدف واضح.
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="border-t border-border pt-6">
-              <h3 className="text-sm tracking-widest text-accent mb-4">
-                من نحن
-              </h3>
+          <div>
+            <ul className="grid gap-x-10 gap-y-6 sm:grid-cols-2">
+              {reasons.map((reason) => (
+                <li key={reason} className="border-t border-beige/15 pt-5">
+                  <p className="font-medium">{reason}</p>
+                </li>
+              ))}
+            </ul>
 
-              <p className="text-muted leading-relaxed">
-                NoviTech شركة تقنية مقرها الإمارات، تركّز على تطوير حلول
-                رقمية عملية وموثوقة وقابلة للتوسع للأعمال والاحتياجات
-                الواقعية.
-              </p>
-            </div>
-
-            <div className="border-t border-border pt-6">
-              <h3 className="text-sm tracking-widest text-accent mb-4">
-                الرسالة
-              </h3>
-
-              <p className="text-muted leading-relaxed">
-                تصميم وتطوير منتجات رقمية وحلول تقنية موثوقة تعالج
-                مشكلات حقيقية بكفاءة ودقة.
-              </p>
-            </div>
-
-            <div className="border-t border-border pt-6">
-              <h3 className="text-sm tracking-widest text-accent mb-4">
-                الرؤية
-              </h3>
-
-              <p className="text-muted leading-relaxed">
-                تطوير NoviTech لتصبح شركة تقنية إماراتية موثوقة ومعروفة
-                ببناء منتجات رقمية عالية الجودة وحلول تقنية قابلة للتوسع.
-              </p>
+            <div className="mt-10 flex flex-wrap gap-3">
+              <SecondaryButton href="/ar/about" dark>
+                عن نوفيتك
+                <Arrow locale="ar" />
+              </SecondaryButton>
+              <SecondaryButton href="/ar/approach" dark>
+                كيف نعمل
+                <Arrow locale="ar" />
+              </SecondaryButton>
             </div>
           </div>
+        </Container>
+      </section>
 
-          {/* FOUNDER */}
-          <div className="mt-12 border border-border p-8 md:p-10 grid md:grid-cols-[0.8fr_1.2fr] gap-6 md:gap-12">
-            <div>
-              <h3 className="text-sm tracking-widest text-accent mb-3">
-                المؤسسة
-              </h3>
-
-              <p className="text-2xl font-semibold">شوق العامري</p>
-
-              <p className="mt-1 text-sm text-muted">
-                المؤسسة والرئيسة التنفيذية، مطوّرة برمجيات
-              </p>
-            </div>
-
-            <div>
-              <p className="text-muted leading-relaxed">
-                أسست نوفيتك شوق العامري، مطوّرة برمجيات إماراتية. حصل أول منتج
-                لها، تطبيق سمر لدعم تعلم أصحاب الهمم، على المركز الثاني في مسابقة
-                مشاريع التخرج من صندوق خليفة ومزن هب، وكان الدافع لتأسيس نوفيتك.
-              </p>
-
-              <a
-                href="https://www.linkedin.com/in/shouqalameri"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center text-sm text-charcoal transition hover:text-accent"
-              >
-                تواصل عبر لينكدإن
-                <span className="mr-2" aria-hidden="true">←</span>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* DIVIDER */}
-        <div className="my-24 h-px bg-gradient-to-r from-transparent via-accent to-transparent" />
-
-        {/* SERVICES */}
-        <section id="services" className="mt-44">
-          <div className="mb-12">
-            <p className="text-xs tracking-[0.18em] text-accent mb-3">
-              قدراتنا
-            </p>
-
-            <h2 className="text-3xl md:text-4xl font-semibold">
-              ما الذي نطوّره
-            </h2>
-
-            <p className="mt-4 text-sm text-muted max-w-2xl leading-relaxed">
-              من المنتجات الموجهة للعملاء إلى الأنظمة الداخلية للأعمال،
-              نطوّر التقنية وفق احتياجات كل مشروع ومتطلباته.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {services.map((item, index) => (
-              <div
-                key={item.title}
-                className={`group relative border border-border p-8 md:p-10 h-full transition-all duration-200 hover:-translate-y-1 hover:shadow-sm hover:border-accent ${
-                  services.length % 2 === 1 && index === services.length - 1
-                    ? "md:col-span-2"
-                    : ""
-                }`}
-              >
-                <span className="absolute top-0 left-0 w-6 h-6 border-t border-l border-accent" />
-
-                <div className="flex items-start gap-5">
-                  <span className="text-xs text-accent tracking-widest pt-1">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-
-                  <div>
-                    <h3 className="text-lg md:text-xl mb-3">
-                      {item.title}
-                    </h3>
-
-                    <p className="text-sm text-muted leading-relaxed max-w-lg">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* PROJECTS */}
-        <section id="projects" className="mt-44">
-          <div className="mb-12">
-            <p className="text-xs tracking-[0.18em] text-accent mb-3">
-              أعمال مختارة
-            </p>
-
-            <h2 className="text-3xl md:text-4xl font-semibold">
-              منتجات وأنظمة
-            </h2>
-
-            <p className="mt-4 text-sm text-muted max-w-2xl leading-relaxed">
-              مجموعة مختارة من المنتجات والأنظمة الرقمية التي صممتها وطوّرتها NoviTech.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project) => (
-              <ProjectCard
-                key={project.name}
-                {...project}
-              />
-            ))}
-          </div>
-        </section>
-
-        {/* APPROACH */}
-        <section className="mt-44">
-          <div className="border-y border-border py-14 md:py-16">
-            <div className="grid md:grid-cols-[0.8fr_1.2fr] gap-10 md:gap-20">
-              <div>
-                <p className="text-xs tracking-[0.18em] text-accent mb-3">
-                  منهجية العمل
-                </p>
-
-                <h2 className="text-3xl md:text-4xl font-semibold leading-tight">
-                  نبني الحل حول المشكلة،
-                  <br className="hidden md:block" /> وليس حول قالب جاهز.
-                </h2>
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-x-10 gap-y-8">
-                <div>
-                  <p className="text-sm font-medium mb-2">
-                    نفهم
-                  </p>
-
-                  <p className="text-sm text-muted leading-relaxed">
-                    نبدأ بفهم المشكلة والمستخدمين ومسارات العمل والمتطلبات
-                    الفعلية التي يقوم عليها المشروع.
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-sm font-medium mb-2">
-                    نصمم
-                  </p>
-
-                  <p className="text-sm text-muted leading-relaxed">
-                    نصمم تجربة المستخدم وهيكل النظام بما يحقق الوضوح
-                    وسهولة الاستخدام والتشغيل العملي.
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-sm font-medium mb-2">
-                    نطوّر
-                  </p>
-
-                  <p className="text-sm text-muted leading-relaxed">
-                    نطوّر حلولاً رقمية موثوقة باستخدام التقنية المناسبة
-                    لمتطلبات كل منتج ومشروع.
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-sm font-medium mb-2">
-                    نحسّن
-                  </p>
-
-                  <p className="text-sm text-muted leading-relaxed">
-                    نعمل على تحسين المنتجات من خلال الاختبار والاستخدام
-                    الفعلي والملاحظات والتطوير المستمر.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* FINAL CTA */}
-        <section className="mt-36 mb-28">
-          <div className="border border-border p-10 md:p-14 lg:p-16 relative overflow-hidden">
-            <span className="absolute top-0 left-0 w-12 h-12 border-t border-l border-accent" />
-            <span className="absolute bottom-0 right-0 w-12 h-12 border-b border-r border-accent" />
-
-            <div className="max-w-3xl">
-              <p className="text-xs tracking-[0.18em] text-accent mb-4">
-                ابدأ مشروعك
-              </p>
-
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight">
-                لديك فكرة أو مشروع؟
-              </h2>
-
-              <p className="mt-5 text-muted leading-relaxed max-w-2xl">
-                شاركنا احتياجك، ولنستكشف كيف يمكن لـNoviTech تحويله إلى
-                حل رقمي موثوق وعملي.
-              </p>
-
-              <a
-                href="/ar/contact"
-                className="inline-flex items-center justify-center mt-8 bg-charcoal text-beige border border-charcoal px-8 py-3 transition hover:bg-transparent hover:text-charcoal"
-              >
-                ابدأ مشروعك
-                <span className="mr-3" aria-hidden="true">
-                  ←
-                </span>
-              </a>
-            </div>
-          </div>
-        </section>
-
-      </div>
-
-      <Footer />
-    </main>
+      <CTASection locale="ar" />
+    </SiteShell>
   );
 }

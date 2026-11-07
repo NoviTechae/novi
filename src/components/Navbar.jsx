@@ -16,40 +16,24 @@ export default function Navbar() {
   const isAr = pathname?.startsWith("/ar");
   const prefix = isAr ? "/ar" : "/en";
 
-  const isHomePage =
-    pathname === "/en" ||
-    pathname === "/ar" ||
-    pathname === "/";
-
   const links = isAr
     ? [
-      {
-        label: "عن نوفيتك",
-        href: isHomePage ? "#about" : `${prefix}#about`,
-      },
-      {
-        label: "الخدمات",
-        href: isHomePage ? "#services" : `${prefix}#services`,
-      },
-      {
-        label: "المشاريع",
-        href: isHomePage ? "#projects" : `${prefix}#projects`,
-      },
-    ]
+        { label: "عن نوفيتك", href: "/ar/about" },
+        { label: "الخدمات", href: "/ar/services" },
+        { label: "أعمالنا", href: "/ar/work" },
+        { label: "منهجيتنا", href: "/ar/approach" },
+      ]
     : [
-      {
-        label: "About",
-        href: isHomePage ? "#about" : `${prefix}#about`,
-      },
-      {
-        label: "Services",
-        href: isHomePage ? "#services" : `${prefix}#services`,
-      },
-      {
-        label: "Projects",
-        href: isHomePage ? "#projects" : `${prefix}#projects`,
-      },
-    ];
+        { label: "About", href: "/en/about" },
+        { label: "Services", href: "/en/services" },
+        { label: "Work", href: "/en/work" },
+        { label: "Approach", href: "/en/approach" },
+      ];
+
+  const isActive = (href) =>
+    !href.includes("#") &&
+    (pathname === href || pathname?.startsWith(`${href}/`) ||
+      (href.endsWith("/work") && pathname?.startsWith(`${prefix}/projects`)));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -83,7 +67,7 @@ export default function Navbar() {
     >
       <div
         dir={isAr ? "rtl" : "ltr"}
-        className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-10"
+        className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10"
       >
         {/* Logo */}
         <Link
@@ -94,7 +78,7 @@ export default function Navbar() {
           <img
             src="/header1.png"
             alt="NoviTech Technology Systems"
-            className="h-14 w-auto object-contain md:h-24"
+            className="h-14 w-auto object-contain md:h-20"
           />
         </Link>
 
@@ -102,18 +86,23 @@ export default function Navbar() {
         <div className="hidden items-center gap-8 md:flex">
           <div className="flex items-center gap-7 text-sm">
             {links.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
-                className="
-                  relative text-muted transition hover:text-charcoal
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={`
+                  relative transition hover:text-charcoal
                   after:absolute after:-bottom-1 after:start-0
-                  after:h-px after:w-0 after:bg-accent
-                  after:transition-all hover:after:w-full
-                "
+                  after:h-px after:bg-accent after:transition-all
+                  hover:after:w-full
+                  ${isActive(link.href)
+                    ? "text-charcoal after:w-full"
+                    : "text-muted after:w-0"
+                  }
+                `}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -125,11 +114,11 @@ export default function Navbar() {
             href={`${prefix}/contact`}
             className="
               inline-flex items-center justify-center
-              border border-charcoal
+              border border-charcoal bg-charcoal
               px-5 py-2.5
-              text-sm text-charcoal
+              text-sm text-beige
               transition
-              hover:bg-charcoal hover:text-beige
+              hover:bg-transparent hover:text-charcoal
             "
           >
             {isAr ? "ابدأ مشروعك" : "Start a project"}
@@ -151,7 +140,7 @@ export default function Navbar() {
           }
           aria-expanded={open}
           className="
-            flex h-10 w-10 items-center justify-center
+            flex h-11 w-11 items-center justify-center
             border border-border
             text-charcoal
             transition hover:border-accent hover:text-accent
@@ -175,19 +164,20 @@ export default function Navbar() {
           <div className="mx-auto flex max-w-7xl flex-col px-6 py-6">
             <div className="flex flex-col">
               {links.map((link) => (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="
+                  className={`
                     border-b border-border/70
                     py-4
-                    text-sm text-charcoal
+                    text-sm
                     transition hover:text-accent
-                  "
+                    ${isActive(link.href) ? "text-accent" : "text-charcoal"}
+                  `}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
 

@@ -4,16 +4,20 @@ import { usePathname, useRouter } from "next/navigation";
 
 export default function LanguageSwitch() {
   const router = useRouter();
-  const pathname = usePathname();
+  const pathname = usePathname() || "/en";
 
-  const isEN = pathname === "/" || pathname === "/en";
+  const isAr = pathname.startsWith("/ar");
+  const rest = pathname.replace(/^\/(en|ar)/, "") || "";
+  const target = `${isAr ? "/en" : "/ar"}${rest}`;
 
   return (
     <button
-      onClick={() => router.push(isEN ? "/ar" : "/en")}
-      className="text-sm underline"
+      type="button"
+      onClick={() => router.push(target)}
+      aria-label={isAr ? "Switch to English" : "التبديل إلى العربية"}
+      className="text-sm underline underline-offset-4 transition hover:text-accent"
     >
-      {isEN ? "AR" : "EN"}
+      {isAr ? "EN" : "AR"}
     </button>
   );
 }

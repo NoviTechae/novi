@@ -8,7 +8,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/en",
     "/ar",
 
+    "/en/about",
+    "/en/services",
+    "/en/services/websites-web-apps",
+    "/en/services/mobile-apps",
+    "/en/services/custom-software",
+    "/en/services/management-systems",
+    "/en/services/ai-solutions",
+    "/en/work",
+    "/en/approach",
+
     "/en/contact",
+    "/ar/about",
+    "/ar/services",
+    "/ar/services/websites-web-apps",
+    "/ar/services/mobile-apps",
+    "/ar/services/custom-software",
+    "/ar/services/management-systems",
+    "/ar/services/ai-solutions",
+    "/ar/work",
+    "/ar/approach",
+
     "/ar/contact",
 
     "/en/projects/glowee",
@@ -36,7 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ? 1
         : route === "/en" || route === "/ar"
         ? 0.9
-        : route.includes("/projects/")
+        : route.includes("/projects/") || route.includes("/services") || route.endsWith("/about")
         ? 0.8
         : route.includes("/contact")
         ? 0.8

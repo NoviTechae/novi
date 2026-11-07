@@ -46,6 +46,22 @@ export default function Footer() {
         { href: `${prefix}/refund-policy`, label: "Refund Policy" },
       ];
 
+  const companyLinks = isAr
+    ? [
+        { href: "/ar/about", label: "عن نوفيتك" },
+        { href: "/ar/services", label: "الخدمات" },
+        { href: "/ar/work", label: "أعمالنا" },
+        { href: "/ar/approach", label: "منهجيتنا" },
+        { href: "/ar/contact", label: "تواصل معنا" },
+      ]
+    : [
+        { href: "/en/about", label: "About" },
+        { href: "/en/services", label: "Services" },
+        { href: "/en/work", label: "Work" },
+        { href: "/en/approach", label: "Approach" },
+        { href: "/en/contact", label: "Contact" },
+      ];
+
   const socialLinks = [
     ...(LINKEDIN_URL.startsWith("https://")
       ? [
@@ -80,7 +96,13 @@ export default function Footer() {
     >
       {/* Main footer */}
       <div className="py-12 md:py-14">
-        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr] md:gap-12">
+        <div
+          className={`grid gap-10 md:gap-12 ${
+            companyLinks.length
+              ? "md:grid-cols-[1.4fr_1fr_1fr_1fr]"
+              : "md:grid-cols-[1.4fr_1fr_1fr]"
+          }`}
+        >
 
           {/* Brand */}
           <div>
@@ -103,6 +125,27 @@ export default function Footer() {
                 : "UAE-based • Emirati-led"}
             </p>
           </div>
+
+          {/* Company */}
+          {companyLinks.length > 0 && (
+            <div>
+              <p className="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-charcoal">
+                {isAr ? "الشركة" : "Company"}
+              </p>
+
+              <div className="flex flex-col items-start gap-3">
+                {companyLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-sm transition hover:text-accent"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Legal */}
           <div>

@@ -1,29 +1,19 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+// src/app/en/refund-policy/page.jsx
 
-export const metadata = {
+import LegalPage, { LEGAL_NAME } from "@/components/site/LegalPage";
+import { buildMetadata } from "@/components/site/ui";
+
+const base = buildMetadata({
   title: "Refund Policy | NoviTech",
   description:
-    "Refund and cancellation policy for NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C.",
-  openGraph: {
-    title: "Refund Policy | NoviTech",
-    description:
-      "Refund and cancellation policy for NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C.",
-    url: "https://www.novitech.ae/en/refund-policy",
-    locale: "en_AE",
-    siteName: "NoviTech",
-    type: "website",
-    images: [
-      {
-        url: "/opengraph-image.png",
-        width: 1200,
-        height: 627,
-        alt: "NoviTech",
-      },
-    ],
-  },
+    "Refund and cancellation policy for services and products of NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C, in line with UAE consumer protection law.",
+  path: "/en/refund-policy",
+});
+
+export const metadata = {
+  ...base,
   alternates: {
-    canonical: "https://www.novitech.ae/en/refund-policy",
+    ...base.alternates,
     languages: {
       "en-AE": "https://www.novitech.ae/en/refund-policy",
       "ar-AE": "https://www.novitech.ae/ar/refund-policy",
@@ -31,245 +21,147 @@ export const metadata = {
   },
 };
 
-const LEGAL_NAME =
-  "NOVITECH FOR TECHNOLOGY SYSTEMS L.L.C S.P.C";
-
 const summary = [
   {
-    label: "Pre-work cancellation",
-    value: "May be eligible for a deposit refund",
+    label: "Cancelled before work starts",
+    value: "Deposit refunded, less any costs already incurred",
   },
   {
-    label: "Mid-project cancellation",
-    value: "Pay for completed work and incurred costs",
+    label: "Cancelled during the project",
+    value: "You pay for completed work and costs incurred; any overpayment is refunded",
   },
   {
-    label: "Post-delivery defects",
-    value: "Corrections within the agreed warranty scope",
-  },
-  {
-    label: "Digital products",
-    value: "Generally non-refundable after access",
+    label: "Defects after delivery",
+    value: "We fix them within the agreed warranty scope",
   },
   {
     label: "Third-party costs",
-    value: "Non-refundable once incurred",
+    value: "Non-refundable once paid",
+  },
+  {
+    label: "Your statutory rights",
+    value: "Always protected under UAE consumer protection law",
   },
 ];
 
 const sections = [
   {
     id: "overview",
-    title: "1. Overview",
-    content: `This Refund Policy applies to services and products provided by ${LEGAL_NAME}, trading as NoviTech.
+    title: "Overview",
+    content: `This Refund Policy applies to services and digital products provided by ${LEGAL_NAME}, trading as NoviTech.
 
-Refunds, credits, and cancellation outcomes are assessed according to the nature of the service, the stage of the project, work already completed, costs already incurred, and the applicable project agreement or purchase terms.`,
+Refunds and cancellations depend on the stage of the project, the work already completed, the costs already incurred, and the terms of the applicable project agreement. Where a project agreement sets out specific refund terms, those terms apply together with this policy.`,
+  },
+  {
+    id: "statutory-rights",
+    title: "Your statutory rights",
+    content: `Nothing in this policy limits or excludes the rights you have under Federal Law No. 15 of 2020 on Consumer Protection (as amended), its Executive Regulations, or Federal Decree-Law No. 14 of 2023 on Modern Technology-Based Trade.
+
+If a service we provide is defective or does not match what was agreed, we will repair it, redo it, or refund the amount paid for the affected part, as required by law.`,
   },
   {
     id: "deposits",
-    title: "2. Deposits & Upfront Payments",
-    content: `Deposits and upfront payments may become non-refundable once work has commenced or costs have been incurred in connection with the project.
+    title: "Deposits and upfront payments",
+    content: `If you cancel a project before work begins, we refund the deposit, less any documented costs already incurred for your project, such as third-party purchases you approved.
 
-If a project is cancelled before work begins, NoviTech may refund some or all of the deposit, depending on the applicable project agreement and whether any administrative, planning, third-party, or other project-related costs have already been incurred.`,
+Once work has started, the deposit is applied to the work completed and costs incurred, as described below.`,
   },
   {
     id: "milestones",
-    title: "3. Milestone-Based Projects",
+    title: "Milestone-based projects",
     content: `For projects divided into milestones:
 
-• Payments relating to completed and accepted milestones are generally non-refundable.
-• If a project is cancelled during an active milestone, the client remains responsible for work completed and costs incurred up to the effective cancellation date.
-• Any amount paid in excess of the amount properly due may be refundable.
-• Milestone scope and completion are determined by the deliverables and acceptance criteria defined in the applicable project agreement.`,
+• Payments for completed and approved milestones are non-refundable, except as required by law.
+• If a project is cancelled during a milestone, you pay for the work completed and costs incurred up to the cancellation date.
+• Any amount you have paid above what is due will be refunded.
+• Milestone scope and approval criteria are set out in the project agreement.`,
   },
   {
     id: "cancellation",
-    title: "4. Project Cancellation",
-    content: `If a project is cancelled:
+    title: "Cancelling a project",
+    content: `To cancel a project, notify us in writing at info@novitech.ae. We will then:
 
-1. NoviTech may prepare a summary of work completed and costs incurred.
-2. The client will remain responsible for all amounts due for completed work, approved milestones, and non-cancellable or third-party costs already incurred.
-3. Deliverables due to the client may be transferred after outstanding amounts relating to the completed work have been paid.
-4. If the client has made an overpayment after all applicable amounts are calculated, the refundable balance will be returned within a reasonable processing period.`,
+1. Prepare a written summary of the work completed and the costs incurred up to the cancellation date.
+2. Calculate the amount due, or any amount to be refunded to you.
+3. Hand over the deliverables for the completed work once any amount due has been paid.
+4. Refund any overpayment within 14 working days of agreeing the final amount, using the original payment method where possible.`,
   },
   {
     id: "defects",
-    title: "5. Defects & Warranty",
-    content: `Where a project includes a warranty or post-delivery correction period, its duration and scope will be specified in the applicable project agreement.
+    title: "Defects and warranty",
+    content: `Where a project includes a warranty or post-delivery correction period, its length and scope are set out in the project agreement.
 
-During that period, NoviTech may correct reproducible defects caused directly by NoviTech's implementation and falling within the agreed project scope.
+During that period, we fix reproducible defects caused by our work that fall within the agreed scope, at no extra cost. Where a defect can be fixed, we will fix it first. If we are unable to fix it within a reasonable time, you may be entitled to a refund for the affected part of the work.
 
-A refund will not normally be issued where NoviTech can reasonably correct the defect.
+The warranty does not cover issues caused by:
 
-Warranty coverage does not apply to issues caused by:
-
-• Client or third-party modifications
+• Changes made by you or third parties
 • Third-party services, APIs, hosting providers, or platforms
-• Operating system, browser, marketplace, or platform updates
-• Incorrect use or use outside the agreed specifications
-• Features, changes, or requirements outside the original project scope`,
+• Operating system, browser, or app store updates
+• Use outside the agreed specifications
+• New features or requirements outside the original scope`,
   },
   {
     id: "digital-products",
-    title: "6. Digital Products",
-    content: `Digital products, downloadable materials, templates, software, licenses, or other immediately accessible digital content are generally non-refundable once access, download, activation, or delivery has occurred.
+    title: "Digital products",
+    content: `Digital products purchased directly from NoviTech, such as templates, licences, or downloadable software, are generally non-refundable once access, download, or activation has taken place, because they cannot be returned.
 
-Where a directly purchased digital product is materially different from its published description or cannot be accessed due to a defect attributable to NoviTech, the customer should contact us promptly so the issue can be reviewed and, where appropriate, corrected, replaced, credited, or refunded.
+If a digital product is faulty, cannot be accessed because of a problem on our side, or is materially different from its description, contact us and we will fix it, replace it, or refund it.
 
-Any product-specific refund terms displayed at the time of purchase will also apply.`,
+Any product-specific refund terms shown at the time of purchase also apply.`,
   },
   {
-    id: "mobile-games",
-    title: "7. Mobile Apps & Games",
-    content: `For applications, games, or digital products purchased through third-party platforms such as the Apple App Store or Google Play:
+    id: "apps",
+    title: "Purchases in our apps",
+    content: `Purchases made in apps downloaded from the Apple App Store or Google Play that are billed by those platforms follow the platform's refund rules. We cannot process those refunds directly.
 
-• Refund requests are subject to the relevant platform's own refund rules and procedures.
-• NoviTech cannot directly process refunds for purchases handled and billed by a third-party marketplace.
-• Products or licenses purchased directly from NoviTech are subject to this Refund Policy and any product-specific terms provided at the time of purchase.`,
+Payments made inside our own products, such as bookings or gifts in the Glowee app, are covered by that product's own terms and refund rules.`,
   },
   {
     id: "non-refundable",
-    title: "8. Non-Refundable Items",
-    content: `The following amounts are generally non-refundable once incurred, delivered, or completed:
+    title: "Non-refundable costs",
+    content: `Except where required by law, the following are non-refundable once incurred or delivered:
 
-• Third-party costs, including domains, hosting, APIs, licenses, subscriptions, app store fees, and external services
-• Rush or expedited delivery charges
-• Completed and accepted milestones
-• Consultations or advisory sessions already provided
-• Work already completed before cancellation
-• Custom work developed according to approved specifications
-• Costs or work resulting from delays, changes, or inactivity on the client's side
-
-Nothing in this section limits any rights that cannot lawfully be excluded under applicable law.`,
+• Third-party costs paid on your behalf, such as domains, hosting, licences, subscriptions, and app store fees
+• Completed and approved milestones
+• Consultations already provided
+• Work completed before cancellation`,
   },
   {
     id: "process",
-    title: "9. How to Request a Refund",
-    content: `To request a refund or discuss a payment issue, contact NoviTech through novitech.ae/en/contact and provide:
+    title: "How to request a refund",
+    content: `To request a refund, email info@novitech.ae or use our contact page, and include:
 
-• Your name
-• Project, invoice, order, or payment reference
-• The payment concerned
-• A clear description of the reason for the request
-• Any supporting information that may help us review the matter
+• Your name and contact details
+• Your project, invoice, or payment reference
+• The amount concerned and the reason for your request
+• Any supporting information
 
-NoviTech will review the request and respond within a reasonable timeframe. Additional information may be requested where necessary.`,
+We will acknowledge your request and respond with a decision within 10 working days. Approved refunds are paid within 14 working days, using the original payment method where possible.`,
+  },
+  {
+    id: "complaints",
+    title: "Complaints",
+    content: `If you are not satisfied with how your request was handled, contact us so we can review it again.
+
+If the matter is still not resolved, you may contact the competent consumer protection authority in the UAE, such as the Abu Dhabi Department of Economic Development or the UAE Ministry of Economy.`,
   },
   {
     id: "governing-law",
-    title: "10. Governing Law",
-    content: `This Refund Policy is governed by the laws of the United Arab Emirates.
+    title: "Governing law",
+    content: `This Refund Policy is governed by the federal laws of the United Arab Emirates and, where applicable, the laws of the Emirate of Abu Dhabi. Disputes are handled as set out in our Terms of Service.
 
-Any dispute relating to this policy shall be subject to the jurisdiction of the competent courts of the United Arab Emirates, unless otherwise agreed in writing.`,
+This policy is published in Arabic and English. If there is any inconsistency, the Arabic version prevails to the extent required by UAE law.`,
   },
 ];
 
 export default function RefundPolicyPage() {
   return (
-    <main className="min-h-screen bg-beige text-charcoal px-6 md:px-10 py-10 md:py-14">
-      <Navbar />
-
-      <div className="max-w-3xl mx-auto py-16">
-        <div className="mb-12">
-          <p className="text-xs uppercase tracking-widest text-accent mb-3">
-            Legal
-          </p>
-
-          <h1 className="text-4xl font-bold tracking-tight mb-4">
-            Refund Policy
-          </h1>
-
-          <p className="text-sm text-muted">
-            Last updated:{" "}
-            <span className="text-charcoal">
-              September 2026
-            </span>
-          </p>
-
-          <div className="mt-4 border border-border p-4">
-            <p className="text-xs uppercase tracking-widest text-accent mb-1">
-              Legal Entity
-            </p>
-
-            <p className="text-sm font-medium">
-              {LEGAL_NAME}
-            </p>
-
-            <p className="text-xs text-muted mt-1">
-              Registered in the United Arab Emirates
-            </p>
-          </div>
-
-          <p className="mt-4 text-muted leading-relaxed">
-            We stand behind our work. This policy explains how
-            cancellations, payment adjustments, and refund requests are
-            handled.
-          </p>
-        </div>
-
-        {/* Quick Summary */}
-        <div className="border border-border p-6 mb-8">
-          <p className="text-xs uppercase tracking-widest text-accent mb-4">
-            Quick Summary
-          </p>
-
-          <div className="space-y-3">
-            {summary.map((item) => (
-              <div
-                key={item.label}
-                className="flex flex-col gap-1 border-b border-border pb-3 text-sm last:border-0 last:pb-0 sm:flex-row sm:items-center sm:justify-between"
-              >
-                <span className="text-muted">
-                  {item.label}
-                </span>
-
-                <span className="text-charcoal sm:text-right">
-                  {item.value}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* TOC */}
-        <div className="border border-border p-6 mb-12">
-          <p className="text-xs uppercase tracking-widest text-accent mb-4">
-            Contents
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
-            {sections.map((section) => (
-              <a
-                key={section.id}
-                href={`#${section.id}`}
-                className="text-sm text-muted hover:text-charcoal transition py-1"
-              >
-                {section.title}
-              </a>
-            ))}
-          </div>
-        </div>
-
-        <div className="space-y-10">
-          {sections.map((section) => (
-            <section
-              key={section.id}
-              id={section.id}
-              className="scroll-mt-28"
-            >
-              <h2 className="text-lg font-semibold mb-3">
-                {section.title}
-              </h2>
-
-              <p className="text-muted leading-relaxed text-[15px] whitespace-pre-line">
-                {section.content}
-              </p>
-            </section>
-          ))}
-        </div>
-      </div>
-
-      <Footer />
-    </main>
+    <LegalPage
+      title="Refund Policy"
+      intro="How cancellations, refunds, and defects are handled for NoviTech services and products."
+      summary={summary}
+      sections={sections}
+    />
   );
 }

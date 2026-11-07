@@ -1,6 +1,5 @@
 // src/app/ar/projects/glowee/page.jsx
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { SiteShell, Container } from "@/components/site/ui";
 import ProductCaseStudy from "@/components/ProductCaseStudy";
 
 export const metadata = {
@@ -35,13 +34,8 @@ alternates: {
 
 export default function GloweeProjectPageAR() {
   return (
-    <main
-      className="min-h-screen bg-beige px-6 py-10 text-charcoal md:px-10 md:py-14"
-      dir="rtl"
-    >
-      <Navbar />
-
-      <div className="mx-auto max-w-6xl">
+    <SiteShell locale="ar">
+      <Container className="pb-8">
         <ProductCaseStudy
           locale="ar"
           eyebrow="منتج مختار"
@@ -107,9 +101,7 @@ export default function GloweeProjectPageAR() {
           availabilityText="يتوفر Glowee حالياً على Apple App Store، ويجري العمل على ضم أعمال التجميل والتوسع في السوق الإماراتي." footerTitle="هل تبني منصة تضم مستخدمين متعددين وعمليات وتجارب مترابطة؟"
           footerText="تقوم نوفيتك بتصميم وتطوير منتجات رقمية تجمع تجربة العميل وأدوات الأعمال وأنظمة الإدارة والبنية التقنية الخلفية ضمن حل متكامل."
         />
-      </div>
-
-      <Footer />
-    </main>
+      </Container>
+    </SiteShell>
   );
 }

@@ -147,3 +147,9 @@ html {
 .animate-data-flow {
   animation: data-flow 5s ease-in-out infinite;
 }
+
+/* Arabic letters must stay connected: no letter-spacing */
+.ar-text,
+.ar-text * {
+  letter-spacing: 0 !important;
+}
