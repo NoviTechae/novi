@@ -190,13 +190,13 @@ export function WorkCard({ project, locale = "en" }) {
   return (
     <Link
       href={project.href}
-      className="group grid overflow-hidden border border-border transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-sm md:grid-cols-[0.9fr_1.1fr]"
+      className="group grid grid-cols-1 overflow-hidden border border-border transition-all duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-sm md:grid-cols-[0.9fr_1.1fr]"
     >
       <div className="flex aspect-[4/3] items-center justify-center border-b border-border bg-white/50 p-10 md:aspect-auto md:border-b-0 md:border-e">
         <img
           src={project.image}
           alt={project.name}
-          className="max-h-56 w-auto object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+          className="max-h-56 w-auto max-w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
         />
       </div>
       <div className="flex flex-col p-8 md:p-10">
